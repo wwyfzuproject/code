@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 <body>
     <div class="背景">
@@ -61,6 +64,7 @@
              </div>
         </div>
 
+
      <div class="右边界面">
         <div class="顶部">
             <img src="img/金币.png" width="40px" height="40px"   class="金币1">
@@ -69,6 +73,8 @@
             <div class="昵称">法外狂徒张三</div>
             <img src="img/声音.png" alt="" width="40px" height="40px"  class="声音">
         </div>
+
+        <!-- logo -->
         <div class="中间">
             
             <div class="玩家一">
@@ -83,7 +89,7 @@
         </div>
 
         <img src="img/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
-        <divc class="右下角">
+        <div class="右下角">
             <div class="签到" onclick="">
                 <img src="img/签到.png" alt="" width="30px" height="30px">
                 <h4>签到</h4>
@@ -93,14 +99,74 @@
                 <h4>分享</h4>
             </div>
         </div>
-     </div>   
-    
+    </div>
+
+    <!-- //签到和分享 -->
+    <div id="tan1" class="弹窗1" >
+        <div class="签到标题">
+            <strong>签到</strong>  
+            <img src="img/关闭.png" alt="" width="30px" height="30px" class="关闭">  
+        </div>
+        <div class="签到成功">
+            <h2>签到成功!</h2>
+            <div class="签到金币">
+                <img src="img/金币.png" alt="">
+                <h3>x  100</h3>
+            </div>
+            
+
+        </div>
     </div>
     
+    <div class="弹窗2">
+        <div class="分享标题">
+            <h2>分享领金币</h2>
+            <img src="img/关闭.png" alt="" width="30px" height="30px" class="close2"> 
+        </div>
+        <img src="img/复制链接.JPG" alt="" width="200px" height="80px" class="链接">
+        <img src="img/复制.JPG" alt="" width="100px" height="60px" class="复制" >
+    </div>
     <script>
+        // 签到和分享页面的弹窗
+        var tan1=document.getElementById('tan1');
+        var 签=document.querySelector(".签到");
+        var close1=document.querySelector(".关闭");
+        var close2=document.querySelector(".close2")
+        var tan2=document.querySelector (".弹窗2");
+        var 分享=document.querySelector(".分享");
+
+        tan1.style.display="none";
+        tan2.style.display="none";
+        签.onclick=function(){
+            tan1.style.display="block";
+            console.log("nihao");
+        }
+        分享.onclick=function(){
+            tan2.style.display="block";
+        }
+        window.onclick=function(event){
+
+            if(event.target==tan1){
+                tan1.style.display="none";
+            }
+            if(event.target==tan2){
+                tan2.style.display="none";
+            }
+            
+        }
+        close1.onclick=function(){
+            tan1.style.display="none";
+            
+        }
+        close2.onclick=function(){
+            tan2.style.display="none";
+            
+        }
+
+
         var paiming1=document.querySelector(".排名")
         var renshu=document.querySelector(".在线人数")
-
+        
         paiming1.onclick=function(){
             paiming1.style.background='black';
         };
@@ -108,6 +174,8 @@
             paiming1.style.background='rgb(244,203, 124)';
             renshu.style.background='aliceblue';
         };
+       
+
     </script>
 </body>
 
