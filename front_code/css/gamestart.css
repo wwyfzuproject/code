@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-position: center; */
+    /* 背景随着页面滑动而滚动 */
+    /* background-attachment:scroll; */
+    
+    background-color: white;
+    /* 定义盒子外边距 */
+    /* margin-top: 50px;
+    margin: 0 auto; */
+    /* border: 30px solid white; */
+
+}
+.背景{
+    width: 789px;
+    height: 561px;
+    background-color: #D2F09F;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    
+}
+ .排行榜{
+    height: 561px;
+    width: 306px;
+    background-color: aliceblue;
+    border-top:1px solid darkblue
+
+}
+.上框{
+    float: left;
+    width: 304px;
+    height: 100px;
+    background-color: aliceblue;
+    border-bottom: black;
+    border-width: 1px;
+    border-style:solid;
+}
+a.排名{
+    display:inline-block;
+    height: 100px;
+    width: 151px;
+    /* text-indent: 40px;
+    font-weight: bold; */
+    background-color:rgb(244,203, 124);
+    border-right:1px solid black; 
+    text-align: center;
+    line-height: 100px;
+    text-decoration:none;
+    font-size: 20px;
+}
+a.在线人数{
+    display:inline-block;
+    height: 100px;
+    width: 151px;
+    /* text-indent: 40px;
+    font-weight: bold; */
+    background-color:white;
+    text-align: center;
+    line-height: 100px;
+    text-decoration:none;
+    font-size: 20px;
+}
+.列表{
+    width: 304px;
+    height: 461px;
+    padding-top: 100px;
+    color:black;
+    
+}
+.数据{
+    width: 250px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: rgb(246, 232, 205);
+    margin-bottom: 20px;
+    display: flex;
+    /* justify-content: space-around; */
+    border: 1px solid #999;
+    border-radius: 25px;
+}
+h1{
+    width: 20px;
+    font-size: 20px;
+
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.头像{
+    /* width: 10px;
+    height: 10px; */
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+h3{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.金币数{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.顶部{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 89px;
+    margin-top: 20px;
+}
+.昵称{
+    width: 150px;
+    height: 50px;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    margin-left: 40px;
+    text-align:center;
+    line-height :50px;;
+}
+.声音{
+    margin-left: 50px;
+    padding-right: 10px;
+}
+.中间{
+    margin-top: 150px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.玩家一{
+    position: relative;
+    margin-left: 50px;
+}
+.玩家一 h2{
+    width: 200px;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 70px;
+}
+.邀请{
+    margin-left:150px;
+    /* width: 200px; */
+}
+.开始游戏{
+    margin-left: 140px;
+    margin-top: 60px;
+}
+.右下角{
+    display: flex;
+    flex-direction: row;
+    padding-left: 400px;
+}
+.签到{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+.分享{
+    display: flex;
+    flex-direction: column;
+}
+ .弹窗1{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    border: #999 solid 2px;
+    margin-top: 200px; 
+    margin-left: 350px;
+}
+.签到标题{
+
+    width: 300;
+    height: 40px;
+    background-color: rgba(157, 207, 84, 1);
+    text-align: center;
+    line-height: 40px;
+    color: aliceblue;
+    /* margin-left: 40px; */
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.签到标题 img{
+    position:absolute;
+    margin-left: 100px;
+    margin-top: 3px;
+}
