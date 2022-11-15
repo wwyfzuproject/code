@@ -167,7 +167,7 @@ h3{
  .弹窗1{
     width: 300px;
     height: 200px;
-    background-color: white;
+    background-color: rgba(215, 236, 184, 1);
     position: absolute;
     border: #999 solid 2px;
     margin-top: 200px; 
@@ -187,7 +187,83 @@ h3{
 }
 
 .签到标题 img{
-    position:absolute;
+    
+position:absolute;
     margin-left: 100px;
     margin-top: 3px;
+}
+.签到成功{
+    background-color: rgba(215, 236, 184, 1);
+    padding-top: 0px;
+
+    /* transform: translate(-20px); */
+}
+.签到成功 h2{
+    color: rgba(129, 179, 55, 1);
+    font-size: 20px;
+    text-align: centerS;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-family:serif;
+}
+.签到金币{
+    margin-top: 10px;
+    display:flex;
+    flex-direction: row;
+}
+.签到金币 img{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.签到金币 h3{
+    margin-top: 15px;
+    color: rgba(129, 179, 55, 1);
+    font-size: 20px;
+}
+
+.弹窗2{
+    width: 300px;
+    height: 230px;
+    background-color: rgba(215, 236, 184, 1);
+    position: absolute;
+    border: #999 solid 2px;
+    margin-top: 200px; 
+    margin-left: 350px;
+    display: flex;
+    flex-direction: row;
+}
+.分享标题{
+    width: 300;
+    height: 40px;
+    background-color: rgba(157, 207, 84, 1);
+    text-align: center;
+    line-height: 40px;
+    color: aliceblue;
+    /* margin-left: 40px; */
+    display: flex;
+    flex-direction: row;
+}
+ .分享标题 img{
+    margin-top: 10px;
+    position: absolute;
+    /* padding-top: 30px; */
+    margin-top: 6px;
+    margin-left: 260px;
+}
+.分享标题 h2{
+    font-size: 20px;
+    width: 100px;
+    margin-left: 90px;
+}
+.链接{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+}
+.复制{
+    margin-left: 100px;
+    margin-top: 0px;
+    width: 120px;
+    height: 70px;
+    padding-top: 0px;
 }
