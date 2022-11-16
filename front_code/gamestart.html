@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/gamestart.css">
     
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
 </head>
 <body>
     <div class="背景">
@@ -16,47 +16,91 @@
             <div class="上框">
                     <a href=""  class="排名">排名</a><a href=""  class="在线人数">在线人数</a>
             </div>
-             <div class="列表">
-                <div class="数据">
+            <!-- 鼠标进入列表时，运行mouseenterEvent，移出列表时，执行leaveevent -->
+             <div class="列表" id="列表" onmouseenter="mouseenterEvent()" onmouseleave="mouseleaveEvent()">
+                <div class="数据" id="数据">
                     <h1>1</h1>
-                    <img src="img/头像.png" width="30px" height="30px" class="头像">
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
                     <div class="右边" >
                         <h3>花开富贵</h3>
                         <div class="金币数">
-                            <img src="img/金币.png" width="20px" height="20px" class="金币">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
                             <h4>x 22.5w</h4>
                         </div>
                     </div>
                 </div>
-                <div class="数据">
+                <div class="数据" id="数据">
                     <h1>2</h1>
-                    <img src="img/头像.png" width="30px" height="30px" class="头像">
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
                     <div class="右边" >
                         <h3>自由飞翔</h3>
                         <div class="金币数">
-                            <img src="img/金币.png" width="20px" height="20px" class="金币">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
                             <h4>x 22.5w</h4>
                         </div>
                     </div>
                 </div>
-                <div class="数据">
+                <div class="数据" id="数据">
                     <h1>3</h1>
-                    <img src="img/头像.png" width="30px" height="30px" class="头像">
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
                     <div class="右边" >
                         <h3>哈哈哈哈</h3>
                         <div class="金币数">
-                            <img src="img/金币.png" width="20px" height="20px" class="金币">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
                             <h4>x 22.5w</h4>
                         </div>
                     </div>
                 </div>
-                <div class="数据">
+                <div class="数据" id="数据">
                     <h1>4</h1>
-                    <img src="img/头像.png" width="30px" height="30px" class="头像">
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
                     <div class="右边" >
                         <h3>机器人</h3>
                         <div class="金币数">
-                            <img src="img/金币.png" width="20px" height="20px" class="金币">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
+                            <h4>x 22.5w</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="数据" id="数据">
+                    <h1>4</h1>
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
+                    <div class="右边" >
+                        <h3>机器人</h3>
+                        <div class="金币数">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
+                            <h4>x 22.5w</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="数据" id="数据">
+                    <h1>4</h1>
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
+                    <div class="右边" >
+                        <h3>机器人</h3>
+                        <div class="金币数">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
+                            <h4>x 22.5w</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="数据" id="数据">
+                    <h1>4</h1>
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
+                    <div class="右边" >
+                        <h3>机器人</h3>
+                        <div class="金币数">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
+                            <h4>x 22.5w</h4>
+                        </div>
+                    </div>
+                </div><div class="数据" id="数据">
+                    <h1>4</h1>
+                    <img src="imagines/头像.png" width="30px" height="30px" class="头像">
+                    <div class="右边" >
+                        <h3>机器人</h3>
+                        <div class="金币数">
+                            <img src="imagines/金币.png" width="20px" height="20px" class="金币">
                             <h4>x 22.5w</h4>
                         </div>
                     </div>
@@ -67,11 +111,11 @@
 
      <div class="右边界面">
         <div class="顶部">
-            <img src="img/金币.png" width="40px" height="40px"   class="金币1">
+            <img src="imagines/金币.png" width="40px" height="40px"   class="金币1">
             <h3>x </h3>
             <h1 > 250</h1>
             <div class="昵称">法外狂徒张三</div>
-            <img src="img/声音.png" alt="" width="40px" height="40px"  class="声音">
+            <img src="imagines/声音.png" alt="" width="40px" height="40px"  class="声音">
         </div>
 
         <!-- logo -->
@@ -79,23 +123,23 @@
             
             <div class="玩家一">
                 <h2 id="昵称一">法外狂徒张三</h2>
-                <img src="img/角色1.png" alt="" width="70px" height="70px"  position: absolute class="角色一">
+                <img src="imagines/角色1.png" alt="" width="70px" height="70px"  position: absolute class="角色一">
             </div>
             <div>
-                <img src="img/邀请.png" alt="" width="70px" height="70px" class="邀请">
+                <img src="imagines/邀请.png" alt="" width="70px" height="70px" class="邀请">
 
             </div>
            
         </div>
 
-        <img src="img/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
+        <img src="imagines/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
         <div class="右下角">
             <div class="签到" onclick="">
-                <img src="img/签到.png" alt="" width="30px" height="30px">
+                <img src="imagines/签到.png" alt="" width="30px" height="30px">
                 <h4>签到</h4>
             </div>
             <div class="分享">
-                <img src="img/分享.png" alt="" width="30px" height="30px">
+                <img src="imagines/分享.png" alt="" width="30px" height="30px">
                 <h4>分享</h4>
             </div>
         </div>
@@ -105,12 +149,12 @@
     <div id="tan1" class="弹窗1" >
         <div class="签到标题">
             <strong>签到</strong>  
-            <img src="img/关闭.png" alt="" width="30px" height="30px" class="关闭">  
+            <img src="imagines/关闭.png" alt="" width="30px" height="30px" class="关闭">  
         </div>
         <div class="签到成功">
             <h2>签到成功!</h2>
             <div class="签到金币">
-                <img src="img/金币.png" alt="">
+                <img src="imagines/金币.png" alt="">
                 <h3>x  100</h3>
             </div>
             
@@ -121,12 +165,41 @@
     <div class="弹窗2">
         <div class="分享标题">
             <h2>分享领金币</h2>
-            <img src="img/关闭.png" alt="" width="30px" height="30px" class="close2"> 
+            <img src="imagines/关闭.png" alt="" width="30px" height="30px" class="close2"> 
         </div>
-        <img src="img/复制链接.JPG" alt="" width="200px" height="80px" class="链接">
-        <img src="img/复制.JPG" alt="" width="100px" height="60px" class="复制" >
+        <img src="imagines/复制链接.JPG" alt="" width="200px" height="80px" class="链接">
+        <img src="imagines/复制.JPG" alt="" width="100px" height="60px" class="复制" >
     </div>
     <script>
+
+        // 排行榜滚动
+        const dom = document.getElementById ('列表')
+        const scpDom = document.getElementsByClassName('数据')
+        let time = null
+        console.log(dom.scrollHeight, dom.offsetHeight);
+        time = setInterval(() => {
+            dom.scrollTop++;
+            if (dom.scrollTop >= dom.scrollHeight - dom.offsetHeight) {
+                console.log("111");
+                dom.scrollTop = 0;
+            }
+         }, 10)
+
+        function mouseenterEvent() {
+            clearInterval(time);
+            //将定时器停止
+        }
+
+        function mouseleaveEvent() {
+            time = setInterval(() => {
+            dom.scrollTop++;
+            if (dom.scrollTop >= dom.scrollHeight - dom.offsetHeight) {
+                console.log("111");
+                dom.scrollTop = 0;
+            }
+        }, 10)
+    }
+
         // 签到和分享页面的弹窗
         var tan1=document.getElementById('tan1');
         var 签=document.querySelector(".签到");
@@ -163,7 +236,7 @@
             
         }
 
-
+        
         var paiming1=document.querySelector(".排名")
         var renshu=document.querySelector(".在线人数")
         
