@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+    width: 983px;
+    height: 699px;
+    background-color: #D2F09F;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+}
+.playerset{
+    width: 414px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 155px;
+    margin-top: 50px;
+}
+.name{
+    width: 210px;
+    height: 41px;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    margin-left: 50px;
+    text-align:center;
+    line-height :43px;
+    font-size: 19px;
+}
+.coinNum{
+    font-family:'KaiTi';
+    font-size: 36px;
+    font-weight: bold;
+}
+.playButton{
+    margin-top: 82px;
+    margin-left: 209px;
+}
+.ss{
+    display: flex;
+    flex-direction: row;
+    padding-left: 485px;
+}
+.share{
+    display: flex;
+    flex-direction: column;
+}
+.signin{
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+}
+.playerinfo{
+    margin-top: 170px;
+    margin-left: 96px;
+    display: flex;
+    flex-direction: row;
+}
+.player01{
+    position: relative;
+    margin-left: 25px;
+}
+.player02{
+    position: relative;
+    margin-left: 50px;
+}
+.invitation{
+    margin-left: 90px;
+}
+.rankingList{
+    height: 699px;
+    width: 304px;
+    background-color: #FFFAFA;
+    border-top:1px solid darkblue
+}
+.select{
+    float: left;
+    width: 304px;
+    height: 100px;
+    background-color: aliceblue;
+    border-bottom: black;
+    border-width: 0px;
+    border-style:solid;
+}
