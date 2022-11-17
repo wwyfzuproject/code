@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,18 +22,19 @@
             background-position: center top;
         }
 
-        .up, .in {
+        .up,
+        .in {
             display: inline-block;
             width: 160px;
             height: 62px;
             line-height: 20px;
             border-radius: 24px;
             background-color: rgba(255, 191, 107, 1);
-            text-align: center; 
+            text-align: center;
             box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
         }
 
-        .up {       
+        .up {
             position: relative;
             left: 210px;
             top: 430px;
@@ -83,8 +85,19 @@
             display: none;
         }
 
+        .message {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            color: #999;
+            background: url(imagines/叹号.png) no-repeat left center;
+            padding-left: 20px;
+        }
+
     </style>
 </head>
+
 <body>
     <div class="homepage">
         <!-- 注册 -->
@@ -98,11 +111,44 @@
         </span>
         <!-- 注册弹窗 -->
         <div class="sign_up">
-            11111111111111
+            <form>
+
+                <!--用户邮箱-电子邮件-->
+                <p>
+                    <input type="email" name="email" placeholder="请输入邮箱">
+                </p>
+
+                <!--登录昵称-文本框-->
+                <p>
+                    <input type="text" id="uname" name="uname" placeholder="请输入昵称" >
+                    <!--提示用户名是否一致的位置-->
+                    <span id="uname-show"></span>
+                </p>
+
+                <!--登录密码-密码框-->
+                <p>
+                    <input type="password" id="upwd" name="upwd" placeholder="请输入8~16位密码">
+                    <!--name值与id值可以重复，name值用于提交给服务器，id值在前端用-->
+                    <span class="message"></span>
+                </p>
+
+                <!--确认密码-密码框-->
+                <p>
+                    <input type="password" id="cpwd" name="cpwd" placeholder="确认密码" >
+                    <!--用于提示两次密码是否一致的位置-->
+                    <span class="message"></span>
+                </p>
+
+                <!--注册按钮-->
+                <p>
+                    <input type="submit" value="注册">
+                    <!--submit按钮的表单提交数据，是同步访问数据的方式-->
+                </p>
+            </form>
         </div>
     </div>
 
-    
+
 
     <!-- 登入弹窗 -->
     <div class="sign_in">
@@ -113,12 +159,12 @@
         //点击注册后跳出注册弹窗
         var up = document.querySelector('.up');
         var up_page = document.querySelector('.sign_up');
-        up.onclick = function()
-        {
-            up_page.style.display =  'block';             
+        up.onclick = function () {
+            up_page.style.display = 'block';
         }
 
 
     </script>
 </body>
+
 </html>
