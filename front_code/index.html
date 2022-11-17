@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蛙蛙游福大</title>
     <style>
-        div {
+        .homepage {
             width: 789px;
             height: 561px;
             position: absolute;
@@ -21,7 +21,7 @@
             background-position: center top;
         }
 
-        span {
+        .up, .in {
             display: inline-block;
             width: 160px;
             height: 62px;
@@ -65,15 +65,38 @@
     </style>
 </head>
 <body>
-    <div>
+    <div class="homepage">
         <!-- 注册 -->
+        <!-- 采用弹窗，而不是跳转链接  实现方法为：初始化弹窗为不可见 display:none-->
         <span class="up">
-            <a href="sign_up.html"> </a>
+            <a href="#"> </a>
         </span>
         <!-- 登录 -->
         <span class="in">
-            <a href="sign_in.html"> </a>
+            <a href="#"> </a>
         </span>
     </div>
+
+    <!-- 注册弹窗 -->
+    <div class="sign_up">
+         
+    </div>
+
+    <!-- 登入弹窗 -->
+    <div class="sign_in">
+        
+    </div>
+
+    <script>
+        //点击注册后跳出注册弹窗
+        var up = document.querySelector('.up');
+        var up_page = document.querySelector('.sign_up');
+        up.onclick = function()
+        {
+            up_page.style.display =  'block';             
+        }
+        
+
+    </script>
 </body>
 </html>
