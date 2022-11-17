@@ -81,10 +81,6 @@
             display: none;
         }
 
-        .sign_in {
-            display: none;
-        }
-
         .message {
             display: inline-block;
             width: 18px;
@@ -94,6 +90,46 @@
             background: url(imagines/叹号.png) no-repeat left center;
             padding-left: 20px;
         }
+
+        .homepage .sign_up .close{
+            width: 25px;
+            height: 25px;
+            background-image: url(./imagines/关闭2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            left: 235px;
+            bottom: -10px;
+        }
+        .homepage .sign_up .one{
+            position: relative;
+            left: -8px;
+            bottom: -15px;
+        }
+        .homepage .sign_up .two{
+            position: relative;
+            left: -8px;
+            bottom: -15px;
+        }
+        .homepage .sign_up .three{
+            position: relative;
+            left: 13px;
+            bottom: -15px;
+        }
+        .homepage .sign_up .four{
+            position: relative;
+            left: 13px;
+            bottom: -15px;
+        }
+        .homepage .sign_up .five{
+            position: relative;
+            bottom: -45px;
+        }
+        .sign_in {
+            display: none;
+        }
+
+        
 
     </style>
 </head>
@@ -111,36 +147,36 @@
         </span>
         <!-- 注册弹窗 -->
         <div class="sign_up">
+            <div class="close"></div>
             <form>
-
                 <!--用户邮箱-电子邮件-->
-                <p>
+                <p class="one">
                     <input type="email" name="email" placeholder="请输入邮箱">
                 </p>
 
                 <!--登录昵称-文本框-->
-                <p>
+                <p class="two">
                     <input type="text" id="uname" name="uname" placeholder="请输入昵称" >
                     <!--提示用户名是否一致的位置-->
                     <span id="uname-show"></span>
                 </p>
 
                 <!--登录密码-密码框-->
-                <p>
+                <p class="three">
                     <input type="password" id="upwd" name="upwd" placeholder="请输入8~16位密码">
                     <!--name值与id值可以重复，name值用于提交给服务器，id值在前端用-->
                     <span class="message"></span>
                 </p>
 
                 <!--确认密码-密码框-->
-                <p>
+                <p class="four">
                     <input type="password" id="cpwd" name="cpwd" placeholder="确认密码" >
                     <!--用于提示两次密码是否一致的位置-->
                     <span class="message"></span>
                 </p>
 
                 <!--注册按钮-->
-                <p>
+                <p class="five">
                     <input type="submit" value="注册">
                     <!--submit按钮的表单提交数据，是同步访问数据的方式-->
                 </p>
