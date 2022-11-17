@@ -64,6 +64,7 @@
             background-repeat: no-repeat;
         }
 
+        /* 注册弹窗的相关设置 */
         .sign_up {
             /* left: 485px; */
             /* top: 326px; */
@@ -81,6 +82,7 @@
             display: none;
         }
 
+        /* 密码检验的设置 */
         .message {
             display: inline-block;
             width: 18px;
@@ -91,7 +93,8 @@
             padding-left: 20px;
         }
 
-        .homepage .sign_up .close{
+        /* 注册弹窗 关闭图标的设置 */
+        .homepage .sign_up .close1{
             width: 25px;
             height: 25px;
             background-image: url(./imagines/关闭2.png);
@@ -101,6 +104,7 @@
             left: 235px;
             bottom: -10px;
         }
+        /* 注册弹窗的其余元素的相关位置设置 */
         .homepage .sign_up .one{
             position: relative;
             left: -8px;
@@ -125,11 +129,47 @@
             position: relative;
             bottom: -45px;
         }
+
+        /* 登录弹窗的相关设置 */
         .sign_in {
+            margin: 0 auto;
+            width: 275px;
+            height: 200px;
+            line-height: 20px;
+            border-radius: 26px;
+            background-color: rgba(255, 250, 250, 1);
+            text-align: center;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(79, 79, 79, 1);
+            z-index: 21;
+            position: relative;
+            top: 100px;
             display: none;
         }
-
-        
+        /* 登录弹窗 关闭图标的设置 */
+        .homepage .sign_in .close2{
+            width: 25px;
+            height: 25px;
+            background-image: url(./imagines/关闭2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            left: 235px;
+            bottom: -10px;
+        }
+        /* 登录弹窗其余元素相关位置的设置 */
+        .homepage .sign_in .in_one{
+            position: relative;
+            bottom: -10px;
+        }
+        .homepage .sign_in .in_two{
+            position: relative;
+            bottom: -15px;
+        }
+        .homepage .sign_in .in_three{
+            position: relative;
+            bottom: -30px;
+        }
 
     </style>
 </head>
@@ -147,7 +187,8 @@
         </span>
         <!-- 注册弹窗 -->
         <div class="sign_up">
-            <div class="close"></div>
+            <!-- 关闭的小图标 -->
+            <div class="close1"></div>
             <form>
                 <!--用户邮箱-电子邮件-->
                 <p class="one">
@@ -182,13 +223,25 @@
                 </p>
             </form>
         </div>
-    </div>
-
-
-
-    <!-- 登入弹窗 -->
-    <div class="sign_in">
-
+        <!-- 登入弹窗 -->
+        <div class="sign_in">
+            <form>
+                <!-- 关闭的小图标 -->
+                <div class="close2"></div>
+                <!-- 用户登录的邮箱 -->
+                <p class="in_one">
+                    <input type="email" name="email" placeholder="请输入邮箱">
+                </p>
+                <!-- 用户的登录密码 -->
+                <p class="in_two">
+                    <input type="password" id="upwd" name="upwd" placeholder="请输入8~16位密码">
+                </p>
+                <!-- 登录按钮 -->
+                <p class="in_three">
+                    <input type="submit" value="登录">
+                </p>
+            </form>
+        </div>
     </div>
 
     <script>
