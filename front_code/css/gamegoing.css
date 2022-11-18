@@ -1,0 +1,118 @@
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+input{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 游戏界面总的大小 */
+.bgbox{
+    width: 789px;
+    height: 561px;
+    background-color: pink;
+    background-image: url(./地图.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+/* 玩家1的头像设置 */
+.bgbox .role1 .img1{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+    background-color: #fff;
+    background-image: url(./角色1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid rgb(255, 170, 0);
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    z-index: 10;
+}
+/* 玩家1的名称设置 */
+.bgbox .role1 .name1{
+    display: inline-block;
+    width: 125px;
+    height: 34px;
+    background-color: #fcf6ea;
+    border: 2px solid #bbb;
+    position: relative;
+    left: -10px;
+    top: -20px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 8;
+}
+/* 玩家1打卡点的设置 */
+.bgbox .role1 .daka1 li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0b2;
+    border-radius: 50%;
+    position: relative;
+    left: 133px;
+    top: -8px;
+    box-shadow: 0 2px 6px 0 #000;
+    margin-right: 5px;
+}
+/* 玩家2的头像设置 */
+.bgbox .role2 .img2{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* background-color: greenyellow; */
+    background-color: #fff;
+    background-image: url(./角色2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid rgb(255, 170, 0);
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+    top: -10px;
+    z-index: 10;
+}
+/* 玩家2的名称设置 */
+.bgbox .role2 .name2{
+    display: inline-block;
+    width: 125px;
+    height: 34px;
+    background-color: #fcf6ea;
+    border: 2px solid #bbb;
+    position: relative;
+    left: -10px;
+    top: -36px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 8;
+}
+/* 玩家2打卡点的设置 */
+.bgbox .role2 .daka2 li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0b2;
+    border-radius: 50%;
+    position: relative;
+    left: 133px;
+    top: -8px;
+    box-shadow: 0 2px 6px 0 #000;
+    margin-right: 5px;
+}
