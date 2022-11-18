@@ -15,8 +15,8 @@ body{
 
 }
 .背景{
-    width: 789px;
-    height: 561px;
+    width: 983px;
+    height: 699px;
     background-color: #D2F09F;
     margin: 10px auto;
     position: relative;
@@ -24,7 +24,7 @@ body{
     
 }
  .排行榜{
-    height: 561px;
+    height: 699px;
     width: 306px;
     background-color: aliceblue;
     border-top:1px solid darkblue
@@ -34,9 +34,9 @@ body{
     width: 304px;
     height: 100px;
     background-color: aliceblue;
-    border-bottom: black;
+    /* border-bottom: black;
     border-width: 1px;
-    border-style:solid;
+    border-style:solid; */
 }
 a.排名{
     display:inline-block;
@@ -97,14 +97,23 @@ h1{
     margin-left: 10px;
 }
 h3{
+    
     margin-left: 10px;
     font-size: 20px;
 }
-.金币数{
-    margin-left: 10px;
+.playerset{
+    width: 414px;
     display: flex;
     flex-direction: row;
+    margin-left: 155px;
+    margin-top: 50px;
 }
+.coinNum{
+    font-family:'KaiTi';
+    font-size: 36px;
+    font-weight: bold;
+}
+
 .顶部{
     width: 400px;
     display: flex;
@@ -112,54 +121,51 @@ h3{
     margin-left: 89px;
     margin-top: 20px;
 }
-.昵称{
-    width: 150px;
-    height: 50px;
+
+.name{ 
+    width: 210px;
+    height: 41px;
     background-color: antiquewhite;
     border-radius: 25px;
-    margin-left: 40px;
+    margin-left: 50px;
     text-align:center;
-    line-height :50px;;
+    line-height :43px;
+    font-size: 19px;
 }
 .声音{
     margin-left: 50px;
     padding-right: 10px;
 }
-.中间{
-    margin-top: 150px;
-    margin-left: 80px;
+.playerinfo{
+    margin-top: 170px;
+    margin-left: 96px;
     display: flex;
     flex-direction: row;
 }
-.玩家一{
+.player01{
+    position: relative;
+    margin-left: 25px;
+}
+
+.邀请{
     position: relative;
     margin-left: 50px;
-}
-.玩家一 h2{
-    width: 200px;
-    margin-bottom: 20px;
-    position: absolute;
-    bottom: 70px;
-}
-.邀请{
-    margin-left:150px;
-    /* width: 200px; */
 }
 .开始游戏{
     margin-left: 140px;
     margin-top: 60px;
 }
-.右下角{
+.ss{
     display: flex;
     flex-direction: row;
-    padding-left: 400px;
+    padding-left: 485px;
 }
-.签到{
+.signin{
     display: flex;
     flex-direction: column;
-    padding-right: 10px;
+    padding-right: 50px;
 }
-.分享{
+.share{
     display: flex;
     flex-direction: column;
 }
@@ -180,9 +186,7 @@ h3{
     text-align: center;
     line-height: 40px;
     color: aliceblue;
-    /* margin-left: 40px; */
-    /* display: flex;
-    flex-direction: row; */
+    
 }
 
 .签到标题 img{

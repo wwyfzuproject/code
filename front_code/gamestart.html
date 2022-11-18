@@ -6,18 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/gamestart.css">
-<<<<<<< HEAD
-=======
-    
-<!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
->>>>>>> c84ff0ccee4822640d95ca9c8bea27fc372bdcf5
 </head>
 <body>
     <div class="背景">
         <div class="排行榜">
             <div class="上框">
-                    <a href=""  class="排名">排名</a><a href=""  class="在线人数">在线人数</a>
+                <a href=""><img src="imagines/ranking.png" alt="" width="152px" height="100px"></a><a href=""><img src="imagines/man.png" alt="" width="152px" height="100px"></a>
+                    <!-- <a href=""  class="排名">排名</a><a href=""  class="在线人数">在线人数</a> -->
             </div>
             <!-- 鼠标进入列表时，运行mouseenterEvent，移出列表时，执行leaveevent -->
              <div class="列表" id="列表" onmouseenter="mouseenterEvent()" onmouseleave="mouseleaveEvent()">
@@ -113,42 +108,40 @@
 
 
      <div class="右边界面">
-        <div class="顶部">
-            <img src="imagines/金币.png" width="40px" height="40px"   class="金币1">
-            <h3>x </h3>
-            <h1 > 250</h1>
-            <div class="昵称">法外狂徒张三</div>
-            <img src="imagines/声音.png" alt="" width="40px" height="40px"  class="声音">
+        <div class="playerset">
+            <img src="imagines/金币.png" width="40px" height="40px">
+            <p class="coinNum">&nbspX&nbsp</p>
+            <p class="coinNum">22.5w</p>
+            <div class="name">法外狂徒张三</div>
+            
         </div>
 
         <!-- logo -->
-        <div class="中间">
+        <div class="playerinfo">
             
-            <div class="玩家一">
-                <h2 id="昵称一">法外狂徒张三</h2>
-                <img src="imagines/角色1.png" alt="" width="70px" height="70px"  position: absolute class="角色一">
+            <div class="player01">
+                <img src="imagines/角色1.png" alt="" width="200px" height="144px">
             </div>
-            <div>
-                <img src="imagines/邀请.png" alt="" width="70px" height="70px" class="邀请">
-
+            <div class="邀请">
+                <img src="imagines/邀请.png" alt="" width="150px" height="144px">
             </div>
-           
+            
         </div>
 
         <img src="imagines/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
-        <div class="右下角">
-            <div class="签到" onclick="">
-                <img src="imagines/签到.png" alt="" width="30px" height="30px">
-                <h4>签到</h4>
+        <div class="ss">
+            <div class="signin">
+                <img src="imagines/签到.png" alt="" width="57px" height="82px">
             </div>
-            <div class="分享">
-                <img src="imagines/分享.png" alt="" width="30px" height="30px">
-                <h4>分享</h4>
+            <div class="share">
+                <img src="imagines/分享.png" alt="" width="57px" height="82px">
             </div>
         </div>
+        
     </div>
 
     <!-- //签到和分享 -->
+    
     <div id="tan1" class="弹窗1" >
         <div class="签到标题">
             <strong>签到</strong>  
