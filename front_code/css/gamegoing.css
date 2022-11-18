@@ -19,7 +19,7 @@ a{
     width: 789px;
     height: 561px;
     background-color: pink;
-    background-image: url(./地图.jpg);
+    background-image: url(../imagines/地图.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     margin: 0 auto;
@@ -31,7 +31,7 @@ a{
     height: 40px;
     background-color: greenyellow;
     background-color: #fff;
-    background-image: url(./角色1.png);
+    background-image: url(../imagines/角色1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -77,7 +77,7 @@ a{
     height: 40px;
     /* background-color: greenyellow; */
     background-color: #fff;
-    background-image: url(./角色2.png);
+    background-image: url(../imagines/角色2.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
