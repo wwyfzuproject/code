@@ -189,6 +189,7 @@
         .right {
             background-image: url(imagines/成功.png);
         }
+
     </style>
 </head>
 
@@ -269,6 +270,18 @@
         var up = document.querySelector('.up');
         var up_page = document.querySelector('.sign_up');
         var close1 = document.querySelector('.close1');
+        var btn = document.querySelector('#btn');
+        var flag2 = 0;
+
+        function lock() {
+            if (flag1 == 0 || flag2 == 0) {
+                btn.disabled = 'disabled';
+            }
+            else {
+                btn.disabled = '';
+            }
+        }
+
         up.onclick = function () {
             up_page.style.display = 'block';
         }
@@ -276,6 +289,8 @@
             up_page.style.display = 'none';
         }
 
+        lock();
+        
         var pd = document.querySelector('#upwd');
         var mess = document.querySelector('#mess1');
         pd.onblur = function () {
@@ -287,13 +302,13 @@
                 mess.className = 'message right';
                 flag1 = 1;
             }
+            lock();
         }
 
-        var flag2 = 0;
         var rpd = document.querySelector('#cpwd');
         var mess2 = document.querySelector('#mess2');
         rpd.onblur = function () {
-            if (this.value == pd.value && pd.value!='') {
+            if (this.value == pd.value && pd.value != '') {
                 mess2.className = 'message right';
                 flag2 = 1;
             }
@@ -301,10 +316,9 @@
                 mess2.className = 'message wrong';
                 flag2 = 0;
             }
+            lock();
         }
 
-        var btn = document.querySelector('#btn');
-        if(flag1==0||flag2==0) btn.disable = 'disabled';
 
     </script>
 
