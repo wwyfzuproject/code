@@ -120,7 +120,7 @@ a{
     margin-right: 5px;
 } */
 /* 玩家1和玩家2打卡点设置 */
-.bgbox li{
+.bgbox .daka1 li,.bgbox .daka2 li{
     float: left;
     width: 20px;
     height: 20px;
@@ -139,4 +139,107 @@ a{
     left: -25px;
     top: -122px;
     color: rgb(8,8,8);
+}
+/* 地图上玩家1初始位置 */
+.bgbox .mr1 img{
+    float: right;
+    width: 45px;
+    height: 55px;
+    position: relative;
+    left: -53px;
+    bottom: -36px;
+}
+/* 地图上玩家2初始位置 */
+.bgbox .mr2 img{
+    float: right;
+    width: 45px;
+    height: 55px;
+    position: relative;
+    left: -13px;
+    bottom: 33px;
+}
+/* 随机事件的位置 */
+.bgbox .suiji .one{
+    float: right;
+    position: relative;
+    left: -55px;
+    top: -41px;
+}
+.bgbox .suiji .two{
+    float: right;
+    position: relative;
+    left: -149px;
+    top: -25px;
+}
+.bgbox .suiji .three{
+    float: right;
+    position: relative;
+    left: -207px;
+    top: 38px;
+}
+.bgbox .suiji .four{
+    float: left;
+    position: relative;
+    left: 263px;
+    top: 23px;
+}
+.bgbox .suiji .five{
+    float: left;
+    position: relative;
+    left: 105px;
+    top: 40px;
+}
+.bgbox .suiji .six{
+    float: left;
+    position: relative;
+    left: 60px;
+    top: 132px;
+}
+.bgbox .suiji .seven{
+    float: left;
+    position: relative;
+    left: 186px;
+    top: 201px;
+}
+.bgbox .suiji .eight{
+    float: left;
+    position: relative;
+    left: 298px;
+    bottom: -204px;
+}
+.bgbox .suiji .nine{
+    float: right;
+    position: relative;
+    left: -124px;
+    top: 144px;
+}
+.bgbox .suiji .ten{
+    float: right;
+    position: relative;
+    left: 44px;
+    top: 44px;
+}
+/* 设置随机事件的背景颜色 */
+.bgbox .suiji li:nth-child(-n+10){
+    background-color: rgb(194, 240, 242);
+    border-radius: 50%;
+}
+/* 小白站点的位置 */
+.bgbox .suiji .bus1{
+    float: right;
+    position: relative;
+    left: -59px;
+    top: -3px;
+}
+.bgbox .suiji .bus2{
+    float: left;
+    position: relative;
+    left: -93px;
+    top: 105px;
+}
+.bgbox .suiji .bus3{
+    float: right;
+    position: relative;
+    left: 18px;
+    top: 106px;
 }
