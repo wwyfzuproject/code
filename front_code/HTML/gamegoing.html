@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>游戏中——蛙蛙游福大</title>
     <link rel="stylesheet" href="../css/gamegoing.css">
+    <script src="../js/move.js"></script>
 </head>
 <body>
     <div class="bgbox">
@@ -27,7 +28,7 @@
             </div>
         </div>
         <!-- mr1 地图上玩家1 -->
-        <div class="mr1"><img src="../imagines/地图玩家1.png" alt="玩家1"></div>
+        <div class="mr1"><img src="../imagines/地图玩家1.png" alt="玩家1" class="p1"></div>
         <!-- 玩家2 -->
         <div class="role2">
             <div class="img2"></div>
@@ -45,7 +46,7 @@
             </div>
         </div>
         <!-- mr2 地图上玩家2 -->
-        <div class="mr2"><img src="../imagines/地图玩家2.png" alt="玩家2"></div>
+        <div class="mr2"><img src="../imagines/地图玩家2.png" alt="玩家2" class="p2"></div>
         <!-- 打卡点名称 -->
         <div class="name3">晋江楼->福友阁</div>
         <!-- 随机事件和小白站点 -->
@@ -67,5 +68,20 @@
             </ul>
         </div>
     </div>
+    <button>骰子</button>
+    <script>
+        var player1 = document.querySelector('.p1');
+        var btn = document.querySelector('button');
+        var num = 1; //骰子数
+        var target;
+        //点击骰子后触发
+        btn.addEventListener('click',function(){
+            target = player1.offsetLeft + num*(-19);
+            console.log(target);
+            console.log(player1.offsetLeft);
+            console.log(player1.offsetTop);
+            animate(player1,target,num);
+        })
+    </script>
 </body>
 </html>
