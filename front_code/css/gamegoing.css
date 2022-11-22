@@ -19,13 +19,17 @@ a{
 }
 /* 游戏界面总的大小 */
 .bgbox{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,0);
     width: 789px;
     height: 561px;
     /* background-color: pink; */
     background-image: url(../imagines/地图.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 /* 玩家1的头像设置 */
 .bgbox .role1 .img1{
@@ -42,7 +46,7 @@ a{
     border-radius: 50%;
     position: relative;
     left: 5px;
-    top: 5px;
+    top: 6px;
     z-index: 10;
 }
 /* 玩家1的名称设置 */
@@ -87,8 +91,8 @@ a{
     border: 2px solid rgb(255, 170, 0);
     border-radius: 50%;
     position: relative;
-    left: 5px;
-    top: -10px;
+    left: -39px;
+    top: -13px;
     z-index: 10;
 }
 /* 玩家2的名称设置 */
@@ -99,8 +103,8 @@ a{
     background-color: #fcf6ea;
     border: 2px solid #bbb;
     position: relative;
-    left: -10px;
-    top: -36px;
+    left: -53px;
+    top: -39px;
     border-radius: 15px;
     font-size: 12px;
     text-align: center;
@@ -142,21 +146,25 @@ a{
 }
 /* 地图上玩家1初始位置 */
 .bgbox .mr1 img{
-    float: right;
+    position: relative;
+    float: left;
     width: 45px;
     height: 55px;
-    position: relative;
-    left: -53px;
-    bottom: -36px;
+    left: 691px;
+    /* bottom: -36px; */
+    top: 37px;
+    z-index: 10;
 }
 /* 地图上玩家2初始位置 */
 .bgbox .mr2 img{
-    float: right;
+    position: relative;
+    float: left;
     width: 45px;
     height: 55px;
-    position: relative;
-    left: -13px;
-    bottom: 33px;
+    left: 728px;
+    top: -32px;
+    /* bottom: 33px; */
+    z-index: 10;
 }
 /* 随机事件的位置 */
 .bgbox .suiji .one{
@@ -242,4 +250,9 @@ a{
     position: relative;
     left: 18px;
     top: 106px;
+}
+.bgbox .suiji ul {
+    position: relative;
+    /* float: left; */
+    left: -45px;
 }
