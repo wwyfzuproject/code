@@ -140,7 +140,7 @@ a{
 .bgbox .name3{
     text-align: center;
     position: relative;
-    left: -25px;
+    left: -52px;
     top: -122px;
     color: rgb(8,8,8);
 }
@@ -255,4 +255,22 @@ a{
     position: relative;
     /* float: left; */
     left: -45px;
+}
+/* 倒计时 */
+.bgbox .time {
+    float: left;
+    position: relative;
+    left: 430px;
+    top: 250px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+}
+/* 骰子位置和大小 */
+.bgbox .touzi img {
+    float: left;
+    position: relative;
+    left: 360px;
+    top: 290px;
+    z-index: 11;
 }
