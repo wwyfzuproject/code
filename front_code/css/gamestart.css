@@ -144,7 +144,7 @@ h3{
 }
 .player01{
     position: relative;
-    margin-left: 25px;
+    margin-left: 17px;
 }
 
 .邀请{
@@ -164,10 +164,10 @@ h3{
     display: flex;
     flex-direction: column;
     padding-right: 50px;
+    margin-left: 500px;
 }
 .share{
-    display: flex;
-    flex-direction: column;
+    margin-left: 550px;
 }
  .弹窗1{
     width: 300px;
