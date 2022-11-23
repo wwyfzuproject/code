@@ -287,21 +287,44 @@ position:absolute;
 .在线人员{
     margin-top: 0px;
     margin-bottom: 20px;
-    /* padding-top: 10px; */
+    padding-top: 10px; 
     height: 50px;
     position:relative;
-    list-style-type: none;
+    list-style-type: none; 
 }
-.在线人员 img{
-    /* position: absolute; */
-    margin-left: 30px;
-    margin-top: 10px;
+
+.state{
+    position: absolute;
+    margin-left: 20px;
+    z-index: 1;
 }
+
+.invite{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 185px;
+    z-index: 11;
+}
+
+
 .在线人员 p{
     position: absolute;
-    left: 100px;
-    top: 18px;
+    margin-top: 7px;
+    margin-left: 100px;
+    z-index: 11;
 }
 .search{
-    margin-left: 2px;
+    margin-left:9px;
+}
+.input{
+    float: left;
+    box-sizing: border-box;
+}
+.button{
+    background-color: #999;
+    color: white;
+    font-size: 5px;
+    height: 30px;
+    width: 50px;
+    border: none;
 }
