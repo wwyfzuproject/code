@@ -38,6 +38,10 @@ body{
     border-width: 1px;
     border-style:solid; */
 }
+.上框 li{
+    float:left;
+    list-style-type: none;
+}
 a.排名{
     display:inline-block;
     height: 100px;
@@ -275,4 +279,26 @@ position:absolute;
     width: 120px;
     height: 70px;
     padding-top: 0px;
+}
+.在线列表{
+    margin-top: 100px;
+    height: 461px;
+}
+.在线人员{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* padding-top: 10px; */
+    height: 50px;
+    position:relative;
+    
+}
+.在线人员 img{
+    /* position: absolute; */
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.在线人员 p{
+    position: absolute;
+    left: 100px;
+    top: 18px;
 }
