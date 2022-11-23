@@ -16,23 +16,27 @@
                         
                  </ul>
             </div>
-            <div class="search">
-                <input type="text" placeholder="请输入用户ID/昵称" style="width: 300px;height: 30px;"/>
-            </div>
+            <p class="search">
+                <input type="text" placeholder="请输入用户ID/昵称" style="width: 240px;height: 30px;" class="input"/>
+                <input type="submit" value="搜索" class="button"/>
+            </p>
              <div class="在线列表" id="列表" onmouseenter="mouseenterEvent()" onmouseleave="mouseleaveEvent()">
-                <ul>
+                <ul >
                     <li class="在线人员">
-                        <img src="../imagines/在线列表.png" alt="" width="252px" height="52px">
-                        <p>花开富贵</p>
+                        <img src="../imagines/在线列表.png" alt="" width="252px" height="52px" class="state"  >
+                        <img src="../imagines/邀请按钮.png" alt="" width="60px" height="40px" class="invite" >
+                        <p>花开富贵</p>  
                     </li>
-                    <li  class="在线人员">
-                        <img src="../imagines/在线列表.png" alt="" width="252px" height="52px">
-                        <p>花开富贵</p>
-                    </li >
-                    <li  class="在线人员">
-                        <img src="../imagines/在线列表.png" alt="" width="252px" height="52px">
-                        <p>花开富贵</p>
-                    </li >
+                    <li class="在线人员">
+                        <img src="../imagines/在线列表.png" alt="" width="252px" height="52px" class="state"  >
+                        <img src="../imagines/邀请按钮.png" alt="" width="60px" height="40px" class="invite" >
+                        <p>哈哈哈哈</p>  
+                    </li>
+                    <li class="在线人员">
+                        <img src="../imagines/在线列表.png" alt="" width="252px" height="52px" class="state"  >
+                        <img src="../imagines/邀请按钮.png" alt="" width="60px" height="40px" class="invite" >
+                        <p>李四</p>  
+                    </li>
                 </ul>
             </div>
         </div>      
@@ -102,7 +106,9 @@
 
 
     <!-- <img src="../imagines/骰子2.png" alt=""> -->
-    <script>
+    <script >
+       
+
 
         // 排行榜滚动
         const dom = document.getElementById ('列表')
