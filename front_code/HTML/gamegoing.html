@@ -71,16 +71,24 @@
     <button>骰子</button>
     <script>
         var player1 = document.querySelector('.p1');
+        var player2 = document.querySelector('.p2');
         var btn = document.querySelector('button');
         var num = 1; //骰子数
         var target;
         //点击骰子后触发
         btn.addEventListener('click',function(){
-            target = player1.offsetLeft + num*(-19);
+            target = player1.offsetLeft + num*(-25);
             console.log(target);
             console.log(player1.offsetLeft);
             console.log(player1.offsetTop);
-            animate(player1,target,num);
+            animate1(player1,target,num);
+        })
+        btn.addEventListener('click',function(){
+            target = player2.offsetLeft + num*(-29);
+            console.log(target);
+            console.log(player2.offsetLeft);
+            console.log(player2.offsetTop);
+            animate2(player2,target,num);
         })
     </script>
 </body>
