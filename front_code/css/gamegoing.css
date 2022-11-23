@@ -1,0 +1,258 @@
+/* 消除这些元素的默认边框边距等 */
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+input{
+    margin: 0;
+    padding: 0;
+}
+/* 去掉无序列表自带的圆点 */
+li{
+    list-style: none;
+}
+/* 去点a标签自带的下划线 */
+a{
+    text-decoration: none;
+}
+/* 游戏界面总的大小 */
+.bgbox{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,0);
+    width: 789px;
+    height: 561px;
+    /* background-color: pink; */
+    background-image: url(../imagines/地图.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* margin: 0 auto; */
+}
+/* 玩家1的头像设置 */
+.bgbox .role1 .img1{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* background-color: greenyellow; */
+    background-color: #fff;
+    background-image: url(../imagines/角色1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid rgb(255, 170, 0);
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+    top: 6px;
+    z-index: 10;
+}
+/* 玩家1的名称设置 */
+.bgbox .role1 .name1{
+    display: inline-block;
+    width: 125px;
+    height: 34px;
+    background-color: #fcf6ea;
+    border: 2px solid #bbb;
+    position: relative;
+    left: -10px;
+    top: -20px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 8;
+}
+/* 玩家1打卡点的设置 */
+/* .bgbox .role1 .daka1 li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0b2;
+    border-radius: 50%;
+    position: relative;
+    left: 133px;
+    top: -8px;
+    box-shadow: 0 2px 6px 0 #000;
+    margin-right: 5px;
+} */
+/* 玩家2的头像设置 */
+.bgbox .role2 .img2{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* background-color: greenyellow; */
+    background-color: #fff;
+    background-image: url(../imagines/角色2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid rgb(255, 170, 0);
+    border-radius: 50%;
+    position: relative;
+    left: -39px;
+    top: -13px;
+    z-index: 10;
+}
+/* 玩家2的名称设置 */
+.bgbox .role2 .name2{
+    display: inline-block;
+    width: 125px;
+    height: 34px;
+    background-color: #fcf6ea;
+    border: 2px solid #bbb;
+    position: relative;
+    left: -53px;
+    top: -39px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 8;
+}
+/* 玩家2打卡点的设置 */
+/* .bgbox .role2 .daka2 li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0b2;
+    border-radius: 50%;
+    position: relative;
+    left: 133px;
+    top: -8px;
+    box-shadow: 0 2px 6px 0 #000;
+    margin-right: 5px;
+} */
+/* 玩家1和玩家2打卡点设置 */
+.bgbox .daka1 li,.bgbox .daka2 li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0b2;
+    border-radius: 50%;
+    position: relative;
+    left: 133px;
+    top: -13px;
+    box-shadow: 0 2px 6px 0 #000;
+    margin-right: 5px;
+}
+/* 设置打卡点名称的位置和颜色 */
+.bgbox .name3{
+    text-align: center;
+    position: relative;
+    left: -25px;
+    top: -122px;
+    color: rgb(8,8,8);
+}
+/* 地图上玩家1初始位置 */
+.bgbox .mr1 img{
+    position: relative;
+    float: left;
+    width: 45px;
+    height: 55px;
+    left: 691px;
+    /* bottom: -36px; */
+    top: 37px;
+    z-index: 10;
+}
+/* 地图上玩家2初始位置 */
+.bgbox .mr2 img{
+    position: relative;
+    float: left;
+    width: 45px;
+    height: 55px;
+    left: 728px;
+    top: -32px;
+    /* bottom: 33px; */
+    z-index: 10;
+}
+/* 随机事件的位置 */
+.bgbox .suiji .one{
+    float: right;
+    position: relative;
+    left: -55px;
+    top: -41px;
+}
+.bgbox .suiji .two{
+    float: right;
+    position: relative;
+    left: -149px;
+    top: -25px;
+}
+.bgbox .suiji .three{
+    float: right;
+    position: relative;
+    left: -207px;
+    top: 38px;
+}
+.bgbox .suiji .four{
+    float: left;
+    position: relative;
+    left: 263px;
+    top: 23px;
+}
+.bgbox .suiji .five{
+    float: left;
+    position: relative;
+    left: 105px;
+    top: 40px;
+}
+.bgbox .suiji .six{
+    float: left;
+    position: relative;
+    left: 60px;
+    top: 132px;
+}
+.bgbox .suiji .seven{
+    float: left;
+    position: relative;
+    left: 186px;
+    top: 201px;
+}
+.bgbox .suiji .eight{
+    float: left;
+    position: relative;
+    left: 298px;
+    bottom: -204px;
+}
+.bgbox .suiji .nine{
+    float: right;
+    position: relative;
+    left: -124px;
+    top: 144px;
+}
+.bgbox .suiji .ten{
+    float: right;
+    position: relative;
+    left: 44px;
+    top: 44px;
+}
+/* 设置随机事件的背景颜色 */
+.bgbox .suiji li:nth-child(-n+10){
+    background-color: rgb(194, 240, 242);
+    border-radius: 50%;
+}
+/* 小白站点的位置 */
+.bgbox .suiji .bus1{
+    float: right;
+    position: relative;
+    left: -59px;
+    top: -3px;
+}
+.bgbox .suiji .bus2{
+    float: left;
+    position: relative;
+    left: -93px;
+    top: 105px;
+}
+.bgbox .suiji .bus3{
+    float: right;
+    position: relative;
+    left: 18px;
+    top: 106px;
+}
+.bgbox .suiji ul {
+    position: relative;
+    /* float: left; */
+    left: -45px;
+}
