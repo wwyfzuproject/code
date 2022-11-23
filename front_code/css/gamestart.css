@@ -281,16 +281,16 @@ position:absolute;
     padding-top: 0px;
 }
 .在线列表{
-    margin-top: 100px;
+    margin-top: 5px;
     height: 461px;
 }
 .在线人员{
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 20px;
     /* padding-top: 10px; */
     height: 50px;
     position:relative;
-    
+    list-style-type: none;
 }
 .在线人员 img{
     /* position: absolute; */
@@ -301,4 +301,7 @@ position:absolute;
     position: absolute;
     left: 100px;
     top: 18px;
+}
+.search{
+    margin-left: 2px;
 }
