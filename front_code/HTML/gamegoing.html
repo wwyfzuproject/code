@@ -77,12 +77,11 @@
             <!-- <img src="../imagines/骰子2(1).png" alt="骰子"> -->
         </div>
     </div>
-    <button>骰子</button>
+
     <script>
         var flag = 1; //falg为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
         var player2 = document.querySelector('.p2');
-        var btn = document.querySelector('button');
 
         var tz = document.querySelector('#tz');
         var time = document.querySelector('.time');
@@ -90,16 +89,40 @@
 
         var target;
         //点击骰子后触发
-        
+
         clock(time);
-        btn.addEventListener('click', function () {
-            num = getnum();
+
+        tz.addEventListener('click', function () {
+            num = getnum(); //num从后端获取？
+            time.innerHTML = '倒计时';
+            clearInterval(time.timer);
+            switch (num) {
+                case 1:
+                    tz.src = '../imagines/骰子1(1).png';
+                    break;
+                case 2:
+                    tz.src = '../imagines/骰子2(1).png';
+                    break;
+                case 3:
+                    tz.src = '../imagines/骰子3(1).png';
+                    break;
+                case 4:
+                    tz.src = '../imagines/骰子4(1).png';
+                    break;
+                case 5:
+                    tz.src = '../imagines/骰子5(1).png';
+                    break;
+                case 6:
+                    tz.src = '../imagines/骰子6(1).png';
+                    break;
+            }
+            //玩家移动期间禁用骰子，移动完之后再恢复
             if (flag % 2) {
                 target = player1.offsetLeft + num * (-26);
                 console.log(target);
                 console.log(player1.offsetLeft);
                 console.log(player1.offsetTop);
-                animate1(player1, target, num);
+                animate1(player1, target, time, num);
                 flag++;
             }
             else {
@@ -107,14 +130,9 @@
                 console.log(target);
                 console.log(player2.offsetLeft);
                 console.log(player2.offsetTop);
-                animate2(player2, target, num);
+                animate2(player2, target, time, num);
                 flag++;
             }
-
-        })
-
-
-        tz.addEventListener('click', function () {
 
         })
 

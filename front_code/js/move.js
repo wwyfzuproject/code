@@ -1,4 +1,4 @@
-function animate1(obj, target, num, callback) {
+function animate1(obj, target, time, num, callback) {
     clearInterval(obj.timer);
     obj.timer = setInterval(function () {
         if (obj.offsetLeft <= target) {
@@ -6,6 +6,7 @@ function animate1(obj, target, num, callback) {
             console.log(target);
             console.log(player1.offsetLeft);
             console.log(player1.offsetTop);
+            clock(time);
         }
         else {
             var top = obj.offsetTop - 67;
@@ -15,7 +16,7 @@ function animate1(obj, target, num, callback) {
     }, 100)
 
 }
-function animate2(obj, target, num, callback) {
+function animate2(obj, target, time, num, callback) {
     clearInterval(obj.timer);
     obj.timer = setInterval(function () {
         if (obj.offsetLeft <= target) {
@@ -23,6 +24,7 @@ function animate2(obj, target, num, callback) {
             console.log(target);
             console.log(player1.offsetLeft);
             console.log(player1.offsetTop);
+            clock(time);
         }
         else {
             var top = obj.offsetTop - 135;
@@ -34,10 +36,11 @@ function animate2(obj, target, num, callback) {
 }
 
 function clock(obj) {
+    clearInterval(obj.timer);
     var time = 10;
-    var timer = setInterval(function () {
+    obj.timer = setInterval(function () {
         if (time == 0) {
-            clearInterval(timer);
+            clearInterval(obj.timer);
             obj.innerHTML = '倒计时';
         }
         else {
