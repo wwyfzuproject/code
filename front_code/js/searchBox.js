@@ -17,7 +17,7 @@ $(function(){
                     divs+="<div onclick='writeContent(this)'  onmouseover='changeBgcolor(this)' onmouseout='turnBgcolor(this)'>"+cons[i]+"</div>";
                 }
                 tips.html(divs);
-                tips.css("display","block")
+                tips.css("display","block")//这里可能会有点问题***
             },
             // error:function(){
             //     alert("请求失败！")
@@ -45,7 +45,7 @@ function writeContent(div){
     div.parentNode.style.display="none";
 }
 function changeBgcolor(div){
-    div.style.background="blue";
+    div.style.background="#F4E5C4";
 }
 function turnBgcolor(div){
     div.style.background="";
