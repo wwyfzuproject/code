@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/gamegoing.css">
     <script src="../js/move.js"></script>
 </head>
+
 <body>
     <div class="bgbox">
         <!-- 玩家1 -->
@@ -17,13 +19,13 @@
             <div class="name1">
                 <p>张三三三三</p>
                 <div class="daka1">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -71,32 +73,54 @@
         <div class="time">倒计时</div>
         <!-- 骰子 -->
         <div class="touzi">
-            <img src="../imagines/骰子1(1).png" alt="骰子">
+            <img src="../imagines/骰子1(1).png" alt="骰子" id="tz">
             <!-- <img src="../imagines/骰子2(1).png" alt="骰子"> -->
         </div>
     </div>
     <button>骰子</button>
     <script>
+        var flag = 1; //falg为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
         var player2 = document.querySelector('.p2');
         var btn = document.querySelector('button');
-        var num = 1; //骰子数
+
+        var tz = document.querySelector('#tz');
+        var time = document.querySelector('.time');
+        var num; //骰子数
+
         var target;
         //点击骰子后触发
-        btn.addEventListener('click',function(){
-            target = player1.offsetLeft + num*(-25);
-            console.log(target);
-            console.log(player1.offsetLeft);
-            console.log(player1.offsetTop);
-            animate1(player1,target,num);
+        
+        clock(time);
+        btn.addEventListener('click', function () {
+            num = getnum();
+            if (flag % 2) {
+                target = player1.offsetLeft + num * (-26);
+                console.log(target);
+                console.log(player1.offsetLeft);
+                console.log(player1.offsetTop);
+                animate1(player1, target, num);
+                flag++;
+            }
+            else {
+                target = player2.offsetLeft + num * (-30);
+                console.log(target);
+                console.log(player2.offsetLeft);
+                console.log(player2.offsetTop);
+                animate2(player2, target, num);
+                flag++;
+            }
+
         })
-        btn.addEventListener('click',function(){
-            target = player2.offsetLeft + num*(-29);
-            console.log(target);
-            console.log(player2.offsetLeft);
-            console.log(player2.offsetTop);
-            animate2(player2,target,num);
+
+
+        tz.addEventListener('click', function () {
+
         })
+
+
+
     </script>
 </body>
+
 </html>
