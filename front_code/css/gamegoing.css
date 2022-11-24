@@ -278,3 +278,56 @@ a{
     top: 290px;
     z-index: 11;
 }
+/* 游戏结束时弹窗样式 */
+.win1-over {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 20;    /*背景层*/
+    text-align: center;
+}
+.win1-over .win1-content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: rgb(252, 246, 234);
+    border-radius: 20px;
+    z-index: 21;
+}
+.win1-over .win1-content .shang {
+    width: 400px;
+    height: 70px;
+    background-color: rgb(158,201,86);
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(100,16,19);
+}
+.win2-daka {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 30;    /*背景层*/
+    text-align: center;
+}
+.win2-daka .win2-content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 560px;
+    background-color: #fff;
+    z-index: 31;
+}
