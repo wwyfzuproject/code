@@ -8,8 +8,8 @@
     <title>蛙蛙游福大</title>
     <link rel="stylesheet" href="../css/index.css">
 </head>
-<script src="../js/JQuery-3.6.1.min.js"></script>
-<script src="../js/signin.js"></script>
+<script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../js/signin.js"></script>
 <body>
     <div class="homepage">
         <!-- 注册 -->
@@ -25,7 +25,7 @@
         <div class="sign_up">
             <!-- 关闭的小图标 -->
             <div class="close1"></div>
-            <form>
+            <form id="signupForm">
                 <!--用户邮箱-电子邮件-->
                 <p class="one">
                     <input type="email" name="email" placeholder="请输入邮箱" id="email">
@@ -74,7 +74,7 @@
                 </p>
                 <!-- 登录按钮 -->
                 <p class="in_three">
-                    <input type="submit" value="登录" id="signup" onclick="signin()">
+                    <input type="submit" value="登录" id="signin">
                 </p>
             </form>
         </div>
