@@ -8,8 +8,8 @@ function animate1(obj, time, num, callback) {
             if (num==0) {
             clearInterval(obj.timer);
             console.log(target);
-            console.log(player1.offsetLeft);
-            console.log(player1.offsetTop);
+            console.log(obj.offsetLeft);
+            console.log(obj.offsetTop);
             clock(time);
         }
         else {
@@ -59,19 +59,59 @@ function animate1(obj, time, num, callback) {
 }
 function animate2(obj, time, num, callback) {
     clearInterval(obj.timer);
-    var target = obj.offsetLeft + num * (-30);
+    var target, flag;
+    flag = 0;
+    // var target = obj.offsetLeft + num * (-30);
     obj.timer = setInterval(function () {
-        if (obj.offsetLeft <= target) {
+        if (num==0) {
+            // if (obj.offsetLeft <= target) {
             clearInterval(obj.timer);
             console.log(target);
-            console.log(player1.offsetLeft);
-            console.log(player1.offsetTop);
+            console.log(obj.offsetLeft);
+            console.log(obj.offsetTop);
             clock(time);
         }
         else {
-            var top = obj.offsetTop - 135;
-            obj.style.left = obj.offsetLeft - 2 + 'px';
-            obj.style.top = top - 1 + 'px';
+
+            // var top = obj.offsetTop - 135;
+            // obj.style.left = obj.offsetLeft - 2 + 'px';
+            // obj.style.top = top - 1 + 'px';
+
+            if ((obj.offsetLeft > 602) && (obj.offsetTop <= 103)) {
+
+                if(flag==0) {
+                    target = obj.offsetLeft + num * (-30);
+                    flag++;
+                } 
+
+                var top = obj.offsetTop - 135;
+                obj.style.left = obj.offsetLeft - 2 + 'px';
+                obj.style.top = top - 1 + 'px';
+                
+                if((obj.offsetLeft - target)%30==0) {
+                    num--;
+                    target = obj.offsetLeft + num * (-30);
+                    console.log(num);
+                }
+                
+            }
+            else if ((obj.offsetLeft <= 602) && (obj.offsetTop <= 202) && (obj.offsetLeft > 378)) {
+
+                if(flag<2) {
+                    target = obj.offsetLeft + num * (-32);
+                    flag = 3;
+                }
+                
+                var top = obj.offsetTop - 135;
+                obj.style.left = obj.offsetLeft - 4 + 'px';
+                obj.style.top = top + 3 + 'px';
+
+                if((obj.offsetLeft - target)%32==0) {
+                    num--;
+                    target = obj.offsetLeft + num * (-32);
+                    console.log(num);
+                }
+            }
         }
     }, 100)
 

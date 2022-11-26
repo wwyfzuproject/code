@@ -89,7 +89,7 @@
         <div class="win2-content"></div>
     </div>
     <script>
-        var flag = 1; //falg为奇数时p1行动，否则p2行动
+        var flag = 1; //flag为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
         var player2 = document.querySelector('.p2');
 
@@ -103,8 +103,8 @@
         clock(time);
 
         tz.addEventListener('click', function () {
-            num = getnum(); //num从后端获取？
-            // num = 4;
+            // num = getnum(); //num从后端获取？
+            num = 4;
             time.innerHTML = '倒计时';
             clearInterval(time.timer);
             switch (num) {
@@ -133,7 +133,7 @@
                 // console.log(target);
                 console.log(player1.offsetLeft);
                 console.log(player1.offsetTop);
-                animate1(player1, time, num);
+                // animate1(player1, time, num);
                 flag++;
             }
             else {
