@@ -285,10 +285,11 @@ a{
     right: 0;
     left: 0;
     bottom: 0;
-    /* display: none; */
+    display: none;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 20;    /*背景层*/
     text-align: center;
+    
 }
 .win1-over .win1-content {
     position: relative;
