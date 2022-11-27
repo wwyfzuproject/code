@@ -1,11 +1,13 @@
 $(function(){
     // 签到按钮
     $("#sign").onclick(function(){
+        var objs={name:"",msg:"sign"};
+
         $.ajax({
             url:"",
             type:"get",
             dataType:"json",
-            data:JSON.stringify(),
+            data:objs,
             success:function(resp){
                 console.log(resp);
             },
@@ -16,11 +18,13 @@ $(function(){
     });
     // 分享按钮
     $("#share").onclick(function(){
+        var objr={name:"",msg:"share"};
+
         $.ajax({
             url:"",
             type:"get",
             dataType:"json",
-            data:JSON.stringify(),
+            data:objr,
             success:function(resp){
                 console.log(resp);
             },

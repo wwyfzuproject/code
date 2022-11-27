@@ -1,10 +1,12 @@
 $(function(){
     $("#invite").onclick(function(){
+        var obji={};
+
         $.ajax({
             url:"",
             type:"post",
             dateType:"json",
-            data:JSON.stringify(),
+            data:obji,
             success:function(resp){
     
             },
@@ -13,5 +15,5 @@ $(function(){
             }
         });
     });
-    
+
 });

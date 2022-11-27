@@ -1,11 +1,13 @@
 $(function(){
     // 单人开始游戏按钮
     $("#single-game").onclick(function(){
+        objg={};
+
         $.ajax({
             url:"",
             type:"get",
             dataType:"json",
-            data:JSON.stringify(),
+            data:objg,
             success:function(resp){
                 console.log(resp);
             },
