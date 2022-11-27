@@ -103,8 +103,8 @@
         clock(time);
 
         tz.addEventListener('click', function () {
-            // num = getnum(); //num从后端获取？
-            num = 4;
+            num = getnum(); //num从后端获取？
+            // num = 4;
             time.innerHTML = '倒计时';
             clearInterval(time.timer);
             switch (num) {
