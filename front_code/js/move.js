@@ -38,7 +38,7 @@ function animate1(obj, time, num, callback) {
 
                 if(flag<2) {
                     target = obj.offsetLeft + num * (-28);
-                    flag = 3;
+                    flag = 2;
                 }
                 
                 var top = obj.offsetTop - 67;
@@ -50,6 +50,24 @@ function animate1(obj, time, num, callback) {
                     target = obj.offsetLeft + num * (-28);
                     console.log(num);
                 }
+            }
+
+            else if( 1) {
+
+                if(flag<3) {
+                    target = obj.offsetLeft + num * (-26);
+                    flag++;
+                }
+                var top = obj.offsetTop - 67;
+                obj.style.left = obj.offsetLeft - 2 + 'px';
+                obj.style.top = top - 1 + 'px';
+                
+                if((obj.offsetLeft - target)%26==0) {
+                    num--;
+                    target = obj.offsetLeft + num * (-26);
+                    console.log(num);
+                }
+
             }
 
             // num--;
