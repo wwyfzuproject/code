@@ -140,7 +140,7 @@ a{
 .bgbox .name3{
     text-align: center;
     position: relative;
-    left: -25px;
+    left: -52px;
     top: -122px;
     color: rgb(8,8,8);
 }
@@ -161,7 +161,7 @@ a{
     float: left;
     width: 45px;
     height: 55px;
-    left: 728px;
+    left: 722px;
     top: -32px;
     /* bottom: 33px; */
     z-index: 10;
@@ -255,4 +255,150 @@ a{
     position: relative;
     /* float: left; */
     left: -45px;
+}
+/* 倒计时 */
+.bgbox .time {
+    float: left;
+    position: relative;
+    left: 430px;
+    top: 250px;
+    width: 50px;
+    height: 30px;
+    padding-top: 5px;
+    background-color: rgb(204, 241, 166);
+    text-align: center;
+    border-radius: 30%;
+    /* display: none; */
+}
+/* 骰子位置和大小 */
+.bgbox .touzi img {
+    float: left;
+    position: relative;
+    left: 360px;
+    top: 290px;
+    z-index: 11;
+}
+/* 游戏结束时弹窗样式 */
+.win1-over {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 20;    /*背景层*/
+    text-align: center;
+    
+}
+.win1-over .win1-content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: 380px;
+    background-color: rgb(252, 246, 234);
+    border-radius: 20px;
+    z-index: 21;
+}
+/* 游戏结束上窗口样式 */
+.win1-over .win1-content .shang {
+    width: 360px;
+    height: 60px;
+    background-color: rgb(158,201,86);
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-size: 34px;
+    color: rgb(100,16,19);
+}
+/* 胜利玩家 */
+.win1-content .winner {
+    width: 360px;
+    height: 80px;
+}
+/* .win1-content .winner .winner-img{
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url(../imagines/角色1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+/* 胜利玩家头像 */
+.win1-content .winner img {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid rgb(187, 216, 118);
+    position: absolute;
+    left: 30px;
+    top: 100px;
+}
+.win1-content .winner .winner-text {
+    width: 200px;
+    height: 45px;
+    background-color: rgb(252, 220, 135);
+    /* border: 2px solid #bbb; */
+    border-radius: 10px;
+    position: absolute;
+    left: 100px;
+    top: 110px;
+}
+/* 失败玩家 */
+.win1-content .loser {
+    width: 360px;
+    height: 80px;
+}
+/* 失败玩家头像 */
+.win1-content .loser img {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid rgb(187, 216, 118);
+    position: absolute;
+    left: 30px;
+    top: 190px;
+}
+.win1-content .loser .loser-text {
+    width: 200px;
+    height: 45px;
+    background-color: rgb(252, 220, 135);
+    border-radius: 10px;
+    position: absolute;
+    left: 100px;
+    top: 203px;
+}
+.win1-content .b1 {
+    background-color: rgba(158, 201, 86, 1);
+    position: absolute;
+    left: 100px;
+    top: 300px;
+}
+.win1-content .b2 {
+    background-color: rgba(158, 201, 86, 1);
+    position: absolute;
+    left: 210px;
+    top: 300px;
+}
+/* 打卡弹窗样式 */
+.win2-daka {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 30;    /*背景层*/
+    text-align: center;
+}
+.win2-daka .win2-content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 400px;
+    background-color: #fff;
+    z-index: 31;
 }

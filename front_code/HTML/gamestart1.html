@@ -7,6 +7,10 @@
     <title>蛙蛙游福大</title>
     <link rel="stylesheet" type="text/css" href="../css/gamestart.css">
 </head>
+<script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../js/single-game.js"></script>
+<script type="text/javascript" src="../js/share&sign.js"></script>
+<script type="text/javascript" src="../js/coin&name&img.js"></script>
 <body>
     <div class="背景">
         <div class="排行榜">
@@ -62,8 +66,10 @@
         <div class="playerset">
             <img src="../imagines/金币.png" width="40px" height="40px">
             <p class="coinNum">&nbspX&nbsp</p>
-            <p class="coinNum">22.5w</p>
-            <div class="name">法外狂徒张三</div>
+            <div id="coinNumber"></div>
+            <div id="username"></div>
+            <!-- <p class="coinNum" id="coinNumber">22.5w</p> -->
+            <!-- <div class="name" id="name">法外狂徒张三</div> -->
             
         </div>
 
@@ -79,12 +85,14 @@
             
         </div>
 
-        <img src="../imagines/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
+        <div id="single-game">
+            <img src="../imagines/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
+        </div>
         <div class="ss">
-            <div class="signin" >
+            <div class="signin" id="sign">
                 <img src="../imagines/签到.png" alt="" width="30px" height="30px">
             </div>
-            <div class="share">
+            <div class="share" id="share">
                 <img src="../imagines/分享.png" alt="" width="30px" height="30px">
             </div>
         </div>

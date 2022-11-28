@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蛙蛙游福大</title>
     <link rel="stylesheet" type="text/css" href="../css/gamestart.css">
+    <script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../js/searchBox.js"></script>
+    <script type="text/javascript" src="../js/share&sign.js"></script>
 </head>
 <body>
     <div class="背景">
@@ -17,9 +20,14 @@
                  </ul>
             </div>
             <p class="search">
-                <input type="text" placeholder="请输入用户ID/昵称" style="width: 240px;height: 30px;" class="input"/>
-                <input type="submit" value="搜索" class="button"/>
+                <form action="" method="get">
+                    <input type="text" placeholder="请输入用户ID/昵称" style="width: 240px;height: 30px;" class="input" id="content">
+                    <input type="submit" value="搜索" class="button" id="submit">
+                </form>
             </p>
+            <!-- 搜索结果列表显示 -->
+            <div id="tips" style="display: none; width:240px;height: 200px;border: gray solid 1px;"></div>
+
              <div class="在线列表" id="列表" onmouseenter="mouseenterEvent()" onmouseleave="mouseleaveEvent()">
                 <ul >
                     <li class="在线人员">
@@ -65,10 +73,10 @@
 
         <img src="../imagines/开始游戏.png"  width="200px" height="80px" alt="" class="开始游戏">
         <div class="ss">
-            <div class="signin" >
+            <div class="signin" id="sign">
                 <img src="../imagines/签到.png" alt="" width="30px" height="30px">
             </div>
-            <div class="share">
+            <div class="share" id="share">
                 <img src="../imagines/分享.png" alt="" width="30px" height="30px">
             </div>
         </div>
