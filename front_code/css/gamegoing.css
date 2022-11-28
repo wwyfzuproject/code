@@ -26,7 +26,7 @@ a{
     width: 789px;
     height: 561px;
     /* background-color: pink; */
-    background-image: url(../imagines/地图.jpg);
+    background-image: url(../imagines/map.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     /* margin: 0 auto; */
@@ -38,7 +38,7 @@ a{
     height: 40px;
     /* background-color: greenyellow; */
     background-color: #fff;
-    background-image: url(../imagines/角色1.png);
+    background-image: url(../imagines/role1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -84,7 +84,7 @@ a{
     height: 40px;
     /* background-color: greenyellow; */
     background-color: #fff;
-    background-image: url(../imagines/角色2.png);
+    background-image: url(../imagines/role2.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -322,7 +322,7 @@ a{
     height: 60px;
     background-color: #fff;
     border-radius: 50%;
-    background-image: url(../imagines/角色1.png);
+    background-image: url(../imagines/role1.png);
     background-repeat: no-repeat;
     background-size: contain;
 } */
