@@ -110,34 +110,6 @@
        
 
 
-        // 排行榜滚动
-        const dom = document.getElementById ('列表')
-        const scpDom = document.getElementsByClassName('数据')
-        let time = null
-        console.log(dom.scrollHeight, dom.offsetHeight);
-        time = setInterval(() => {
-            dom.scrollTop++;
-            if (dom.scrollTop >= dom.scrollHeight - dom.offsetHeight) {
-                console.log("111");
-                dom.scrollTop = 0;
-            }
-         }, 10)
-
-        function mouseenterEvent() {
-            clearInterval(time);
-            //将定时器停止
-        }
-
-        function mouseleaveEvent() {
-            time = setInterval(() => {
-            dom.scrollTop++;
-            if (dom.scrollTop >= dom.scrollHeight - dom.offsetHeight) {
-                console.log("111");
-                dom.scrollTop = 0;
-            }
-        }, 10)
-    }
-
         // 签到和分享页面的弹窗
         var tan1=document.getElementById('tan1');
         var 签=document.querySelector(".signin");
@@ -186,7 +158,9 @@
             renshu.style.background='aliceblue';
         };
        
-
+//邀请
+        var invite=document.querySelector(".invite")
+        
     </script>
 </body>
 
