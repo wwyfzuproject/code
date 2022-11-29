@@ -107,6 +107,11 @@
             <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
             <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
         </div>
+
+        <!-- 已发送邀请，等待对方接收弹窗 -->
+        <div class="wait-accept">
+            已发送邀请，等待对方接收
+        </div>
     </div>
 
 
@@ -150,21 +155,9 @@
 
         }
 
-
-        var paiming1 = document.querySelector(".排名")
-        var renshu = document.querySelector(".在线人数")
-
-        paiming1.onclick = function () {
-            paiming1.style.background = 'black';
-        };
-        renshu.onclick = function () {
-            paiming1.style.background = 'rgb(244,203, 124)';
-            renshu.style.background = 'aliceblue';
-        };
-
         //邀请
         var invite = document.querySelector(".invite")
-        
+
 
     </script>
 </body>
@@ -177,11 +170,11 @@
                 mouseWheel: true
             })
             const nameDataList = ['张三', '李四', '王五']; // 
-            const allTotal = 100; // 达到100条数据，不再加载（这个值可修改）
+            const allTotal = 100; // 达到100条数据，不再加载
             const size = 10;
             let page = 1;
             function loadData() {
-                // 之后有对接接口，把这里面替换掉就行了
+                
                 const value = size || 10;
                 const dataList = Array(value).fill(0).map((_, index) => `<li class="people">
                         <img src="../imagines/online-list.png" alt="" width="252px" height="52px" class="state">
@@ -201,6 +194,10 @@
                 bs.refresh();
             })
         })();
-</script>
+        var invite=document.querySelector(".invite");
+        
+        invite.onclick= function () {
 
+        }
+</script>
 </html>
