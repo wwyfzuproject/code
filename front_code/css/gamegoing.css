@@ -285,7 +285,7 @@ a{
     right: 0;
     left: 0;
     bottom: 0;
-    display: none;
+    /* display: none; */
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 20;    /*背景层*/
     text-align: center;
@@ -327,7 +327,7 @@ a{
     background-size: contain;
 } */
 /* 胜利玩家头像 */
-.win1-content .winner img {
+.win1-content .winner .touxiang1 {
     background-color: #fff;
     border-radius: 50%;
     border: 2px solid rgb(187, 216, 118);
@@ -340,10 +340,25 @@ a{
     height: 45px;
     background-color: rgb(252, 220, 135);
     /* border: 2px solid #bbb; */
-    border-radius: 10px;
+    border-radius: 35px;
     position: absolute;
     left: 100px;
     top: 110px;
+}
+.win1-content .winner .winner-text .jinbi{
+    position: absolute;
+    left: 65px;
+    top: 22px;
+}
+.win1-content .winner .winner-text .jinbishu{
+    position: absolute;
+    left: 90px;
+    top: 20px;
+}
+.win1-content .winner .winner-text .winner-smile{
+    position: absolute;
+    left: 210px;
+    top: 7px;
 }
 /* 失败玩家 */
 .win1-content .loser {
@@ -351,7 +366,7 @@ a{
     height: 80px;
 }
 /* 失败玩家头像 */
-.win1-content .loser img {
+.win1-content .loser .touxiang2 {
     background-color: #fff;
     border-radius: 50%;
     border: 2px solid rgb(187, 216, 118);
@@ -363,22 +378,42 @@ a{
     width: 200px;
     height: 45px;
     background-color: rgb(252, 220, 135);
-    border-radius: 10px;
+    border-radius: 35px;
     position: absolute;
     left: 100px;
     top: 203px;
 }
+.win1-content .loser .loser-text .shibai{
+    position: absolute;
+    left: 65px;
+    top: 22px;
+    font-weight: 700;
+    color: red;
+}
+.win1-content .loser .loser-text .loser-smile{
+    position: absolute;
+    left: 210px;
+    top: 7px;
+}
+
+
 .win1-content .b1 {
     background-color: rgba(158, 201, 86, 1);
     position: absolute;
-    left: 100px;
+    left: 60px;
     top: 300px;
+    border: 0;
+    width: 80px;
+    height: 25px;
 }
 .win1-content .b2 {
     background-color: rgba(158, 201, 86, 1);
     position: absolute;
     left: 210px;
     top: 300px;
+    border: 0;
+    width: 80px;
+    height: 25px;
 }
 /* 打卡弹窗样式 */
 .win2-daka {
