@@ -1,212 +1,187 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蛙蛙游福大</title>
+    <title>蛙蛙</title>
     <link rel="stylesheet" type="text/css" href="../css/gamestart.css">
 </head>
+<script src="https://unpkg.com/better-scroll@latest/dist/better-scroll.min.js"></script>
 <script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../js/single-game.js"></script>
 <script type="text/javascript" src="../js/share&sign.js"></script>
 <script type="text/javascript" src="../js/coin&name&img.js"></script>
+
+
 <body>
-    <div class="背景">
-        <div class="排行榜">
-            <!-- <ul>
-                <li id="S01">排名</li>
-                <li id="S02">在线人数</li>
-            </ul> -->
-             <ul class="上框">
-                <li> <a href="file:///D:/%E5%A4%A7%E4%B8%89%E4%B8%8A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E5%B7%A5/code/front_code/HTML/gamestart1.html" target="_self"><img src="../imagines/ranking.png" alt="" width="152px" height="100px"></a></li><li> <a href="file:///D:/%E5%A4%A7%E4%B8%89%E4%B8%8A%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E5%B7%A5/code/front_code/HTML/gamestart2.html" target="_self"><img src="../imagines/man.png" alt="" width="152px" height="100px"></a></li>
-                    
-             </ul>
-            <!-- 鼠标进入列表时，运行mouseenterEvent，移出列表时，执行leaveevent -->
-             <ul  class="列表" id="列表" onmouseenter="mouseenterEvent()" onmouseleave="mouseleaveEvent()">
-                <li  class="数据" id="数据">
-                    <h1>1</h1>
-                    <img src="../imagines/headimg.png" width="30px" height="30px" class="头像">
-                    <div class="右边" >
-                        <h3>花开富贵</h3>
-                        <div class="金币数">
-                            <img src="../imagines/gold.png" width="20px" height="20px" class="金币">
-                            <h4>x 22.5w</h4>
-                        </div>
-                    </div>
-                </li >
-                <li  class="数据" id="数据">
-                    <h1>2</h1>
-                    <img src="../imagines/headimg.png" width="30px" height="30px" class="头像">
-                    <div class="右边" >
-                        <h3>自由飞翔</h3>
-                        <div class="金币数">
-                            <img src="../imagines/gold.png" width="20px" height="20px" class="金币">
-                            <h4>x 22.5w</h4>
-                        </div>
-                    </div>
-                </li >
-                <li  class="数据" id="数据">
-                    <h1>3</h1>
-                    <img src="../imagines/headimg.png" width="30px" height="30px" class="头像">
-                    <div class="右边" >
-                        <h3>哈哈哈哈</h3>
-                        <div class="金币数">
-                            <img src="../imagines/gold.png" width="20px" height="20px" class="金币">
-                            <h4>x 22.5w</h4>
-                        </div>
-                    </div>
-                </li >
+    <div class="back">
+        <div class="ranking">
+            <div class="clearfix">
+                <ul class="up">
+                    <li> <img src="../imagines/ranking.png" alt="" width="152px" height="100px"></a></li>
+                    <li><a href="../HTML/gamestart2.html" target="_self"><img src="../imagines/online-num1.png" alt=""
+                                width="152px" height="100px"></a></li>
+
+                </ul>
+            </div>
+            <div id="ranking-list__wrapper" class="ranking-list__wrapper">
                 
-             </ul>
+                <ul class="ranking-list">
+                    
+                </ul>
+            </div>
+
         </div>
 
+<!-- 右上角玩家信息 -->
+<div class="right-face">
+    <div class="playerset">
+        <img src="../imagines/gold.png" width="40px" height="40px">
+        <p class="coinNum">&nbspX&nbsp</p>
+        <p class="coinNum">22.5w</p>
+        <div class="name">法外狂徒张三</div>
 
-     <div class="右边界面">
-        <div class="playerset">
-            <img src="../imagines/gold.png" width="40px" height="40px">
-            <p class="coinNum">&nbspX&nbsp</p>
-            <div id="coinNumber"></div>
-            <div id="username"></div>
-            <!-- <p class="coinNum" id="coinNumber">22.5w</p> -->
-            <!-- <div class="name" id="name">法外狂徒张三</div> -->
-            
-        </div>
-
-        <!-- logo -->
-        <div class="playerinfo">
-            
-            <div class="player01">
-                <img src="../imagines/role1.png" alt="" width="200px" height="144px">
-            </div>
-            <div class="邀请">
-                <img src="../imagines/invite.png" alt="" width="150px" height="144px">
-            </div>
-            
-        </div>
-
-        <div id="single-game">
-            <img src="../imagines/startgame.png"  width="200px" height="80px" alt="" class="开始游戏">
-        </div>
-        <div class="ss">
-            <div class="signin" id="sign">
-                <img src="../imagines/qiandao.png" alt="" width="30px" height="30px">
-            </div>
-            <div class="share" id="share">
-                <img src="../imagines/share.png" alt="" width="30px" height="30px">
-            </div>
-        </div>
-        
     </div>
 
-    <!-- //签到和分享 -->
-    
-    <div id="tan1" class="弹窗1" >
-        <div class="签到标题">
-            <strong>签到</strong>  
-            <img src="../imagines/close.png" alt="" width="30px" height="30px" class="关闭">  
-        </div>
-        <div class="签到成功">
-            <h2>签到成功!</h2>
-            <div class="签到金币">
-                <img src="../imagines/gold.png" alt="">
-                <h3>x  100</h3>
+            <!-- logo -->
+            <div class="playerinfo">
+
+                <div class="player01">
+                    <img src="../imagines/role1.png" alt="" width="200px" height="144px">
+                </div>
+
+                <!-- 邀请按钮-->
+                <div class="invite">
+                    <img src="../imagines/invite.png" alt="" width="150px" height="144px" onclick="javascript:location.href='../HTML/gamestart2.html'">
+                </div>
+
             </div>
-            
+
+            <div id="single-game">
+                <img src="../imagines/startgame.png" width="200px" height="80px" alt="" class="startgame">
+            </div>
+            <div class="ss">
+                <div class="signin" id="sign">
+                    <img src="../imagines/qiandao.png" alt="" width="30px" height="30px">
+                </div>
+                <div class="share" id="share">
+                    <img src="../imagines/share.png" alt="" width="30px" height="30px">
+                </div>
+            </div>
 
         </div>
-    </div>
-    
-    <div class="弹窗2">
-        <div class="分享标题">
-            <h2>分享领金币</h2>
-            <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close2"> 
+
+        <!-- //签到和分享 -->
+
+        <div id="tan1" class="tan1">
+            <div class="qiandao-title">
+                <strong>签到</strong>
+                <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close">
+            </div>
+            <div class="qiandao-success">
+                <h2>签到成功!</h2>
+                <div class="qiandao-gold">
+                    <img src="../imagines/gold.png" alt="">
+                    <h3>x 100</h3>
+                </div>
+
+
+            </div>
         </div>
-        <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="链接">
-        <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="复制" >
-    </div>
-    <!-- <img src="../imagines/dice2.png" alt=""> -->
-    <script>
 
-        // 排行榜滚动
-        const dom = document.getElementById ('列表')
-        const scpDom = document.getElementsByClassName('数据')
-        let time = null
-        console.log(dom.scrollHeight, dom.offsetHeight);
-        time = setInterval(() => {
-            dom.scrollTop++;
-            if (dom.scrollTop >= dom.scrollHeight - dom.offsetHeight) {
-                console.log("111");
-                dom.scrollTop = 0;
+        <div class="tan2">
+            <div class="share-title">
+                <h2>分享领金币</h2>
+                <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close2">
+            </div>
+            <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
+            <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
+        </div>
+        <!-- <img src="../imagines/骰子2.png" alt=""> -->
+        <script>
+
+
+            // 签到和分享页面的弹窗
+            var tan1 = document.getElementById('tan1');
+            var qiandao = document.querySelector(".signin");
+            var close1 = document.querySelector(".close");
+            var close2 = document.querySelector(".close2")
+            var tan2 = document.querySelector(".tan2");
+            var share = document.querySelector(".share");
+
+            tan1.style.display = "none";
+            tan2.style.display = "none";
+            qiandao.onclick = function () {
+                tan1.style.display = "block";
             }
-         }, 10)
-
-        function mouseenterEvent() {
-            clearInterval(time);
-            //将定时器停止
-        }
-
-        function mouseleaveEvent() {
-            time = setInterval(() => {
-            dom.scrollTop++;
-            if (dom.scrollTop >= dom.scrollHeight - dom.offsetHeight) {
-                console.log("111");
-                dom.scrollTop = 0;
+            share.onclick = function () {
+                tan2.style.display = "block";
             }
-        }, 10)
-    }
+            window.onclick = function (event) {
 
-        // 签到和分享页面的弹窗
-        var tan1=document.getElementById('tan1');
-        var 签=document.querySelector(".signin");
-        var close1=document.querySelector(".关闭");
-        var close2=document.querySelector(".close2")
-        var tan2=document.querySelector (".弹窗2");
-        var 分享=document.querySelector(".share");
+                if (event.target == tan1) {
+                    tan1.style.display = "none";
+                }
+                if (event.target == tan2) {
+                    tan2.style.display = "none";
+                }
 
-        tan1.style.display="none";
-        tan2.style.display="none";
-        签.onclick=function(){
-            tan1.style.display="block";
-            console.log("nihao");
-        }
-        分享.onclick=function(){
-            tan2.style.display="block";
-        }
-        window.onclick=function(event){
-
-            if(event.target==tan1){
-                tan1.style.display="none";
             }
-            if(event.target==tan2){
-                tan2.style.display="none";
+            close1.onclick = function () {
+                tan1.style.display = "none";
+
             }
-            
-        }
-        close1.onclick=function(){
-            tan1.style.display="none";
-            
-        }
-        close2.onclick=function(){
-            tan2.style.display="none";
-            
-        }
+            close2.onclick = function () {
+                tan2.style.display = "none";
 
-        
-        var paiming1=document.querySelector(".排名")
-        var renshu=document.querySelector(".在线人数")
-        
-        paiming1.onclick=function(){
-            paiming1.style.background='black';
-        };
-        renshu.onclick=function(){
-            paiming1.style.background='rgb(244,203, 124)';
-            renshu.style.background='aliceblue';
-        };
-       
+            }
+            // 邀请
+            var invite=document.querySelector(".invite");
 
-    </script>
+
+
+        </script>
 </body>
+<script>
+    // 排名的加载
+    (function () {
 
+        const wrapper = document.getElementById("ranking-list__wrapper")
+        const bs = BetterScroll.createBScroll(wrapper, {
+            pullUpLoad: true,
+            mouseWheel: true
+        })
+        const nameDataList = ['测试数据']; // 
+        const allTotal = 100; // 达到100条数据，不再加载
+        const size = 10;
+        let page = 1;
+        function loadData() {
+
+            const value = size || 10;
+            const dataList = Array(value).fill(0).map((_, index) => `<li class="ranking-item">
+                        <img src="../imagines/rankings.png" alt="" width="252px" height="52px" class="bg">
+                        <h2>${(page - 1) * value + index + 1}</h2>
+                        <div class="ranking-item__value">
+                            <div>${nameDataList[index % nameDataList.length]}${(page - 1) * value + index + 1}</div>
+                            <div class="coin">${((page - 1) * value + index + 1) * 100}00</div>
+                        </div>
+                    </li>`).join('')
+
+            const dom = document.getElementsByClassName('ranking-list')[0];
+            dom.innerHTML = dom.innerHTML + dataList;
+
+        }
+        loadData();
+        bs.on('pullingUp', () => {
+            if (page * size >= allTotal) return
+            page += 1;
+            loadData();
+            bs.finishPullUp()
+            bs.refresh();
+        })
+    })();
+</script>
 
 </html>
