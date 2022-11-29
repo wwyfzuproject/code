@@ -81,6 +81,11 @@
 
         </div>
 
+        <!-- 已发送邀请，等待对方接收弹窗 -->
+        <div class="wait-accept">
+            已发送邀请，等待对方接收
+        </div>
+
         <!-- //签到和分享弹窗 -->
 
         <div id="tan1" class="tan1">
@@ -108,10 +113,7 @@
             <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
         </div>
 
-        <!-- 已发送邀请，等待对方接收弹窗 -->
-        <div class="wait-accept">
-            已发送邀请，等待对方接收
-        </div>
+        
     </div>
 
 
@@ -155,9 +157,7 @@
 
         }
 
-        //邀请
-        var invite = document.querySelector(".invite")
-
+        
 
     </script>
 </body>
@@ -194,10 +194,19 @@
                 bs.refresh();
             })
         })();
-        var invite=document.querySelector(".invite");
-        
-        invite.onclick= function () {
 
+        // 邀请
+        var invite=document.querySelector(".invite");
+        var wait=document.querySelector(".wait-accept");
+        wait.style.display="none";
+        invite.onclick= function () {
+            wait.style.display="block";
+            setTimeout(function(){
+                wait.style.display="none";
+            },2000)
         }
+
+        
+
 </script>
 </html>

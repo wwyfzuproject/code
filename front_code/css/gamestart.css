@@ -344,3 +344,18 @@
     border: none;
   }
   
+  /* <!-- 已发送邀请，等待对方接收弹窗  */
+  .wait-accept{
+    font-size: 30px;
+    background-color:white;
+    text-align: center;
+    line-height: 50px;
+    font-family:cursive;
+    height: 50px;
+    width: 450px;
+    position:absolute;
+    top: 200px;
+    left: 400px;
+    border-radius: 20px;
+  }
+  
