@@ -72,7 +72,7 @@ function animate1(obj, time, num, callback) {
 
             // num--;
         }
-    }, 100)
+    }, 10)
 
 }
 function animate2(obj, time, num, callback) {
@@ -113,11 +113,11 @@ function animate2(obj, time, num, callback) {
                 }
 
             }
-            else if ((obj.offsetLeft <= 602) && (obj.offsetTop <= 202) && (obj.offsetLeft > 378)) {
+            else if ((obj.offsetLeft <= 602) && (obj.offsetTop <= 208) && (obj.offsetLeft >= 382)) {
 
                 if (flag < 2) {
                     target = obj.offsetLeft + num * (-32);
-                    flag = 3;
+                    flag = 2;
                 }
 
                 var top = obj.offsetTop - 135;
@@ -129,9 +129,29 @@ function animate2(obj, time, num, callback) {
                     target = obj.offsetLeft + num * (-32);
                     console.log(num);
                 }
+
+
+            }
+
+            else if ((obj.offsetLeft <= 378) && (obj.offsetTop <= 211) && (obj.offsetLeft >= 188)) {
+
+                if (flag < 3) {
+                    target = obj.offsetLeft + num * (-32);
+                    flag = 3;
+                }
+                var top = obj.offsetTop - 135;
+                obj.style.left = obj.offsetLeft - 2 + 'px';
+                obj.style.top = top - 1 + 'px';
+
+                if ((obj.offsetLeft - target) % 32 == 0) {
+                    num--;
+                    target = obj.offsetLeft + num * (-32);
+                    console.log(num);
+                }
+
             }
         }
-    }, 100)
+    }, 10)
 
 }
 

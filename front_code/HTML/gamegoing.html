@@ -124,8 +124,8 @@
         clock(time);
 
         tz.addEventListener('click', function () {
-            num = getnum(); //num从后端获取？
-            // num = 4;
+            // num = getnum(); //num从后端获取？
+            num = 1;
             time.innerHTML = '倒计时';
             clearInterval(time.timer);
             switch (num) {
@@ -151,9 +151,9 @@
             //玩家移动期间禁用骰子，移动完之后再恢复
             if (flag % 2) {
                 // console.log(target);
-                console.log(player1.offsetLeft);
-                console.log(player1.offsetTop);
-                animate1(player1, time, num);
+                // console.log(player1.offsetLeft);
+                // console.log(player1.offsetTop);
+                // animate1(player1, time, num);
                 flag++;
             }
             else {
