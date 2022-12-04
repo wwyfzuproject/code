@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛙蛙</title>
+    <link rel="stylesheet" type="text/css" href="../css/gamestart.css">
+</head>
+<script src="https://unpkg.com/better-scroll@latest/dist/better-scroll.min.js"></script>
+<script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../js/single-game.js"></script>
+<script type="text/javascript" src="../js/share&sign.js"></script>
+<script type="text/javascript" src="../js/coin&name&img.js"></script>
+
+
+<body>
+    <div class="back">
+        <div class="ranking">
+            <div class="clearfix">
+                <ul class="up">
+                    <li> <img src="../imagines/ranking.png" alt="" width="152px" height="100px"></a></li>
+                    <li><a href="../HTML/gamestart2.html" target="_self"><img src="../imagines/online-num1.png" alt=""
+                                width="152px" height="100px"></a></li>
+
+                </ul>
+            </div>
+            <div id="ranking-list__wrapper" class="ranking-list__wrapper">
+                
+                <ul class="ranking-list">
+                    
+                </ul>
+            </div>
+
+        </div>
+
+<!-- 右上角玩家信息 -->
+<div class="right-face">
+    <div class="playerset">
+        <img src="../imagines/gold.png" width="40px" height="40px">
+        <p class="coinNum">&nbspX&nbsp</p>
+        <p class="coinNum">22.5w</p>
+        <div class="name">法外狂徒张三</div>
+
+    </div>
+
+            <!-- logo -->
+            <div class="playerinfo">
+
+                <div class="player01">
+                    <img src="../imagines/role1.png" alt="" width="200px" height="144px">
+                </div>
+
+                <!-- 邀请按钮-->
+                <div class="invite">
+                    <img src="../imagines/invite.png" alt="" width="150px" height="144px" onclick="javascript:location.href='../HTML/gamestart2.html'">
+                </div>
+
+            </div>
+
+            <div id="single-game">
+                <img src="../imagines/startgame.png" width="200px" height="80px" alt="" class="startgame">
+            </div>
+            <div class="ss">
+                <div class="signin" id="sign">
+                    <img src="../imagines/qiandao.png" alt="" width="30px" height="30px">
+                </div>
+                <div class="share" id="share">
+                    <img src="../imagines/share.png" alt="" width="30px" height="30px">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- //签到和分享 -->
+
+        <div id="tan1" class="tan1">
+            <div class="qiandao-title">
+                <strong>签到</strong>
+                <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close">
+            </div>
+            <div class="qiandao-success">
+                <h2>签到成功!</h2>
+                <div class="qiandao-gold">
+                    <img src="../imagines/gold.png" alt="">
+                    <h3>x 100</h3>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="tan2">
+            <div class="share-title">
+                <h2>分享领金币</h2>
+                <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close2">
+            </div>
+            <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
+            <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
+        </div>
+        
+        <!-- 被邀请方 -->
+        <div class="invited">
+            <div class="receive">
+                <h1 class="hh1">李四</h1>
+                <h1 class="hh2">邀请你一起玩</h1>
+            </div>
+            
+            <div class="select">
+                <div class="accept" onclick="function1()">接受</div>
+                <div class="refuse"onclick="function2()" >拒绝</div>
+            </div>
+        </div>
+        
+        <script>
+
+
+            // 签到和分享页面的弹窗
+            var tan1 = document.getElementById('tan1');
+            var qiandao = document.querySelector(".signin");
+            var close1 = document.querySelector(".close");
+            var close2 = document.querySelector(".close2")
+            var tan2 = document.querySelector(".tan2");
+            var share = document.querySelector(".share");
+
+            tan1.style.display = "none";
+            tan2.style.display = "none";
+            qiandao.onclick = function () {
+                tan1.style.display = "block";
+            }
+            share.onclick = function () {
+                tan2.style.display = "block";
+            }
+            window.onclick = function (event) {
+
+                if (event.target == tan1) {
+                    tan1.style.display = "none";
+                }
+                if (event.target == tan2) {
+                    tan2.style.display = "none";
+                }
+
+            }
+            close1.onclick = function () {
+                tan1.style.display = "none";
+
+            }
+            close2.onclick = function () {
+                tan2.style.display = "none";
+
+            }
+
+            // 被邀请方的弹窗
+            function function1(){
+                window.location.href='../HTML/invitesuccess.html';
+            }
+            var invited=document.querySelector(".invited")
+            function function2(){
+                invited.style.display="none";
+            }
+
+
+        </script>
+</body>
+<script>
+    // 排名的加载
+    (function () {
+
+        const wrapper = document.getElementById("ranking-list__wrapper")
+        const bs = BetterScroll.createBScroll(wrapper, {
+            pullUpLoad: true,
+            mouseWheel: true
+        })
+        const nameDataList = ['测试数据']; // 
+        const allTotal = 100; // 达到100条数据，不再加载
+        const size = 10;// 每页多少条
+        let page = 1;// 页数
+        function loadData() {
+
+            // 绿色才是注释，不是绿色就是错的
+            // 到时后可以直接这样把值填充就行了，我只是随机显示 
+            const value = size || 10;
+            const dataList = Array(value).fill(0).map((_, index) => {
+                // index 从0开始+1就是1到10，第二页就是11到20
+                return `<li class="ranking-item">
+                        <img src="../imagines/rankings.png" alt="" width="252px" height="52px" class="bg">
+                        <h2>${/*排名序号  */(page - 1) * value + index + 1}</h2>
+                        <div class="ranking-item__value">
+                            <div>测试数据${(page - 1) * value + index + 1}</div>
+                            <div class="coin">${((page - 1) * value + index + 1) * 100}00</div>
+                        </div>
+                    </li>`
+            }).join('')
+
+            const dom = document.getElementsByClassName('ranking-list')[0];
+            dom.innerHTML = dom.innerHTML + dataList;
+
+        }
+        loadData();// 刚开始初始化第一页的数据，打开就有10条数据
+        bs.on('pullingUp', () => {
+            // 滚动到底部触发这个方法，就加载第二页，第三页...
+            if (page * size >= allTotal) return
+            page += 1;// 页数在这里增长
+            loadData();
+        // 数据加载完成
+            bs.finishPullUp()
+            // 更新列表
+            bs.refresh();
+        })
+    })();
+</script>
+
+</html>
