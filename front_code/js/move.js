@@ -72,7 +72,7 @@ function animate1(obj, time, num, callback) {
 
             // num--;
         }
-    }, 10)
+    }, 100)
 
 }
 function animate2(obj, time, num, callback) {
@@ -151,7 +151,7 @@ function animate2(obj, time, num, callback) {
 
             }
         }
-    }, 10)
+    }, 100)
 
 }
 
