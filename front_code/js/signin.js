@@ -23,10 +23,11 @@ $(function(){
         var formdata2=$("#signupForm").serialize();
         
         $.ajax({
-            type:'ppostt',
+            type:'post',
             url:'',
             dataType:"json",
             data:JSON.stringify(formdata2),
+            contentType:"application/json",
             success:function(resp){
                 console.log(resp);
             }
