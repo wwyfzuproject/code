@@ -5,9 +5,11 @@ $(function(){
         var formdata1=$("#signinForm").serialize();
         
         $.ajax({
-            type:'get',
-            url:'http://httpbin.org/get',
-            data:{formdata1},
+            type:'post',
+            url:'',
+            dataType:'json',
+            data:JSON.stringify(formdata1),
+            contentType:"application/json",
             success:function(resp){
                 console.log(resp);
             }
@@ -21,9 +23,10 @@ $(function(){
         var formdata2=$("#signupForm").serialize();
         
         $.ajax({
-            type:'get',
-            url:'http://httpbin.org/get',
-            data:{formdata2},
+            type:'ppostt',
+            url:'',
+            dataType:"json",
+            data:JSON.stringify(formdata2),
             success:function(resp){
                 console.log(resp);
             }
