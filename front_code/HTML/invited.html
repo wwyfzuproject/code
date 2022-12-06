@@ -100,6 +100,18 @@
                 已发送邀请，等待对方接收
             </div>
 
+             <!-- 被邀请方 -->
+        <div class="invited">
+            <div class="receive">
+                <h1 class="hh1">李四</h1>
+                <h1 class="hh2">邀请你一起玩</h1>
+            </div>
+            
+            <div class="select">
+                <div class="accept" onclick="function1()">接受</div>
+                <div class="refuse"onclick="function2()" >拒绝</div>
+            </div>
+        </div>
             <!-- 签到和分享按钮 -->
             <div class="ss">
                 <div class="signin" id="sign">
@@ -175,6 +187,15 @@
             close2.onclick = function () {
                 tan2.style.display = "none";
 
+            }
+            
+            // 被邀请方的弹窗
+            function function1(){
+                window.location.href='../HTML/invitesuccess.html';
+            }
+            var invited=document.querySelector(".invited")
+            function function2(){
+                invited.style.display="none";
             }
             var deduct = document.querySelector(".deduct-gold");
             // 金币扣除提示
@@ -307,7 +328,7 @@
         var wait=document.querySelector(".wait-accept");
         wait.style.display="none";
         invite.onclick= function () {
-            
+
             wait.style.display="block";
             setTimeout(function(){
                 wait.style.display="none";
