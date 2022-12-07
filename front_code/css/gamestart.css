@@ -1,361 +1,433 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+body {
+
+  background-color: white;
+}
+.back {
+  width: 983px;
+  height: 699px;
+  background-color: #d2f09f;
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+}
+.ranking {
+  height: 699px;
+  width: 306px;
+  background-color: aliceblue;
+  border-top: 1px solid darkblue;
+}
+.ranking-list__wrapper {
+  /* calc: css一个可以计算的方法，百度能找到说明。100%就是父盒子的高度，100px是你上面那两个切换的高度，相减就得到最终的 */
+  height: calc(100% - 100px);
+  overflow: hidden;
+  position: relative;
+}
+.ranking-item {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  height: 50px;
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.ranking-item h2 {
+  position: relative;
+  text-align: center;
+  width: 50px;
+  font-size: 16px;
+}
+.ranking-item .ranking-item__value .coin {
+  font-size: 14px;
+  padding-left: 30px;
+}
+.ranking-item .ranking-item__value {
+  position: relative;
+  padding-left: 30px;
+}
+.ranking-item .bg {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.ranking-item p {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 100px;
+  z-index: 11;
+}
+.up {
+  float: left;
+  width: 304px;
+  height: 100px;
+  background-color: aliceblue;
+  /* border-bottom: black;
+    border-width: 1px;
+    border-style:solid; */
+}
+.up li {
+  float: left;
+  list-style-type: none;
+}
+ol {
+  padding-top: 100px;
+  /* height: ; */
+}
+ol li {
+  list-style-image: url(imagines/rankings.png);
+}
+
+
+h3 {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.playerset {
+  width: 414px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 155px;
+  margin-top: 50px;
+}
+.coinNum {
+  font-family: 'KaiTi';
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.顶部 {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 89px;
+  margin-top: 20px;
+}
+
+.name {
+  width: 210px;
+  height: 41px;
+  background-color: antiquewhite;
+  border-radius: 25px;
+  margin-left: 50px;
+  text-align: center;
+  line-height: 43px;
+  font-size: 19px;
+}
+.声音 {
+  margin-left: 50px;
+  padding-right: 10px;
+}
+.playerinfo {
+  margin-top: 170px;
+  margin-left: 96px;
+  display: flex;
+  flex-direction: row;
+}
+.player01 {
+  position: relative;
+  margin-left: 17px;
+}
+
+.invite img{
+  margin-left: 100px;
+}
+.startgame {
+  margin-left: 200px;
+  margin-top: 60px;
+  z-index: 1;
+}
+/* 签到和分享 */
+.ss{
+  margin-top: 60px;
+  display: flex;
+}
+
+/* 签到按钮 */
+.signin {
+  flex-direction: row;
+  padding-right: 50px;
+  margin-left: 500px;
+  margin-top: 0px;
+}
+/* 分享按钮 */
+.share {
+  position: absolute;
+  top: 615px;
+  margin-left: 550px;
+}
+.tan1 {
+  width: 300px;
+  height: 200px;
+  background-color: rgba(215, 236, 184, 1);
+  position: absolute;
+  border: #999 solid 2px;
+  margin-top: 200px;
+  margin-left: 350px;
+}
+.qiandao-title {
+  width: 300;
+  height: 40px;
+  background-color: rgba(157, 207, 84, 1);
+  text-align: center;
+  line-height: 40px;
+  color: aliceblue;
+}
+
+.qiandao-title img {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 3px;
+}
+.qiandao-success {
+  background-color: rgba(215, 236, 184, 1);
+  padding-top: 0px;
+
+  /* transform: translate(-20px); */
+}
+.qiandao-success h2 {
+  color: rgba(129, 179, 55, 1);
+  font-size: 20px;
+  text-align: centerS;
+  margin-top: 30px;
+  margin-left: 100px;
+  font-family: serif;
+}
+.qiandao-gold {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.qiandao-gold img {
+  margin-top: 10px;
+  margin-left: 100px;
+}
+.qiandao-gold h3 {
+  margin-top: 15px;
+  color: rgba(129, 179, 55, 1);
+  font-size: 20px;
+}
+
+.tan2 {
+  width: 300px;
+  height: 230px;
+  background-color: rgba(215, 236, 184, 1);
+  position: absolute;
+  border: #999 solid 2px;
+  margin-top: 200px;
+  margin-left: 350px;
+  display: flex;
+  flex-direction: row;
+}
+.share-title {
+  width: 300;
+  height: 40px;
+  background-color: rgba(157, 207, 84, 1);
+  text-align: center;
+  line-height: 40px;
+  color: aliceblue;
+  /* margin-left: 40px; */
+  display: flex;
+  flex-direction: row;
+}
+.share-title img {
+  margin-top: 10px;
+  position: absolute;
+  /* padding-top: 30px; */
+  margin-top: 6px;
+  margin-left: 260px;
+}
+.share-title h2 {
+  font-size: 20px;
+  width: 100px;
+  margin-left: 90px;
+}
+.link {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+}
+.copy {
+  margin-left: 100px;
+  margin-top: 0px;
+  width: 120px;
+  height: 70px;
+  padding-top: 0px;
+}
+
+.zaixianlist {
+  height: 461px;
+  height: calc(100% - 130px);
+  overflow: hidden;
+  position: relative;
+}
+.people {
+  margin-top: 0px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  height: 50px;
+  position: relative;
+  list-style-type: none;
+}
+
+.state {
+  position: absolute;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+.invite {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 185px;
+  z-index: 11;
+}
+
+.people p {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 100px;
+  z-index: 11;
+}
+.search {
+  margin-left: 9px;
+}
+.input {
+  float: left;
+  box-sizing: border-box;
+}
+.button {
+  background-color: #999;
+  color: white;
+  font-size: 5px;
+  height: 30px;
+  width: 50px;
+  border: none;
+}
+
+/* <!-- 已发送邀请，等待对方接收弹窗  */
+.wait-accept{
+  font-size: 30px;
+  background-color:white;
+  text-align: center;
+  line-height: 50px;
+  font-family:cursive;
+  height: 50px;
+  width: 450px;
+  position:absolute;
+  top: 200px;
+  left: 400px;
+  border-radius: 20px;
+}
+
+/* 被邀请方的弹窗 */
+.invited{
+  position:absolute;
+  height: 200px;
+  width: 300px;
+  background-color: aliceblue;
+  left: 380px;
+  top: 220px;
+  border: 2px solid green;
+  border-radius: 30px; 
+  /* display: flex; */
+}
+.receive h1{
+  display: inline;
+  font-size: 30px;
+  /* position: absolute; */
+  /* top: 50px;
+  left: 70px; */
+}
+.hh1{
+  color: rgba(229,127,138);
+  position: absolute;
+  top: 50px;
+  left: 20px;
   }
-  .clearfix:after {
-    content: '';
-    display: block;
-    visibility: hidden;
-    clear: both;
-  }
-  body {
-  
-    background-color: white;
-  }
-  .back {
-    width: 983px;
-    height: 699px;
-    background-color: #d2f09f;
-    margin: 10px auto;
-    position: relative;
-    display: flex;
-  }
-  .ranking {
-    height: 699px;
-    width: 306px;
-    background-color: aliceblue;
-    border-top: 1px solid darkblue;
-  }
-  .ranking-list__wrapper {
-    height: calc(100% - 100px);
-    overflow: hidden;
-    position: relative;
-  }
-  .ranking-item {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    height: 50px;
-    position: relative;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-  }
-  .ranking-item h2 {
-    position: relative;
-    text-align: center;
-    width: 50px;
-    font-size: 16px;
-  }
-  .ranking-item .ranking-item__value .coin {
-    font-size: 14px;
-    padding-left: 30px;
-  }
-  .ranking-item .ranking-item__value {
-    position: relative;
-    padding-left: 30px;
-  }
-  .ranking-item .bg {
-    position: absolute;
-    left: 20px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  .ranking-item p {
-    position: absolute;
-    margin-top: 7px;
-    margin-left: 100px;
-    z-index: 11;
-  }
-  .up {
-    float: left;
-    width: 304px;
-    height: 100px;
-    background-color: aliceblue;
-    /* border-bottom: black;
-      border-width: 1px;
-      border-style:solid; */
-  }
-  .up li {
-    float: left;
-    list-style-type: none;
-  }
-  ol {
-    padding-top: 100px;
-    /* height: ; */
-  }
-  ol li {
-    list-style-image: url(imagines/rankings.png);
-  }
- 
-  .列表 {
-    width: 304px;
-    height: 461px;
-    padding-top: 100px;
-    color: black;
-  }
-  .数据 {
-    width: 250px;
-    height: 50px;
-    margin-left: 30px;
-    margin-top: 10px;
-    background-color: rgb(246, 232, 205);
-    margin-bottom: 20px;
-    display: flex;
-    /* justify-content: space-around; */
-    border: 1px solid #999;
-    border-radius: 25px;
-  }
-  h1 {
-    width: 20px;
-    font-size: 20px;
-  
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-  .金币数 {
-    flex-direction: row;
-  }
-  .头像 {
-    /* width: 10px;
-      height: 10px; */
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-  h3 {
-    margin-left: 10px;
-    font-size: 20px;
-  }
-  .playerset {
-    width: 414px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 155px;
-    margin-top: 50px;
-  }
-  .coinNum {
-    font-family: 'KaiTi';
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .顶部 {
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 89px;
-    margin-top: 20px;
-  }
-  
-  .name {
-    width: 210px;
-    height: 41px;
-    background-color: antiquewhite;
-    border-radius: 25px;
-    margin-left: 50px;
-    text-align: center;
-    line-height: 43px;
-    font-size: 19px;
-  }
-  .声音 {
-    margin-left: 50px;
-    padding-right: 10px;
-  }
-  .playerinfo {
-    margin-top: 170px;
-    margin-left: 96px;
-    display: flex;
-    flex-direction: row;
-  }
-  .player01 {
-    position: relative;
-    margin-left: 17px;
-  }
-  
-  .invite img{
-    margin-left: 100px;
-  }
-  .startgame {
-    margin-left: 200px;
-    margin-top: 60px;
-  }
-  .ss{
-    margin-top: 60px;
-    display: flex;
-  }
-  .signin {
-    flex-direction: row;
-    padding-right: 50px;
-    margin-left: 500px;
-  }
-  .share {
-    position: absolute;
-    top: 615px;
-    margin-left: 550px;
-  }
-  .tan1 {
-    width: 300px;
-    height: 200px;
-    background-color: rgba(215, 236, 184, 1);
-    position: absolute;
-    border: #999 solid 2px;
-    margin-top: 200px;
-    margin-left: 350px;
-  }
-  .qiandao-title {
-    width: 300;
-    height: 40px;
-    background-color: rgba(157, 207, 84, 1);
-    text-align: center;
-    line-height: 40px;
-    color: aliceblue;
-  }
-  
-  .qiandao-title img {
-    position: absolute;
-    margin-left: 100px;
-    margin-top: 3px;
-  }
-  .qiandao-success {
-    background-color: rgba(215, 236, 184, 1);
-    padding-top: 0px;
-  
-    /* transform: translate(-20px); */
-  }
-  .qiandao-success h2 {
-    color: rgba(129, 179, 55, 1);
-    font-size: 20px;
-    text-align: centerS;
-    margin-top: 30px;
-    margin-left: 100px;
-    font-family: serif;
-  }
-  .qiandao-gold {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-  }
-  .qiandao-gold img {
-    margin-top: 10px;
-    margin-left: 100px;
-  }
-  .qiandao-gold h3 {
-    margin-top: 15px;
-    color: rgba(129, 179, 55, 1);
-    font-size: 20px;
-  }
-  
-  .tan2 {
-    width: 300px;
-    height: 230px;
-    background-color: rgba(215, 236, 184, 1);
-    position: absolute;
-    border: #999 solid 2px;
-    margin-top: 200px;
-    margin-left: 350px;
-    display: flex;
-    flex-direction: row;
-  }
-  .share-title {
-    width: 300;
-    height: 40px;
-    background-color: rgba(157, 207, 84, 1);
-    text-align: center;
-    line-height: 40px;
-    color: aliceblue;
-    /* margin-left: 40px; */
-    display: flex;
-    flex-direction: row;
-  }
-  .share-title img {
-    margin-top: 10px;
-    position: absolute;
-    /* padding-top: 30px; */
-    margin-top: 6px;
-    margin-left: 260px;
-  }
-  .share-title h2 {
-    font-size: 20px;
-    width: 100px;
-    margin-left: 90px;
-  }
-  .link {
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-bottom: 0px;
-  }
-  .copy {
-    margin-left: 100px;
-    margin-top: 0px;
-    width: 120px;
-    height: 70px;
-    padding-top: 0px;
-  }
-  
-  .zaixianlist {
-    height: 461px;
-    height: calc(100% - 130px);
-    overflow: hidden;
-    position: relative;
-  }
-  .people {
-    margin-top: 0px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    height: 50px;
-    position: relative;
-    list-style-type: none;
-  }
-  
-  .state {
-    position: absolute;
-    margin-left: 20px;
-    z-index: 1;
-  }
-  
-  .invite {
-    position: absolute;
-    margin-top: 7px;
-    margin-left: 185px;
-    z-index: 11;
-  }
-  
-  .people p {
-    position: absolute;
-    margin-top: 7px;
-    margin-left: 100px;
-    z-index: 11;
-  }
-  .search {
-    margin-left: 9px;
-  }
-  .input {
-    float: left;
-    box-sizing: border-box;
-  }
-  .button {
-    background-color: #999;
-    color: white;
-    font-size: 5px;
-    height: 30px;
-    width: 50px;
-    border: none;
-  }
-  
-  /* <!-- 已发送邀请，等待对方接收弹窗  */
-  .wait-accept{
-    font-size: 30px;
-    background-color:white;
-    text-align: center;
-    line-height: 50px;
-    font-family:cursive;
-    height: 50px;
-    width: 450px;
-    position:absolute;
-    top: 200px;
-    left: 400px;
-    border-radius: 20px;
-  }
-  
+.hh2{
+  position: absolute;
+  top: 50px;
+  left: 90px;      
+}
+.select{
+  position: relative;
+  margin-top: 120px;
+  width: 300px;
+  height: 50px;
+  border-color: #999;
+  border-top: solid 1px;
+}
+.accept{
+  height: 81px;
+  width: 149px;
+  text-align: center;
+  font-size: 30px;
+  float: left;
+  line-height: 81px;
+  border-right:1px solid #999 ;
+  position: relative;
+  font-weight: bold;
+  color: rgba(127,173,75);
+}
+.refuse{
+  height: 81px;
+  width: 149px;
+  text-align: center;
+  font-size: 30px;
+  float: left;
+  line-height: 81px;
+  position: relative;
+  font-weight: bold;
+  color: rgba(233,10,13);
+}
+
+/* 开始游戏前的金币扣除 */
+.tips
+{
+  position: absolute;
+  top: 200px;
+  left: 391px;
+  z-index: 11;
+}
+.accept-deduct-gold{
+  position: absolute;
+  left: 600px;
+  top: 350px;
+  z-index: 111;
+}
+.refuse-deduct-gold{
+  position: absolute;
+  left: 430px;
+  top: 350px;
+  z-index: 111;
+}
+/* 选择模式 */
+.limited-time{
+  position: absolute;
+  left: 450px;
+  top: 500px;
+}
+.endless{
+  position: absolute;
+  left: 650px;
+  top: 500px;
+}
+
+.signin-single-success{
+  position: absolute;
+  top: 615px;
+  left: 800px;
+}

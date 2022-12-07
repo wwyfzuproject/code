@@ -68,32 +68,26 @@
 
             <!-- logo -->
             <div class="playerinfo">
-                <!-- 角色一 -->
+                <!-- 玩家1 -->
                 <div class="player01">
                     <img src="../imagines/role1.png" alt="" width="200px" height="144px">
                 </div>
 
-                <!-- 角色2-->
+                <!-- 人机 -->
                 <div class="invite">
                     <img src="../imagines/role2.png" alt="" width="170px" height="164px"
                         onclick="invite1()">
                 </div>
 
             </div>
-            <!-- 开始游戏按钮 -->
-            <div id="single-game">
-                <img src="../imagines/startgame.png" onclick="startgame()" width="200px" height="80px" alt=""
-                    class="startgame">
-            </div>
+            
+            <!-- 选择模式 -->
+            <div >
+                <img class="limited-time" src="../imagines/limited-time.png" alt="" width="150px" height="80px" >
+                <img class="endless" src="../imagines/endless.png" alt="" width="150px" height="80px" >
+             </div>
 
-            <!-- 开始游戏前的金币扣除 -->
-            <div class="deduct-gold">
-                <img class="tips" src="../imagines/deduct-gold.png" width="350px" height="250px" alt="">
-                <img class="refuse-deduct-gold"  src="../imagines/refuse.png" width="100px" height="60px" alt="">
-                <img class="accept-deduct-gold"  src="../imagines/accept.png" height="60px" width="100px" alt="">
-            </div>
-            <div id="black">
-            </div>
+            
 
             <!-- 已发送邀请，等待对方接收弹窗 -->
             <div class="wait-accept">
@@ -102,7 +96,7 @@
 
             <!-- 签到和分享按钮 -->
             <div class="ss">
-                <div class="signin" id="sign">
+                <div class="signin-single-success" id="sign">
                     <img src="../imagines/qiandao.png" alt="" width="30px" height="30px">
                 </div>
                 <div class="share" id="share">
@@ -176,23 +170,8 @@
                 tan2.style.display = "none";
 
             }
-            var deduct = document.querySelector(".deduct-gold");
-            // 金币扣除提示
-            deduct.style.display = "none";
-            function startgame() {
-                deduct.style.display = "block";
-            }
-            var refusededuct=document.querySelector(".refuse-deduct-gold");
-            var acceptdeduct=document.querySelector(".accept-deduct-gold");
-
-            refusededuct.onclick=function(){
-                deduct.style.display = "none";
-           }
-           $(".accept-deduct-gold").click(function(){
-            deduct.style.display = "none";
-            location.href='../HTML/single-invitesuccess.html';
-           })
-           
+            
+            
            
 
         </script>
