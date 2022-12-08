@@ -77,6 +77,20 @@
             <!-- <img src="../imagines/dice2.png" alt="骰子"> -->
         </div>
     </div>
+    <!-- 打卡点的弹窗 -->
+    <div class="win2-daka">
+        <div class="win2-content"></div>
+    </div>
+    <!-- 随机事件的弹窗 -->
+    <div class="suijichoice">
+        <div class="suiji-content">
+            <div class="suijititle">随机事件选择</div>
+            <!-- 选择让自己前进 -->
+            <div class="ziji">让自己前进</div>
+            <!-- 选择让对方前进 -->
+            <div class="duifang">让对方前进</div>
+        </div>
+    </div>
     <!-- 游戏结束弹窗 -->
     <div class="win1-over">
         <div class="win1-content">
@@ -105,10 +119,7 @@
             <button class="b1">返回</button>  <button class="b2">重新开始</button>
         </div>
     </div>
-    <!-- 打卡点的弹窗 -->
-    <div class="win2-daka">
-        <div class="win2-content"></div>
-    </div>
+    
     <script>
         var flag = 1; //flag为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
