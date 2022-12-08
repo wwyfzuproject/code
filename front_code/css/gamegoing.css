@@ -279,7 +279,7 @@ a{
     z-index: 11;
 }
 
-/* 打卡弹窗样式 */
+/* 打卡弹窗灰色背景样式设置 */
 .win2-daka {
     position: fixed;
     top: 0;
@@ -292,6 +292,7 @@ a{
     z-index: 30;    /*背景层*/
     text-align: center;
 }
+/* 打卡弹窗样式设置 */
 .win2-daka .win2-content {
     position: relative;
     left: 50%;
@@ -302,7 +303,7 @@ a{
     background-color: #fff;
     z-index: 31;
 }
-/* 游戏结束时弹窗样式 */
+/* 游戏结束时灰色背景样式 */
 .win1-over {
     position: fixed;
     top: 0;
@@ -316,6 +317,7 @@ a{
     text-align: center;
     
 }
+/* 游戏结束弹窗样式设置 */
 .win1-over .win1-content {
     position: relative;
     left: 50%;
@@ -337,7 +339,7 @@ a{
     font-size: 34px;
     color: rgb(100,16,19);
 }
-/* 胜利玩家 */
+/* 胜利玩家整个部分样式设置 */
 .win1-content .winner {
     width: 360px;
     height: 80px;
@@ -351,7 +353,7 @@ a{
     background-repeat: no-repeat;
     background-size: contain;
 } */
-/* 胜利玩家头像 */
+/* 胜利玩家头像样式设置 */
 .win1-content .winner .touxiang1 {
     background-color: #fff;
     border-radius: 50%;
@@ -360,6 +362,7 @@ a{
     left: 30px;
     top: 100px;
 }
+/* 胜利玩家昵称样式设置 */
 .win1-content .winner .winner-text {
     width: 200px;
     height: 45px;
@@ -370,6 +373,7 @@ a{
     left: 100px;
     top: 110px;
 }
+/* 胜利玩家获得金币样式设置 */
 .win1-content .winner .winner-text .jinbi{
     position: absolute;
     left: 65px;
@@ -380,12 +384,13 @@ a{
     left: 90px;
     top: 20px;
 }
+/* 胜利玩家旁边微笑设置 */
 .win1-content .winner .winner-text .winner-smile{
     position: absolute;
     left: 210px;
     top: 7px;
 }
-/* 失败玩家 */
+/* 失败玩家整个部分样式设置 */
 .win1-content .loser {
     width: 360px;
     height: 80px;
@@ -399,6 +404,7 @@ a{
     left: 30px;
     top: 190px;
 }
+/* 失败玩家昵称样式设置 */
 .win1-content .loser .loser-text {
     width: 200px;
     height: 45px;
@@ -408,6 +414,7 @@ a{
     left: 100px;
     top: 203px;
 }
+/* 失败玩家游戏失败文字样式设置 */
 .win1-content .loser .loser-text .shibai{
     position: absolute;
     left: 65px;
@@ -415,6 +422,7 @@ a{
     font-weight: 700;
     color: red;
 }
+/* 失败玩家旁边笑脸设置 */
 .win1-content .loser .loser-text .loser-smile{
     position: absolute;
     left: 210px;
@@ -452,7 +460,7 @@ a{
     left: 0;
     bottom: 0;
     /* 是否要隐藏游戏结束窗口 */
-    /* display: none; */
+    display: none;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 25;    /*背景层*/
     text-align: center;
