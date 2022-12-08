@@ -90,7 +90,7 @@ function animate1(obj, time, num, callback) {
 
             // num--;
         }
-    }, 10)
+    }, 100)
 
 }
 function animate2(obj, time, num, callback) {
@@ -168,8 +168,27 @@ function animate2(obj, time, num, callback) {
                 }
 
             }
+
+            else if ((obj.offsetLeft <= 186) && (obj.offsetTop <= 217) && (obj.offsetLeft >= 50)) {
+
+                if (flag < 4) {
+                    target = obj.offsetLeft + num * (-28);
+                    flag = 4;
+                }
+
+                var top = obj.offsetTop - 135;
+                obj.style.left = obj.offsetLeft - 4 + 'px';
+                obj.style.top = top + 3 + 'px';
+
+                if ((obj.offsetLeft - target) % 28 == 0) {
+                    num--;
+                    target = obj.offsetLeft + num * (-28);
+                    console.log(num);
+                }
+
+            }
         }
-    }, 10)
+    }, 100)
 
 }
 
