@@ -77,6 +77,20 @@
             <!-- <img src="../imagines/dice2.png" alt="骰子"> -->
         </div>
     </div>
+    <!-- 打卡点的弹窗 -->
+    <div class="win2-daka">
+        <div class="win2-content"></div>
+    </div>
+    <!-- 随机事件的弹窗 -->
+    <div class="suijichoice">
+        <div class="suiji-content">
+            <div class="suijititle">随机事件选择</div>
+            <!-- 选择让自己前进 -->
+            <div class="ziji">让自己前进</div>
+            <!-- 选择让对方前进 -->
+            <div class="duifang">让对方前进</div>
+        </div>
+    </div>
     <!-- 游戏结束弹窗 -->
     <div class="win1-over">
         <div class="win1-content">
@@ -85,8 +99,10 @@
             <!-- 胜利玩家 -->
             <div class="winner">
                 <!-- 胜利 -->
+                <!-- 胜利玩家头像 -->
                 <img src="../imagines/role1.png" alt="胜利的玩家" style="width: 60px;height: 60px;" class="touxiang1"> 
                 <div class="winner-text">
+                    <!-- 胜利玩家昵称 -->
                     <div class="winner-name">张三三三三</div>
                     <img src="../imagines/gold.png" alt="金币" class="jinbi" style="width: 20px; height: 20px;">
                     <div class="jinbishu">✖ 100</div>
@@ -95,8 +111,10 @@
             </div>
             <div class="loser">
                 <!-- 失败 -->
+                <!-- 失败玩家头像 -->
                 <img src="../imagines/role2.png" alt="失败的玩家" style="width: 60px;height: 60px;" class="touxiang2">
                 <div class="loser-text">
+                    <!-- 失败玩家昵称 -->
                     <div class="loser-name">李四四四四四</div>
                     <div class="shibai">挑战失败！</div>
                     <img src="../imagines/loserimg1.png" alt="失败" class="loser-smile">
@@ -105,10 +123,7 @@
             <button class="b1">返回</button>  <button class="b2">重新开始</button>
         </div>
     </div>
-    <!-- 打卡点的弹窗 -->
-    <div class="win2-daka">
-        <div class="win2-content"></div>
-    </div>
+    
     <script>
         var flag = 1; //flag为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');

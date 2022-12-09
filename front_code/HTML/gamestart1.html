@@ -301,11 +301,13 @@
         $(showListIds[0]).hide();
         $('#search-wrapper').show();
     }
-    // 列表邀请按钮
+
+    // 列表邀请按钮，点击邀请
     var invite=document.querySelector(".invite");
         var wait=document.querySelector(".wait-accept");
         wait.style.display="none";
         invite.onclick= function () {
+            
             wait.style.display="block";
             setTimeout(function(){
                 wait.style.display="none";
