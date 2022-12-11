@@ -10,7 +10,8 @@
 </head>
 <script src="https://unpkg.com/better-scroll@latest/dist/better-scroll.min.js"></script>
 <script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
-<script type="text/javascript" src="../js/single-game.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/gameBtn.js"></script>
 <script type="text/javascript" src="../js/share&sign.js"></script>
 <script type="text/javascript" src="../js/coin&name.js"></script>
 
@@ -190,9 +191,25 @@
             refusededuct.onclick=function(){
                 deduct.style.display = "none";
            }
+
+           //gameBtn
            $(".accept-deduct-gold").click(function(){
-            deduct.style.display = "none";
-            location.href='../HTML/single-invitesuccess.html';
+            objg={};
+
+            $.ajax({
+                url:"",
+                type:"get",
+                dataType:"json",
+                data:objg,
+                success:function(){
+                    deduct.style.display = "none";
+                    location.href='../HTML/single-invitesuccess.html';
+                },
+                error:function(){
+                    alert("加载失败,请重试！");
+                }
+            });
+            
            })
            
            

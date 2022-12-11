@@ -1,6 +1,6 @@
 $(function(){
     // 金币数显示
-    $("#coinNumber").on(function(){
+    $("#coinNum").on(function(){
         var coinNum = $("#coinNum");
         var temp = "";
         $.ajax({
@@ -13,7 +13,7 @@ $(function(){
         });
     });
     // 用户名显示
-    $("#username").on(function(){
+    $("#name").on(function(){
         var name = $("#name");
         var temp = "";
         $.ajax({

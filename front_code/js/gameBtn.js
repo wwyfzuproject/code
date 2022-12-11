@@ -1,5 +1,5 @@
 $(function(){
-    // 单人开始游戏按钮
+    // 开始游戏按钮
     $("#single-game").onclick(function(){
         objg={};
 

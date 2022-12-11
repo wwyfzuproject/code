@@ -8,11 +8,11 @@ $(function(){
             type:"get",
             dataType:"json",
             data:objs,
-            success:function(resp){
-                console.log(resp);
+            success:function(){
+                SignSuccess();
             },
             error:function(){
-                alert("签到失败，请重试！");
+                SignFailure();
             }
         });
     });
@@ -26,12 +26,25 @@ $(function(){
             dataType:"json",
             data:objr,
             success:function(resp){
-                console.log(resp);
+                ShareSuccess();
             },
             error:function(){
-                alert("分享失败,请重试！");
+                ShareFailure();
             }
         });
     });
 
 });
+
+function SignSuccess(){
+
+};
+function SignFailure(){
+
+};
+function ShareSuccess(){
+
+};
+function ShareFailure(){
+
+};
