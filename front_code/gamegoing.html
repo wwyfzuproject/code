@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏中——蛙蛙游福大</title>
+    <link rel="stylesheet" href="../css/gamegoing.css">
+    <script src="../js/move.js"></script>
+</head>
+
+<body>
+    <div class="bgbox">
+        <!-- 玩家1 -->
+        <div class="role1">
+            <!-- 111111 -->
+            <div class="img1"></div>
+            <div class="name1">
+                <p>张三三三三</p>
+                <div class="daka1">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- mr1 地图上玩家1 -->
+        <div class="mr1"><img src="../imagines/maprole1.png" alt="玩家1" class="p1"></div>
+        <!-- 玩家2 -->
+        <div class="role2">
+            <div class="img2"></div>
+            <div class="name2">
+                <p>李四四四四四</p>
+                <div class="daka2">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- mr2 地图上玩家2 -->
+        <div class="mr2"><img src="../imagines/maprole2.png" alt="玩家2" class="p2"></div>
+        <!-- 打卡点名称 -->
+        <div class="name3">晋江楼->福友阁</div>
+        <!-- 随机事件和小白站点 -->
+        <div class="suiji">
+            <ul>
+                <li class="one"> <img src="../imagines/wenhao.png" alt="随机事件1" style="width: 30px;height: 30px;"></li>
+                <li class="two"> <img src="../imagines/wenhao.png" alt="随机事件2" style="width: 30px;height: 30px;"></li>
+                <li class="three"> <img src="../imagines/wenhao.png" alt="随机事件3" style="width: 30px;height: 30px;"></li>
+                <li class="four"> <img src="../imagines/wenhao.png" alt="随机事件4" style="width: 30px;height: 30px;"></li>
+                <li class="five"> <img src="../imagines/wenhao.png" alt="随机事件5" style="width: 30px;height: 30px;"></li>
+                <li class="six"> <img src="../imagines/wenhao.png" alt="随机事件6" style="width: 30px;height: 30px;"></li>
+                <li class="seven"> <img src="../imagines/wenhao.png" alt="随机事件7" style="width: 30px;height: 30px;"></li>
+                <li class="eight"> <img src="../imagines/wenhao.png" alt="随机事件8" style="width: 30px;height: 30px;"></li>
+                <li class="nine"> <img src="../imagines/wenhao.png" alt="随机事件9" style="width: 30px;height: 30px;"></li>
+                <li class="ten"> <img src="../imagines/wenhao.png" alt="随机事件10" style="width: 30px;height: 30px;"></li>
+                <li class="bus1"> <img src="../imagines/bus.png" alt="小白1" style="width: 28px;height: 28px;"></li>
+                <li class="bus2"> <img src="../imagines/bus.png" alt="小白2" style="width: 28px;height: 28px;"></li>
+                <li class="bus3"> <img src="../imagines/bus.png" alt="小白3" style="width: 28px;height: 28px;"></li>
+            </ul>
+        </div>
+        <!-- 倒计时 -->
+        <div class="time">倒计时</div>
+        <!-- 骰子 -->
+        <div class="touzi">
+            <img src="../imagines/dice1.png" alt="骰子" id="tz">
+            <!-- <img src="../imagines/dice2.png" alt="骰子"> -->
+        </div>
+    </div>
+    <!-- 游戏结束弹窗 -->
+    <div class="win1-over">
+        <div class="win1-content">
+            <!-- 游戏结束弹窗的上部分 -->
+            <div class="shang">游戏结束</div>
+            <!-- 胜利玩家 -->
+            <div class="winner">
+                <!-- 胜利 -->
+                <img src="../imagines/role1.png" alt="胜利的玩家" style="width: 60px;height: 60px;" class="touxiang1"> 
+                <div class="winner-text">
+                    <div class="winner-name">张三三三三</div>
+                    <img src="../imagines/gold.png" alt="金币" class="jinbi" style="width: 20px; height: 20px;">
+                    <div class="jinbishu">✖ 100</div>
+                    <img src="../imagines/winnerimg.png" alt="胜利" class="winner-smile">
+                </div>
+            </div>
+            <div class="loser">
+                <!-- 失败 -->
+                <img src="../imagines/role2.png" alt="失败的玩家" style="width: 60px;height: 60px;" class="touxiang2">
+                <div class="loser-text">
+                    <div class="loser-name">李四四四四四</div>
+                    <div class="shibai">挑战失败！</div>
+                    <img src="../imagines/loserimg1.png" alt="失败" class="loser-smile">
+                </div>
+            </div>
+            <button class="b1">返回</button>  <button class="b2">重新开始</button>
+        </div>
+    </div>
+    <!-- 打卡点的弹窗 -->
+    <div class="win2-daka">
+        <div class="win2-content"></div>
+    </div>
+    <script>
+        var aposi=0;
+        var bposi=0;
+        var asum=0;
+        var bsum=0;
+        var acir=0;
+        var bcir=0;
+        var aflag=new Array;
+        var bflag=new Array;
+
+        var flag = 1; //flag为奇数时p1行动，否则p2行动
+        var player1 = document.querySelector('.p1');
+        var player2 = document.querySelector('.p2');
+
+        var tz = document.querySelector('#tz');
+        var time = document.querySelector('.time');
+        var num; //骰子数
+
+        var target;
+        //点击骰子后触发
+        var addr=[4,12,17,26,32];//五个打卡点所在位置
+        var map=new Array();//数组默认值为0，乘坐小白设为1，随机前进或后退若干步设为2
+        map[7]=1;
+        map[22]=1;
+        map[39]=1;
+        map[2]=2;
+        map[6]=2;
+        map[9]=2;
+        map[15]=2;
+        map[19]=2;
+        map[24]=2;
+        map[29]=2;
+        map[34]=2;
+        map[37]=2;
+        map[42]=2;
+
+        var goal=new Array();
+        goal[4]=1;
+        goal[12]=1;
+        goal[17]=1;
+        goal[26]=1;
+        goal[32]=1;//这几个点是打卡点
+
+        clock(time);
+
+        tz.addEventListener('click', function () {
+            num = getnum(); //num从后端获取？
+            // num = 1;
+            time.innerHTML = '倒计时';
+            clearInterval(time.timer);
+            switch (num) {
+                case 1:
+                    tz.src = '../imagines/dice1.png';
+                    break;
+                case 2:
+                    tz.src = '../imagines/dice2.png';
+                    break;
+                case 3:
+                    tz.src = '../imagines/dice3.png';
+                    break;
+                case 4:
+                    tz.src = '../imagines/dice4.png';
+                    break;
+                case 5:
+                    tz.src = '../imagines/dice5.png';
+                    break;
+                case 6:
+                    tz.src = '../imagines/dice6.png';
+                    break;
+            }
+            //玩家移动期间禁用骰子，移动完之后再恢复
+            if (flag % 2) {
+                // console.log(target);
+                aposi+=num;//随机摇骰子，玩家位置发生改变
+                console.log(player1.offsetLeft);
+                console.log(player1.offsetTop);
+                flag++;
+
+                var num1=0;
+
+                if(map[aposi]==1) {//若遇到小白
+                    var apo;
+                    apo = Jump(aposi);
+                    num1 = apo-aposi;
+                    aposi = apo;
+
+                    if(aflag[aposi]==0)
+                    {
+                        aflag[aposi]=1;
+                        asum++;
+                    }
+                    clearInterval(time.timer);
+                    animate1(player1, time,num,num1,1,animate1);
+                    if(asum>=5) gameover;
+                }
+                else{
+                    animate1(player1, time,num,num1,0,animate1);
+                    if(aposi>=45) {
+                        aposi=aposi-45;
+                        acir++;
+                        if(acir>=2||bcir>=2&&res==1) gameover;//若限时模式且领先玩家的圈数大于二则结束游戏
+                        //跳转界面
+                    }
+                    if(goal[aposi]==1&&aflag[aposi]==0){
+                        aflag[aposi]=1;
+                        asum++;
+                        if(asum==5) gameover;
+                    }
+                }
+
+
+                // var choose=0;
+                // if(map[aposi]==2){
+                //     var r = Math.round(Math.random()*6+1);
+                //     if(choose==0) aposi+=r;
+                //     else bposi+=r;
+                // }
+
+            }
+            else {
+                // target = player2.offsetLeft + num * (-30);
+                // console.log(target);
+                bposi+=num;//随机摇骰子，玩家位置发生改变
+                console.log(player2.offsetLeft);
+                console.log(player2.offsetTop);
+                flag++;
+
+                var num2=0;
+                if(map[bposi]==1) {//若遇到小白
+                    var bpo;
+                    bpo = Jump(bposi);
+                    num2 = bpo-bposi;
+                    bposi = bpo;
+
+                    if(bflag[bposi]==0)
+                    {
+                        bflag[bposi]=1;
+                        bsum++;
+                    }
+                    clearInterval(time.timer);
+                    animate2(player2, time,num,num2,1,animate2);
+                    if(bsum>=5) gameover;
+                }
+                else{
+                    animate2(player2, time,num,num2,0,animate2);
+                    if(bposi>=45) {
+                        bposi=bposi-45;
+                        bcir++;
+                        if(bcir>=2||bcir>=2&&res==1) gameover;//若限时模式且领先玩家的圈数大于二则结束游戏
+                    }
+                    if(goal[bposi]==1&&bflag[bposi]==0){
+                        bflag[bposi]=1;
+                        bsum++;
+                        if(bsum==5) gameover;
+                    }
+                }
+                // var choose=0;
+                // if(map[aposi]==2){
+                //     var r = Math.round(Math.random()*6+1);
+                //     if(choose==0) aposi+=r;
+                //     else bposi+=r;
+                // }
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
