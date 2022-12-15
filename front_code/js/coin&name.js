@@ -16,14 +16,9 @@ $(function(){
     $("#name").on(function(){
         var name = $("#name");
         var temp = "";
-        $.ajax({
-            url:"",
-            type:"get",
-            success:function(resp){
-               name.empty();
-               temp += '<div class="name">'+resp+'</div>'
-               name.append(temp)
-            },
-        });
+        name.empty();
+        resp = getCookie('username');
+        temp += '<div class="name">'+resp+'</div>'
+        name.append(temp)
     });
 });
