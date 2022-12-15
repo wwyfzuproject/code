@@ -23,6 +23,8 @@ $(function(){
         $.ajax({
             url:"",
             type:"get",
+            dataType:"json",
+            data:objr,
             success:function(resp){
                 ShareSuccess();
             },
