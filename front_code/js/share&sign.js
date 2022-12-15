@@ -1,13 +1,14 @@
 $(function(){
     // 签到按钮
     $("#sign").onclick(function(){
-        var objs={name:"",msg:"sign"};
+        var objs={};
+        objs['msg'] = 'sign';
 
         $.ajax({
             url:"",
             type:"get",
             dataType:"json",
-            data:objs,
+            data:JSON.stringify(objs),
             success:function(){
                 SignSuccess();
             },
@@ -18,11 +19,14 @@ $(function(){
     });
     // 分享按钮
     $("#share").onclick(function(){
-        var objr={name:"",msg:"share"};
+        var objr={};
+        objr['msg'] = 'share';
 
         $.ajax({
             url:"",
             type:"get",
+            dataType:"json",
+            data:JSON.stringify(objr),
             success:function(resp){
                 ShareSuccess();
             },
