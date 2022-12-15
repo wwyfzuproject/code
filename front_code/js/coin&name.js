@@ -2,23 +2,19 @@ $(function(){
     // 金币数显示
     $("#coinNum").on(function(){
         var coinNum = $("#coinNum");
-        var temp = "";
-        $.ajax({
-            url:"",
-            type:"get",
-            success:function(resp){
-                coinNum.empty();
-                temp += '<p class="coinNum">'+resp+'</p>'
-            },
-        });
+        var temp1 = "";
+        coinNum.empty();
+        var resp1 = getCookie('money');
+        temp1 += '<p class="coinNum">'+resp1+'</p>';
+        coinNum.append(temp1)
     });
     // 用户名显示
     $("#name").on(function(){
         var name = $("#name");
-        var temp = "";
+        var temp2 = "";
+        var resp2 = getCookie('username');
         name.empty();
-        resp = getCookie('username');
-        temp += '<div class="name">'+resp+'</div>'
-        name.append(temp)
+        temp2 += '<div class="name">'+resp2+'</div>'
+        name.append(temp2)
     });
 });

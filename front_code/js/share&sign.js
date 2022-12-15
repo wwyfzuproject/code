@@ -38,6 +38,7 @@ $(function(){
 
 });
 
+
 function SignSuccess(){
     var tan1 = document.getElementById('tan1');
     var qiandao = document.querySelector(".signin");
@@ -82,3 +83,7 @@ function ShareSuccess(){
 function ShareFailure(){
     alert("分享失败！请重试！");
 };
+
+
+// $("#sign").click(SignFailure());
+// $("share").click(ShareFailure());

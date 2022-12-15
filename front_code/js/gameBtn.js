@@ -8,7 +8,7 @@ $(function(){
             type:"post",
             dataType:"json",
             data:JSON.stringify(objw),
-            success:function(resp){
+            success:function(){
                 location.href = "gamegoing.html";
             },
             error:function(){
@@ -26,7 +26,7 @@ $(function(){
             type:"post",
             dataType:"json",
             data:JSON.stringify(objx),
-            success:function(resp){
+            success:function(){
                 location.href = "gamegoing.html";
             },
             error:function(){
