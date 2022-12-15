@@ -55,7 +55,7 @@
 
                 </ul>
             </div> -->
-        </div> 
+        
 
         <!-- 右上角玩家信息 -->
         <div class="right-face">
@@ -104,20 +104,20 @@
             </div> -->
 
             <!-- 签到和分享按钮 -->
-            <div class="ss">
+            <!-- <div class="ss">
                 <div class="signin" id="sign">
                     <img src="../imagines/qiandao.png" alt="" width="40px" height="40px">
                 </div>
                 <div class="share" id="share">
                     <img src="../imagines/share.png" alt="" width="40px" height="40px">
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
         <!-- //签到和分享 -->
 
-        <div id="tan1" class="tan1">
+        <!-- <div id="tan1" class="tan1">
             <div class="qiandao-title">
                 <strong>签到</strong>
                 <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close">
@@ -140,49 +140,17 @@
             </div>
             <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
             <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
-        </div>
+        </div> -->
         <!-- <img src="../imagines/骰子2.png" alt=""> -->
+        </div>
         <script>
 
 
-            // 签到和分享页面的弹窗
-            var tan1 = document.getElementById('tan1');
-            var qiandao = document.querySelector(".signin");
-            var close1 = document.querySelector(".close");
-            var close2 = document.querySelector(".close2")
-            var tan2 = document.querySelector(".tan2");
-            var share = document.querySelector(".share");
-
-            tan1.style.display = "none";
-            tan2.style.display = "none";
-            qiandao.onclick = function () {
-                tan1.style.display = "block";
-            }
-            share.onclick = function () {
-                tan2.style.display = "block";
-            }
-            window.onclick = function (event) {
-
-                if (event.target == tan1) {
-                    tan1.style.display = "none";
-                }
-                if (event.target == tan2) {
-                    tan2.style.display = "none";
-                }
-
-            }
-            close1.onclick = function () {
-                tan1.style.display = "none";
-
-            }
-            close2.onclick = function () {
-                tan2.style.display = "none";
-
-            }
+            // 扣除金币
             
             var deduct= document.querySelector(".deduct-gold");
-            // var refuse=document.querySelector(".refuse-deduct-gold");
-            // var accept=document.querySelector(".accept-deduct-gold");
+            var refuse=document.querySelector(".refuse-deduct-gold");
+            var accept=document.querySelector(".accept-deduct-gold");
             deduct.style.display="none";
             function limited(){
                 deduct.style.display="block";
@@ -191,7 +159,7 @@
                 deduct.style.display="block";
             }
             // accept.onclick=function(){
-                
+            //     location.href = "gamegoing.html";
             // }
             // refuse.onclick=function(){
             //     deduct.style.display="none";

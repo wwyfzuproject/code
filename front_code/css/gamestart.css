@@ -93,7 +93,7 @@ ol li {
 .right-face{
   position: absolute;
   top: 10px;
-  left: 260px;
+  left: 80px;
 }
 h3 {
   margin-left: 10px;
@@ -188,7 +188,7 @@ h3 {
   position: absolute;
   border: #999 solid 2px;
   top: 200px;
-  left: 500px;
+  left: 300px;
   z-index: 11;
 }
 .qiandao-title {
@@ -241,7 +241,7 @@ h3 {
   position: absolute;
   border: #999 solid 2px;
   top: 200px;
-  left: 500px;
+  left: 300px;
   z-index: 11;
   display: flex;
   flex-direction: row;
@@ -282,16 +282,16 @@ h3 {
   padding-top: 0px;
 }
 .copysuccess{
-  width: 300px;
+  width:270px;
   height: 80px;
   border-radius: 30px;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
   background-color: white;
   position: absolute;
   top: 300px;
-  left: 420px;
-  z-index: 11;
+  left: 320px;
+  z-index: 111;
 }
 
 .zaixianlist {
