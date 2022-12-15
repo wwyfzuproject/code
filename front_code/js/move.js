@@ -7,7 +7,7 @@ function animate1(obj, time, num, callback) {
         // if (obj.offsetLeft <= target) {
         if (num == 0) {
             clearInterval(obj.timer);
-            console.log(target);
+            // console.log(target);
             console.log(obj.offsetLeft);
             console.log(obj.offsetTop);
             clock(time);
@@ -70,7 +70,7 @@ function animate1(obj, time, num, callback) {
 
             }
 
-            else if((obj.offsetLeft <= 193) && (obj.offsetTop <= 212) && (obj.offsetLeft >= 57)) {
+            else if ((obj.offsetLeft <= 193) && (obj.offsetTop <= 212) && (obj.offsetLeft >= 57)) {
                 if (flag < 4) {
                     target = obj.offsetLeft + num * (-28);
                     flag = 4;
@@ -88,8 +88,35 @@ function animate1(obj, time, num, callback) {
 
             }
 
+            else if ((obj.offsetLeft >= 53) && (obj.offsetTop >= 215) && (obj.offsetLeft <= 351)) {
+
+                if (flag < 5) {
+
+                    target = obj.offsetLeft + num * (30);
+                    console.log('target = ' + target);
+                    flag = 5;
+                }
+
+                var top = obj.offsetTop - 67;
+                obj.style.left = obj.offsetLeft + 2 + 'px';
+                obj.style.top = top + 1 + 'px';
+
+                if ((target - obj.offsetLeft) % 30 == 0) {
+                    num--;
+                    target = obj.offsetLeft + num * (30);
+                    console.log(num);
+                }
+            }
+
+            // else if((obj.offsetLeft>=353)&&obj.offsetTop)
+            // {
+
+            // }
+
             // num--;
+
         }
+        
     }, 100)
 
 }
@@ -186,6 +213,26 @@ function animate2(obj, time, num, callback) {
                     console.log(num);
                 }
 
+            }
+
+            else if ((obj.offsetLeft >= 46) && (obj.offsetTop >= 220) && (obj.offsetLeft <= 344)) {
+
+                if (flag < 5) {
+
+                    target = obj.offsetLeft + num * (30);
+                    console.log('target = ' + target);
+                    flag = 5;
+                }
+
+                var top = obj.offsetTop - 135;
+                obj.style.left = obj.offsetLeft + 2 + 'px';
+                obj.style.top = top + 1 + 'px';
+
+                if ((target - obj.offsetLeft) % 30 == 0) {
+                    num--;
+                    target = obj.offsetLeft + num * (30);
+                    console.log(num);
+                }
             }
         }
     }, 100)
