@@ -13,14 +13,14 @@ body {
   background-color: white;
 }
 .back {
-  width: 983px;
-  height: 699px;
+  width: 789px;
+  height: 561px;
   background-color: #d2f09f;
   margin: 10px auto;
   position: relative;
   display: flex;
 }
-.ranking {
+/* .ranking {
   height: 699px;
   width: 306px;
   background-color: aliceblue;
@@ -28,7 +28,7 @@ body {
 }
 .ranking-list__wrapper {
   /* calc: css一个可以计算的方法，百度能找到说明。100%就是父盒子的高度，100px是你上面那两个切换的高度，相减就得到最终的 */
-  height: calc(100% - 100px);
+  /* height: calc(100% - 100px);
   overflow: hidden;
   position: relative;
 }
@@ -55,8 +55,8 @@ body {
 .ranking-item .ranking-item__value {
   position: relative;
   padding-left: 30px;
-}
-.ranking-item .bg {
+} */
+/* .ranking-item .bg {
   position: absolute;
   left: 20px;
   right: 0;
@@ -68,15 +68,15 @@ body {
   margin-top: 7px;
   margin-left: 100px;
   z-index: 11;
-}
-.up {
+}  */
+/* .up {
   float: left;
   width: 304px;
   height: 100px;
-  background-color: aliceblue;
+  background-color: aliceblue; */
   /* border-bottom: black;
     border-width: 1px;
-    border-style:solid; */
+    border-style:solid; 
 }
 .up li {
   float: left;
@@ -84,13 +84,17 @@ body {
 }
 ol {
   padding-top: 100px;
-  /* height: ; */
+   height: ; 
 }
 ol li {
   list-style-image: url(imagines/rankings.png);
+} */
+
+.right-face{
+  position: absolute;
+  top: 10px;
+  left: 260px;
 }
-
-
 h3 {
   margin-left: 10px;
   font-size: 20px;
@@ -131,7 +135,7 @@ h3 {
   padding-right: 10px;
 }
 .playerinfo {
-  margin-top: 170px;
+  margin-top: 130px;
   margin-left: 96px;
   display: flex;
   flex-direction: row;
@@ -139,6 +143,7 @@ h3 {
 .player01 {
   position: relative;
   margin-left: 17px;
+
 }
 
 .invite img{
@@ -150,23 +155,22 @@ h3 {
   z-index: 1;
 }
 /* 签到和分享 */
-.ss{
-  margin-top: 60px;
+/* .ss{
+  margin-top: 40px;
   display: flex;
-}
+} */
 
 /* 签到按钮 */
 .signin {
-  flex-direction: row;
-  padding-right: 50px;
-  margin-left: 500px;
-  margin-top: 0px;
+  position: absolute;
+  top: 500px;
+  left: 530px;
 }
 /* 分享按钮 */
 .share {
   position: absolute;
-  top: 615px;
-  margin-left: 550px;
+  top: 500px;
+  left: 600px;
 }
 .tan1 {
   width: 300px;
@@ -174,8 +178,9 @@ h3 {
   background-color: rgba(215, 236, 184, 1);
   position: absolute;
   border: #999 solid 2px;
-  margin-top: 200px;
-  margin-left: 350px;
+  top: 200px;
+  left: 500px;
+  z-index: 11;
 }
 .qiandao-title {
   width: 300;
@@ -226,8 +231,9 @@ h3 {
   background-color: rgba(215, 236, 184, 1);
   position: absolute;
   border: #999 solid 2px;
-  margin-top: 200px;
-  margin-left: 350px;
+  top: 200px;
+  left: 500px;
+  z-index: 11;
   display: flex;
   flex-direction: row;
 }
@@ -265,6 +271,18 @@ h3 {
   width: 120px;
   height: 70px;
   padding-top: 0px;
+}
+.copysuccess{
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  font-size: 50px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  top: 300px;
+  left: 420px;
+  z-index: 11;
 }
 
 .zaixianlist {
@@ -399,12 +417,12 @@ h3 {
 {
   position: absolute;
   top: 200px;
-  left: 391px;
+  left: 201px;
   z-index: 11;
 }
 .accept-deduct-gold{
   position: absolute;
-  left: 600px;
+  left: 250px;
   top: 350px;
   z-index: 111;
 }
@@ -417,13 +435,13 @@ h3 {
 /* 选择模式 */
 .limited-time{
   position: absolute;
-  left: 450px;
-  top: 500px;
+  left: 180px;
+  top: 400px;
 }
 .endless{
   position: absolute;
-  left: 650px;
-  top: 500px;
+  left: 390px;
+  top: 400px;
 }
 
 .signin-single-success{
