@@ -89,32 +89,12 @@
                     class="startgame">
             </div>
 
-            <!-- 开始游戏前的金币扣除 -->
-            <div class="deduct-gold">
-                <img class="tips" src="../imagines/deduct-gold.png" width="350px" height="250px" alt="">
-                <img class="refuse-deduct-gold"  src="../imagines/refuse.png" width="100px" height="60px" alt="">
-                <img class="accept-deduct-gold"  src="../imagines/accept.png" height="60px" width="100px" alt="">
-            </div>
-            <div id="black">
-            </div>
-
-            
-
-            <!-- 签到和分享按钮 -->
-            <div class="ss">
-                <div class="signin" id="sign"  >
-                    <img src="../imagines/qiandao.png" alt="" width="40px" height="40px">
-                </div>
-                <div class="share" id="share">
-                    <img src="../imagines/share.png" alt="" width="40px" height="40px">
-                </div>
-            </div>
 
         </div>
 
         <!-- //签到和分享 -->
 
-        <div id="tan1" class="tan1"  >
+        <!-- <div id="tan1" class="tan1"  >
             <div class="qiandao-title">
                 <strong>签到</strong>
                 <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close">
@@ -138,77 +118,63 @@
             </div>
             <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
             <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
-        </div>
+        </div> -->
         <!-- <img src="../imagines/骰子2.png" alt=""> -->
         <script>
 
 
             // 签到和分享页面的弹窗
-            var tan1 = document.getElementById('tan1');
-            var qiandao = document.querySelector(".signin");
-            var close1 = document.querySelector(".close");
-            var close2 = document.querySelector(".close2")
-            var tan2 = document.querySelector(".tan2");
-            var share = document.querySelector(".share");
+            // var tan1 = document.getElementById('tan1');
+            // var qiandao = document.querySelector(".signin");
+            // var close1 = document.querySelector(".close");
+            // var close2 = document.querySelector(".close2")
+            // var tan2 = document.querySelector(".tan2");
+            // var share = document.querySelector(".share");
 
-            tan1.style.display = "none";
-            tan2.style.display = "none";
-            qiandao.onclick = function () {
-                tan1.style.display = "block";
-            }
-            share.onclick = function () {
-                tan2.style.display = "block";
-            }
-            window.onclick = function (event) {
+            // tan1.style.display = "none";
+            // tan2.style.display = "none";
+            // qiandao.onclick = function () {
+            //     tan1.style.display = "block";
+            // }
+            // share.onclick = function () {
+            //     tan2.style.display = "block";
+            // }
+            // window.onclick = function (event) {
 
-                if (event.target == tan1) {
-                    tan1.style.display = "none";
-                }
-                if (event.target == tan2) {
-                    tan2.style.display = "none";
-                }
+            //     if (event.target == tan1) {
+            //         tan1.style.display = "none";
+            //     }
+            //     if (event.target == tan2) {
+            //         tan2.style.display = "none";
+            //     }
 
-            }
-            close1.onclick = function () {
-                tan1.style.display = "none";
+            // }
+            // close1.onclick = function () {
+            //     tan1.style.display = "none";
 
-            }
-            close2.onclick = function () {
-                tan2.style.display = "none";
+            // }
+            // close2.onclick = function () {
+            //     tan2.style.display = "none";
 
-            }
-            var deduct = document.querySelector(".deduct-gold");
-            // 金币扣除提示
-            deduct.style.display = "none";
-            function startgame() {
-                deduct.style.display = "block";
-            }
-            var refusededuct=document.querySelector(".refuse-deduct-gold");
-            var acceptdeduct=document.querySelector(".accept-deduct-gold");
+            // }
+        //     var deduct = document.querySelector(".deduct-gold");
+        //     // 金币扣除提示
+        //     deduct.style.display = "none";
+        //     function startgame() {
+        //         deduct.style.display = "block";
+        //     }
+        //     var refusededuct=document.querySelector(".refuse-deduct-gold");
+        //     var acceptdeduct=document.querySelector(".accept-deduct-gold");
 
-            refusededuct.onclick=function(){
-                deduct.style.display = "none";
-           }
+        //     refusededuct.onclick=function(){
+        //         deduct.style.display = "none";
+        //    }
+        function startgame(){
+            location.href='../HTML/single-invitesuccess.html';
+        }
 
-           //gameBtn
-           $(".accept-deduct-gold").click(function(){
-            objg={};
-
-            $.ajax({
-                url:"",
-                type:"get",
-                dataType:"json",
-                data:objg,
-                success:function(){
-                    deduct.style.display = "none";
-                    location.href='../HTML/single-invitesuccess.html';
-                },
-                error:function(){
-                    alert("加载失败,请重试！");
-                }
-            });
+           
             
-           })
            
            
 

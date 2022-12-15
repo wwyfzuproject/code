@@ -83,6 +83,7 @@
                 </div>
 
             </div>
+            <!-- 选择模式 -->
             <div >
                 <img class="limited-time" onclick="limited()" src="../imagines/limited-time.png" alt="" width="150px" height="80px" >
                 <img class="endless" onclick="endless()" src="../imagines/endless.png" alt="" width="150px" height="80px" >
@@ -178,12 +179,10 @@
                 tan2.style.display = "none";
 
             }
-            function startgame(){
-                location.href='../HTML/single-invitesuccess.html';
-            }
+            
             var deduct= document.querySelector(".deduct-gold");
-            var refuse=document.querySelector(".refuse-deduct-gold");
-            var accept=document.querySelector(".accept-deduct-gold");
+            // var refuse=document.querySelector(".refuse-deduct-gold");
+            // var accept=document.querySelector(".accept-deduct-gold");
             deduct.style.display="none";
             function limited(){
                 deduct.style.display="block";
@@ -191,12 +190,12 @@
             function endless(){
                 deduct.style.display="block";
             }
-            accept.onclick=function(){
-
-            }
-            accept.onclick=function(){
-                deduct.style.display="none";
-            }
+            // accept.onclick=function(){
+                
+            // }
+            // refuse.onclick=function(){
+            //     deduct.style.display="none";
+            // }
            
            
 
