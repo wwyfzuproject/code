@@ -429,18 +429,18 @@ h3 {
 {
   position: absolute;
   top: 200px;
-  left: 201px;
+  left: 160px;
   z-index: 11;
 }
 .accept-deduct-gold{
   position: absolute;
-  left: 250px;
+  left: 210px;
   top: 350px;
   z-index: 111;
 }
 .refuse-deduct-gold{
   position: absolute;
-  left: 430px;
+  left: 390px;
   top: 350px;
   z-index: 111;
 }
