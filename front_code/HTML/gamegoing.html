@@ -11,6 +11,7 @@
     <script src="../js/jquery.cookie.js"></script>
     <script src="../js/move.js"></script>
     <script src="../js/coin&name.js"></script>
+    <script src="../js/variable.js"></script>
 </head>
 
 <body>
@@ -174,23 +175,100 @@
                     break;
             }
             //玩家移动期间禁用骰子，移动完之后再恢复
-            if (flag % 2) {
-                // console.log(target);
-                console.log(player1.offsetLeft);
-                console.log(player1.offsetTop);
-                animate1(player1, time, num);
-                flag++;
+                    if (flag % 2) {
+            // console.log(target);
+            aposi+=num;//随机摇骰子，玩家位置发生改变
+            console.log(player1.offsetLeft);
+            console.log(player1.offsetTop);
+            flag++;
+
+            var num1=0;
+
+            if(map[aposi]==1) {//若遇到小白
+                var apo;
+                apo = Jump(aposi);
+                num1 = apo-aposi;
+                aposi = apo;
+
+                if(aflag[aposi]==0)
+                {
+                    aflag[aposi]=1;
+                    asum++;
+                }
+                clearInterval(time.timer);
+                animate1(player1, time,num,num1,1,animate1);
+                if(asum>=5) gameover;
             }
-            else {
-                // target = player2.offsetLeft + num * (-30);
-                // console.log(target);
-                console.log(player2.offsetLeft);
-                console.log(player2.offsetTop);
-                animate2(player2, time, num);
-                flag++;
+            else{
+                animate1(player1, time,num,num1,0,animate1);
+                if(aposi>=45) {
+                    aposi=aposi-45;
+                    acir++;
+                    if(acir>=2||bcir>=2&&res==1) gameover;//若限时模式且领先玩家的圈数大于二则结束游戏
+                    //跳转界面
+                }
+                if(goal[aposi]==1&&aflag[aposi]==0){
+                    aflag[aposi]=1;
+                    asum++;
+                    if(asum==5) gameover;
+                }
             }
 
-        })
+
+            // var choose=0;
+            // if(map[aposi]==2){
+            //     var r = Math.round(Math.random()*6+1);
+            //     if(choose==0) aposi+=r;
+            //     else bposi+=r;
+            // }
+
+        }
+        else {
+            // target = player2.offsetLeft + num * (-30);
+            // console.log(target);
+            bposi+=num;//随机摇骰子，玩家位置发生改变
+            console.log(player2.offsetLeft);
+            console.log(player2.offsetTop);
+            flag++;
+
+            var num2=0;
+            if(map[bposi]==1) {//若遇到小白
+                var bpo;
+                bpo = Jump(bposi);
+                num2 = bpo-bposi;
+                bposi = bpo;
+
+                if(bflag[bposi]==0)
+                {
+                    bflag[bposi]=1;
+                    bsum++;
+                }
+                clearInterval(time.timer);
+                animate2(player2, time,num,num2,1,animate2);
+                if(bsum>=5) gameover;
+            }
+            else{
+                animate2(player2, time,num,num2,0,animate2);
+                if(bposi>=45) {
+                    bposi=bposi-45;
+                    bcir++;
+                    if(acir>=2||bcir>=2&&res==1) gameover;//若限时模式且领先玩家的圈数大于二则结束游戏
+                }
+                if(goal[bposi]==1&&bflag[bposi]==0){
+                    bflag[bposi]=1;
+                    bsum++;
+                    if(bsum==5) gameover;
+                }
+            }
+            // var choose=0;
+            // if(map[aposi]==2){
+            //     var r = Math.round(Math.random()*6+1);
+            //     if(choose==0) aposi+=r;
+            //     else bposi+=r;
+            // }
+        }
+
+    })
 
     </script>
 </body>
