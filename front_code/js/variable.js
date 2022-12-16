@@ -30,3 +30,5 @@ goal[17]=1;
 goal[26]=1;
 goal[32]=1;//这几个点是打卡点
 var res;
+
+alert(res);

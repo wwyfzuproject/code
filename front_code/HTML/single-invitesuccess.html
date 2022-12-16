@@ -13,7 +13,7 @@
 <!-- <script type="text/javascript" src="../js/jquery.cookie.js"></script> -->
 <!-- <script type="text/javascript" src="../js/share&sign.js"></script> -->
 <script type="text/javascript" src="../js/coin&name.js"></script>
-<script type="text/javascript" src="../js/gameBtn.js"></script>
+<script src="../js/variable.js"></script>
 
 
 <body>
@@ -85,8 +85,8 @@
             </div>
             <!-- 选择模式 -->
             <div >
-                <img class="limited-time"  src="../imagines/limited-time.png" alt="" width="150px" height="80px" id="xs">
-                <img class="endless"  src="../imagines/endless.png" alt="" width="150px" height="80px" id="wj">
+                <img class="limited-time"  src="../imagines/limited-time.png" alt="" width="150px" height="80px" id="xs" onclick="XS()">
+                <img class="endless"  src="../imagines/endless.png" alt="" width="150px" height="80px" id="wj" onclick="WJ()">
              </div>
 
             <!-- 开始游戏前的金币扣除 -->
@@ -143,6 +143,18 @@
         </div> -->
         <!-- <img src="../imagines/骰子2.png" alt=""> -->
         </div>
+        <script>
+            function XS(){
+                res = 1;
+                location.href = "../HTML/gamegoing.html";
+                alert(res);
+            }
+            function WJ(){
+                res = 0;
+                location.href = "../HTML/gamegoing.html";
+                alert(res);
+            }
+        </script>
         <script>
 
 
