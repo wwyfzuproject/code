@@ -85,9 +85,18 @@
             </div>
             <!-- 开始游戏按钮 -->
             <div id="single-game">
-                <img src="../imagines/startgame.png" onclick="startgame()" width="200px" height="80px" alt=""
+                <img src="../imagines/startgame.png" width="200px" height="80px" alt=""
                     class="startgame1">
             </div>
+
+            <!-- 游戏开始前的金币扣除 -->
+            <div class="deduct-gold">
+                <img class="tips" src="../imagines/deduct-gold.png" width="350px" height="250px" alt="">
+                <img class="refuse-deduct-gold"  src="../imagines/refuse.png" width="100px" height="60px" alt="">
+                <img class="accept-deduct-gold"  src="../imagines/accept.png" height="60px" width="100px" alt="">
+            </div>
+            <div id="black">
+
             <!-- 签到和分享 -->
             <div class="ss">
                 <div class="signin" id="sign">
@@ -177,19 +186,25 @@
             // },2000)
             // }
             
+            var startgame1=document.querySelector(".startgame1")
+            var deduct = document.querySelector(".deduct-gold");
+            // 金币扣除提示
+            deduct.style.display = "none";
+            startgame1.onclick=function(){
+                deduct.style.display = "block";
+            }
+            
+            var refuse=document.querySelector(".refuse-deduct-gold");
+            var accept=document.querySelector(".accept-deduct-gold");
 
-            // var deduct = document.querySelector(".deduct-gold");
-        //     // 金币扣除提示
-        //     deduct.style.display = "none";
-        //     function startgame() {
-        //         deduct.style.display = "block";
-        //     }
-        //     var refusededuct=document.querySelector(".refuse-deduct-gold");
-        //     var acceptdeduct=document.querySelector(".accept-deduct-gold");
+            refuse.onclick=function(){
+                deduct.style.display = "none";
+           }
+           accept.onclick=function(){
+                location.href = "single-invitesuccess.html";
+           }
 
-        //     refusededuct.onclick=function(){
-        //         deduct.style.display = "none";
-        //    }
+
         function startgame(){
             location.href='../HTML/single-invitesuccess.html';
         }
