@@ -42,7 +42,7 @@
                 </form>
             </div>
 
-            <!-- 排名列表 -->
+            排名列表 -->
             <!-- <div id="ranking-list__wrapper" class="ranking-list__wrapper">
                 <ul class="ranking-list">
 
@@ -124,8 +124,9 @@
                 <h2>分享领金币</h2>
                 <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close2">
             </div>
+            <textarea id="copytext" style="display:none;"></textarea>
             <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
-            <img class="copy" src="../imagines/cope.JPG" alt="" width="100px" height="60px" >
+            <img class="copy" src="../imagines/cope.JPG" alt="" width="100px" height="60px" id="copy">
         </div> 
         <!-- <img src="../imagines/骰子2.png" alt=""> -->
     </div>
@@ -194,6 +195,35 @@
         }
     </script>
 </body>
+<!-- link -->
+<script>
+
+function copyText(value) {
+  if (value == null || value === '') return false
+  var textarea = document.createElement('textarea')
+  textarea.value = value
+  document.body.appendChild(textarea)
+  textarea.focus()
+  textarea.setSelectionRange ? textarea.setSelectionRange(0, textarea.value.length) : textarea.select()
+  var result = document.execCommand('copy')
+  document.body.removeChild(textarea)
+  return result
+}
+
+document.getElementById('copy').addEventListener('click',function(){
+    copyText('demo');
+    alert("复制成功");
+})
+
+// // 通过按钮实现复制指定元素的文本
+// document.getElementById('button').addEventListener('click', function() {
+//   var text = document.getElementById("text").value
+//   var success = copyText(text)
+//   console.log(success ? '复制成功' : '复制失败')
+// })
+
+
+</script>
 <script>
 
     // // 排名的加载

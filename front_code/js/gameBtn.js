@@ -9,7 +9,7 @@ $(function(){
             dataType:"json",
             data:JSON.stringify(objw),
             success:function(){
-                location.href = "gamegoing.html";
+                location.href = "../HTML/gamegoing.html";
             },
             error:function(){
                 alert("加载失败,请重试！");
@@ -27,7 +27,7 @@ $(function(){
             dataType:"json",
             data:JSON.stringify(objx),
             success:function(){
-                location.href = "gamegoing.html";
+                location.href = "../HTML/gamegoing.html";
             },
             error:function(){
                 alert("加载失败,请重试！");
@@ -39,7 +39,7 @@ $(function(){
 function acceptdeductgold(){
     var accept=document.querySelector(".accept-deduct-gold");
     accept.onclick=function(){
-        location.href = "gamegoing.html";
+        location.href = "../HTML/gamegoing.html";
     }
 }
 function refusedeductgold(){
