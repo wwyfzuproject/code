@@ -74,10 +74,11 @@ function ShareSuccess(){
     }
     copy.onclick=function(){
         copysuccess.style.display = "block";
+        setTimeout(function(){
+            copysuccess.style.display="none";
+        },2000)
     }
-    setTimeout(function(){
-        copysuccess.style.display="none";
-    },2000)
+    
 
 };
 function ShareFailure(){
