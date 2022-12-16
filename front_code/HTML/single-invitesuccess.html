@@ -147,39 +147,39 @@
 
 
             // 签到和分享页面的弹窗
-            var tan1 = document.getElementById('tan1');
+            // var tan1 = document.getElementById('tan1');
             // var qiandao = document.querySelector(".signin");
-            var close1 = document.querySelector(".close");
-            var close2 = document.querySelector(".close2")
-            var tan2 = document.querySelector(".tan2");
+            // var close1 = document.querySelector(".close");
+            // var close2 = document.querySelector(".close2")
+            // var tan2 = document.querySelector(".tan2");
             // var share = document.querySelector(".share");
 
-            tan1.style.display = "none";
-            tan2.style.display = "none";
+            // tan1.style.display = "none";
+            // tan2.style.display = "none";
             // qiandao.onclick = function () {
             //     tan1.style.display = "block";
             // }
             // share.onclick = function () {
             //     tan2.style.display = "block";
             // }
-            window.onclick = function (event) {
+            // window.onclick = function (event) {
 
-                if (event.target == tan1) {
-                    tan1.style.display = "none";
-                }
-                if (event.target == tan2) {
-                    tan2.style.display = "none";
-                }
+            //     if (event.target == tan1) {
+            //         tan1.style.display = "none";
+            //     }
+            //     if (event.target == tan2) {
+            //         tan2.style.display = "none";
+            //     }
 
-            }
-            close1.onclick = function () {
-                tan1.style.display = "none";
+            // }
+            // close1.onclick = function () {
+            //     tan1.style.display = "none";
 
-            }
-            close2.onclick = function () {
-                tan2.style.display = "none";
+            // }
+            // close2.onclick = function () {
+            //     tan2.style.display = "none";
 
-            }
+            // }
             
             var deduct= document.querySelector(".deduct-gold");
             var refuse=document.querySelector(".refuse-deduct-gold");
@@ -191,12 +191,12 @@
             function endless(){
                 deduct.style.display="block";
             }
-            // accept.onclick=function(){
-            //     location.href = "gamegoing.html";
-            // }
-            // refuse.onclick=function(){
-            //     deduct.style.display="none";
-            // }
+            accept.onclick=function(){
+                location.href = "gamegoing.html";
+            }
+            refuse.onclick=function(){
+                deduct.style.display="none";
+            }
            
            
 

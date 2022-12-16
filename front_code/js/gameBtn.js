@@ -36,15 +36,15 @@ $(function(){
     });
 
 });
-function acceptdeductgold(){
-    var accept=document.querySelector(".accept-deduct-gold");
-    accept.onclick=function(){
-        location.href = "../HTML/gamegoing.html";
-    }
-}
-function refusedeductgold(){
-    var refuse=document.querySelector(".refuse-deduct-gold");
-    refuse.onclick=function(){
-        deduct.style.display="none";
-    }
-}
+// function acceptdeductgold(){
+//     var accept=document.querySelector(".accept-deduct-gold");
+//     accept.onclick=function(){
+//         location.href = "../HTML/gamegoing.html";
+//     }
+// }
+// function refusedeductgold(){
+//     var refuse=document.querySelector(".refuse-deduct-gold");
+//     refuse.onclick=function(){
+//         deduct.style.display="none";
+//     }
+// }
