@@ -1,4 +1,4 @@
-function animate1(obj, time, num, callback) {
+function animate1(obj, time, num, num1,f,callback) {
     clearInterval(obj.timer);
     var target, flag;
     // target = obj.offsetLeft + num * (-26);
@@ -10,6 +10,10 @@ function animate1(obj, time, num, callback) {
             // console.log(target);
             console.log(obj.offsetLeft);
             console.log(obj.offsetTop);
+            if(f==1)
+            {
+                callback(obj,time,num1,0,0,animate1);
+            }
             clock(time);
         }
         else {
@@ -120,7 +124,7 @@ function animate1(obj, time, num, callback) {
     }, 100)
 
 }
-function animate2(obj, time, num, callback) {
+function animate2(obj, time, num, num2,f,callback) {
     clearInterval(obj.timer);
     var target, flag;
     flag = 0;
@@ -132,6 +136,10 @@ function animate2(obj, time, num, callback) {
             console.log(target);
             console.log(obj.offsetLeft);
             console.log(obj.offsetTop);
+            if(f==1)
+            {
+                callback(obj,time,num2,0,0,animate2);
+            }
             clock(time);
         }
         else {
@@ -256,4 +264,10 @@ function clock(obj) {
 
 function getnum() {
     return Math.floor(Math.random() * 6) + 1;
+}
+function Jump(posi){
+    if(posi==7) return 12;
+    else if (posi==22) return 26;
+    else if (posi==39) return 45;
+
 }
