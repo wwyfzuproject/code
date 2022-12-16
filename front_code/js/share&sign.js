@@ -1,42 +1,42 @@
-$(function(){
-    // 签到按钮
-    $("#sign").onclick(function(){
-        var objs={};
-        objs['msg'] = 'sign';
+// $(function(){
+//     // 签到按钮
+//     $("#sign").onclick(function(){
+//         var objs={};
+//         objs['msg'] = 'sign';
 
-        $.ajax({
-            url:"",
-            type:"get",
-            dataType:"json",
-            data:JSON.stringify(objs),
-            success:function(){
-                SignSuccess();
-            },
-            error:function(){
-                SignFailure();
-            }
-        });
-    });
-    // 分享按钮
-    $("#share").onclick(function(){
-        var objr={};
-        objr['msg'] = 'share';
+//         $.ajax({
+//             url:"",
+//             type:"get",
+//             dataType:"json",
+//             data:JSON.stringify(objs),
+//             success:function(){
+//                 SignSuccess();
+//             },
+//             error:function(){
+//                 SignFailure();
+//             }
+//         });
+//     });
+//     // 分享按钮
+//     $("#share").onclick(function(){
+//         var objr={};
+//         objr['msg'] = 'share';
 
-        $.ajax({
-            url:"",
-            type:"get",
-            dataType:"json",
-            data:JSON.stringify(objr),
-            success:function(resp){
-                ShareSuccess();
-            },
-            error:function(){
-                ShareFailure();
-            }
-        });
-    });
+//         $.ajax({
+//             url:"",
+//             type:"get",
+//             dataType:"json",
+//             data:JSON.stringify(objr),
+//             success:function(resp){
+//                 ShareSuccess();
+//             },
+//             error:function(){
+//                 ShareFailure();
+//             }
+//         });
+//     });
 
-});
+// });
 
 
 function SignSuccess(){
@@ -85,5 +85,7 @@ function ShareFailure(){
 };
 
 
-// $("#sign").click(SignFailure());
-// $("share").click(ShareFailure());
+var sign = document.querySelector(".signin");
+var share = document.querySelector(".share");
+sign.onclick = SignSuccess();
+share.onclick = ShareSuccess();
