@@ -11,10 +11,15 @@ $(function(){
     // 用户名显示
     $("#name").on(function(){
         var name = $("#name");
+        var gammingname = $("#gamingname");
         var temp2 = "";
+        var temp3 = "";
         var resp2 = getCookie('username');
         name.empty();
         temp2 += '<div class="name">'+resp2+'</div>'
         name.append(temp2)
+        gammingname.empty();
+        temp3 += '<p>'+resp2+'</p>'
+        gammingname.append(temp3);
     });
 });
