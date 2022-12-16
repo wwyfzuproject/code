@@ -16,18 +16,16 @@ $(function(){
     
     // 分享按钮
     var share = document.querySelector(".share");
-    share.onclick = function(){
-        var objr={};
-        objr['msg'] = 'share';
-
-        $.ajax({
-            url:"",
-            type:"get",
-            dataType:"json",
-            data:JSON.stringify(objr),
-            success:ShareSuccess(),
-            error:ShareFailure()
-        });
+    share.onclick = function (){
+        var close2 = document.querySelector(".close2")
+        var tan2 = document.querySelector(".tan2");
+        var share = document.querySelector(".share");    
+        share.onclick = function () {
+            tan2.style.display = "block";
+        }
+        close2.onclick = function () {
+            tan2.style.display = "none";
+        }
     };
 
 
@@ -50,30 +48,7 @@ $(function(){
             alert("签到失败！请重试！");
         }
     };
-    function ShareSuccess(){
-        var close2 = document.querySelector(".close2")
-        var tan2 = document.querySelector(".tan2");
-        var share = document.querySelector(".share");
-        var copy = document.querySelector(".copy");
-        var copysuccess = document.querySelector(".copysuccess");
-        // tan2.style.display = "none";
-        // copysuccess.style.display = "none";
     
-        share.onclick = function () {
-            tan2.style.display = "block";
-        }
-        close2.onclick = function () {
-            tan2.style.display = "none";
-        }
-        copy.onclick=function(){
-            copysuccess.style.display = "block";
-            setTimeout(function(){
-                copysuccess.style.display="none";
-            },2000)
-        }
-        
-    
-    };
     function ShareFailure(){ 
         var share = document.querySelector(".share");   
         share.onclick = function () {
