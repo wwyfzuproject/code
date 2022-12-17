@@ -105,41 +105,74 @@ function Bplayer(num){
     }
 }
 function win_lose_jugde(){
-
+    var result;
     if(res==1){//限时模式
         if(bcir >=2){//b玩家赢了
+            result = 0;
             for( iii=0;iii<endjudge2.length;iii++){
                 endjudge2[iii].style.display = "block";
             }
             document.getElementById('b2').addEventListener('click', function (e) {
-                location.href = "../HTML/single-invitesuccess.html";
-            })
+                location.href = "../HTML/gamestart1.html";
+            });
+            Ajax(result);    
         }
         else if(acir>=2){//a win
+            result = 1;
             for(iii=0;iii<endjudge1.length;iii++){
                 endjudge1[iii].style.display = "block";
             }
             document.getElementById('b1').addEventListener('click', function (e) {
-                location.href = "../HTML/single-invitesuccess.html";
-            })
+                location.href = "../HTML/gamestart1.html";
+            });
+            Ajax(result);   
         }
     }//若限时模式且领先玩家的圈数大于二则结束游戏
 
     if(asum==5){//a打满五个点，a赢
+        result = 1;
         for(iii=0;iii<endjudge1.length;iii++){
             endjudge1[iii].style.display = "block";
         }
         document.getElementById('b1').addEventListener('click', function (e) {
-            location.href = "../HTML/single-invitesuccess.html";
-        })
+            location.href = "../HTML/gamestart1.html";
+        });
+        Ajax(result);
     }
     if(bsum==5){
+        result = 0;
         for( iii=0;iii<endjudge2.length;iii++){
             endjudge2[iii].style.display = "block";
         }
         document.getElementById('b2').addEventListener('click', function (e) {
-            location.href = "../HTML/single-invitesuccess.html";
-        })
-    }
+            location.href = "../HTML/gamestart1.html";
+        });
+        Ajax(result);
+    };
 
 }
+
+//获取cookie
+function getCookie(c_name) {
+    if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=")
+        if (c_start != -1) {
+            c_start = c_start + c_name.length + 1
+            c_end = document.cookie.indexOf(";", c_start)
+            if (c_end == -1) c_end = document.cookie.length
+            return unescape(document.cookie.substring(c_start, c_end))
+        }
+    }
+    return "";
+    }
+
+function Ajax(result){  //result是输0赢1  str是email
+    var email = getCookie('email');
+    var str = email.substring(1,email.length-1);
+    $.ajax({
+    url:"",
+    type:"get"
+    });
+};
+
+
