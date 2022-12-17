@@ -12,6 +12,7 @@
     <script src="../js/move.js"></script>
     <script src="../js/coin&name.js"></script>
     <script src="../js/variable.js"></script>
+    <script src="../js/map_player.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <div class="img1"></div>
             <div class="name1">
                 <!-- <p id = "gamegoing"></p> -->
-                <p>张三三三三</p>
+                <p>我</p>
                 <div class="daka1">
                     <ul>
                         <li></li>
@@ -40,7 +41,7 @@
         <div class="role2">
             <div class="img2"></div>
             <div class="name2">
-                <p>李四四四四四</p>
+                <p>机器人</p>
                 <div class="daka2">
                     <ul>
                         <li></li>
@@ -85,7 +86,7 @@
     <!-- 打卡点的弹窗 -->
     <div class="win2-daka">
         <div class="win2-content">
-            <img src="../imagines/jinjianglou.PNG" alt="晋江楼" style="width: 450px;height: 400px;">
+            <img src="../imagines/jinjianglou.PNG" alt="晋江楼" style="width: 450px;height: 400px;" id="pic1">
             <!-- <img src="../imagines/tushuguan.jpg" alt="图书馆" style="width: 450px;height: 400px;"> -->
             <!-- <img src="../imagines/sutuo.jpg" alt="素拓" style="width: 450px;height: 400px;"> -->
             <!-- <img src="../imagines/honghui.jpg" alt="宏晖" style="width: 450px;height: 400px;"> -->
@@ -97,9 +98,9 @@
         <div class="suiji-content">
             <div class="suijititle">随机事件选择</div>
             <!-- 选择让自己前进 -->
-            <div class="ziji">让自己前进</div>
+            <div class="ziji" id="ziji">让自己前进</div>
             <!-- 选择让对方前进 -->
-            <div class="duifang">让对方前进</div>
+            <div class="duifang" id="duifang">让对方前进</div>
         </div>
     </div>
     <!-- 游戏结束弹窗 -->
@@ -144,11 +145,15 @@
         var time = document.querySelector('.time');
         var num; //骰子数
 
+        var judge = document.getElementsByClassName("win1-over");
+        var dakajudge = document.getElementsByClassName("win2-daka");
+        var iii=0;
+
         var target;
         //点击骰子后触发
 
         clock(time);
-
+        //$('#tz').trigger('click');
         tz.addEventListener('click', function () {
             num = getnum(); //num从后端获取？
             // num = 1;
@@ -175,53 +180,15 @@
                     break;
             }
             //玩家移动期间禁用骰子，移动完之后再恢复
-                    if (flag % 2) {
+            if (flag % 2) {
+                // var popUp = document.getElementById("win1-over");
+                // popUp.style.display = "";
             // console.log(target);
             aposi+=num;//随机摇骰子，玩家位置发生改变
             console.log(player1.offsetLeft);
             console.log(player1.offsetTop);
             flag++;
-
-            var num1=0;
-
-            if(map[aposi]==1) {//若遇到小白
-                var apo;
-                apo = Jump(aposi);
-                num1 = apo-aposi;
-                aposi = apo;
-
-                if(aflag[aposi]==0)
-                {
-                    aflag[aposi]=1;
-                    asum++;
-                }
-                clearInterval(time.timer);
-                animate1(player1, time,num,num1,1,animate1);
-                if(asum>=5) gameover;
-            }
-            else{
-                animate1(player1, time,num,num1,0,animate1);
-                if(aposi>=45) {
-                    aposi=aposi-45;
-                    acir++;
-                    if(acir>=2||bcir>=2&&res==1) gameover;//若限时模式且领先玩家的圈数大于二则结束游戏
-                    //跳转界面
-                }
-                if(goal[aposi]==1&&aflag[aposi]==0){
-                    aflag[aposi]=1;
-                    asum++;
-                    if(asum==5) gameover;
-                }
-            }
-
-
-            // var choose=0;
-            // if(map[aposi]==2){
-            //     var r = Math.round(Math.random()*6+1);
-            //     if(choose==0) aposi+=r;
-            //     else bposi+=r;
-            // }
-
+            Aplayer(num);
         }
         else {
             // target = player2.offsetLeft + num * (-30);
@@ -230,42 +197,7 @@
             console.log(player2.offsetLeft);
             console.log(player2.offsetTop);
             flag++;
-
-            var num2=0;
-            if(map[bposi]==1) {//若遇到小白
-                var bpo;
-                bpo = Jump(bposi);
-                num2 = bpo-bposi;
-                bposi = bpo;
-
-                if(bflag[bposi]==0)
-                {
-                    bflag[bposi]=1;
-                    bsum++;
-                }
-                clearInterval(time.timer);
-                animate2(player2, time,num,num2,1,animate2);
-                if(bsum>=5) gameover;
-            }
-            else{
-                animate2(player2, time,num,num2,0,animate2);
-                if(bposi>=45) {
-                    bposi=bposi-45;
-                    bcir++;
-                    if(acir>=2||bcir>=2&&res==1) gameover;//若限时模式且领先玩家的圈数大于二则结束游戏
-                }
-                if(goal[bposi]==1&&bflag[bposi]==0){
-                    bflag[bposi]=1;
-                    bsum++;
-                    if(bsum==5) gameover;
-                }
-            }
-            // var choose=0;
-            // if(map[aposi]==2){
-            //     var r = Math.round(Math.random()*6+1);
-            //     if(choose==0) aposi+=r;
-            //     else bposi+=r;
-            // }
+            Bplayer(num);
         }
 
     })
