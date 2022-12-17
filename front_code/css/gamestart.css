@@ -135,7 +135,13 @@ h3 {
   padding-right: 10px;
 }
 .playerinfo {
-  margin-top: 98px;
+  margin-top: 80px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: row;
+}
+.playerinfo1 {
+  margin-top: 80px;
   margin-left: 70px;
   display: flex;
   flex-direction: row;
@@ -146,9 +152,9 @@ h3 {
 
 }
 .player011{
-  position: absolute;
-  left: 200px;
-  top: 150px;
+  position: relative;
+  margin-left: 100px;
+  margin-top: 0px;
 }
 .invite img{
   margin-left: 70px;
@@ -159,27 +165,30 @@ h3 {
   z-index: 1;
 } */
 .startgame1{
-  position: absolute;
-  top: 380px;
-  left: 220px;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 180px;
 }
 /* 签到和分享 */
-/* .ss{
-  margin-top: 40px;
-  display: flex;
-} */
+.ss{
+  position: relative;
+  margin-top: 0px;
+  display:flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
 
 /* 签到按钮 */
 .signin {
-  position: absolute;
-  top: 470px;
-  left: 530px;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 500px;
 }
 /* 分享按钮 */
 .share {
-  position: absolute;
-  top: 470px;
-  left: 600px;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 50px;
 }
 .tan1 {
   width: 300px;
@@ -445,15 +454,21 @@ h3 {
   z-index: 111;
 }
 /* 选择模式 */
+.choice{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
 .limited-time{
-  position: absolute;
-  left: 130px;
-  top: 400px;
+  position: relative;
+  margin-left: 130px;
+  top: 0px;
 }
 .endless{
-  position: absolute;
-  left: 340px;
-  top: 400px;
+  position: relative;
+  margin-left: 60px;
+  margin-top: 0px;
 }
 
 .signin-single-success{
