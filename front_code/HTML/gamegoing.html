@@ -41,7 +41,7 @@
         <div class="role2">
             <div class="img2"></div>
             <div class="name2">
-                <p>机器人</p>
+                <p>蛙蛙</p>
                 <div class="daka2">
                     <ul>
                         <li></li>
@@ -104,6 +104,7 @@
         </div>
     </div>
     <!-- 游戏结束弹窗 -->
+    <!-- 弹窗1我赢了-->
     <div class="win1-over">
         <div class="win1-content">
             <!-- 游戏结束弹窗的上部分 -->
@@ -112,10 +113,10 @@
             <div class="winner">
                 <!-- 胜利 -->
                 <!-- 胜利玩家头像 -->
-                <img src="../imagines/role1.png" alt="胜利的玩家" style="width: 60px;height: 60px;" class="touxiang1"> 
+                <img src="../imagines/role1.png" alt="胜利的玩家" style="width: 60px;height: 60px;" class="touxiang1">
                 <div class="winner-text">
                     <!-- 胜利玩家昵称 -->
-                    <div class="winner-name">我</div>
+                    <div class="winner-name">恭喜你挑战成功</div>
                     <img src="../imagines/gold.png" alt="金币" class="jinbi" style="width: 20px; height: 20px;">
                     <div class="jinbishu">✖ 100</div>
                     <img src="../imagines/winnerimg.png" alt="胜利" class="winner-smile">
@@ -127,15 +128,39 @@
                 <img src="../imagines/role2.png" alt="失败的玩家" style="width: 60px;height: 60px;" class="touxiang2">
                 <div class="loser-text">
                     <!-- 失败玩家昵称 -->
-                    <div class="loser-name">机器人</div>
+                    <div class="loser-name">蛙蛙</div>
                     <div class="shibai">挑战失败！</div>
                     <img src="../imagines/loserimg1.png" alt="失败" class="loser-smile">
                 </div>
             </div>
-            <button class="b1">返回</button>  <button class="b2">重新开始</button>
+            <button class="b1" id="b1">返回</button>
         </div>
     </div>
-    
+    <!-- 弹窗2我输了-->
+    <div class="win11-over">
+        <div class="win11-content">
+            <div class="shang">游戏结束</div>
+            <div class="winner">
+                <img src="../imagines/role1.png" alt="胜利的玩家" style="width: 60px;height: 60px;" class="touxiang1">
+                <div class="winner-text">
+                    <div class="winner-name">很抱歉你挑战失败！</div>
+                    <img src="../imagines/gold.png" alt="金币" class="jinbi" style="width: 20px; height: 20px;">
+                    <div class="jinbishu">- 100</div>
+                    <img src="../imagines/loserimg1.png" alt="失败" class="winner-smile">
+                </div>
+            </div>
+            <div class="loser">
+                <img src="../imagines/role2.png" alt="失败的玩家" style="width: 60px;height: 60px;" class="touxiang2">
+                <div class="loser-text">
+                    <div class="loser-name">蛙蛙</div>
+                    <div class="shibai">挑战成功！</div>
+                    <img src="../imagines/winnerimg.png" alt="胜利" class="loser-smile">
+                </div>
+            </div>
+            <button class="b1" id="b2">返回</button>
+        </div>
+    </div>
+
     <script>
         var flag = 1; //flag为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
@@ -145,7 +170,8 @@
         var time = document.querySelector('.time');
         var num; //骰子数
 
-        var judge = document.getElementsByClassName("win1-over");
+        var endjudge1 = document.getElementsByClassName("win11-over");
+        var endjudge2 = document.getElementsByClassName("win11-over");
         var dakajudge = document.getElementsByClassName("win2-daka");
         var iii=0;
 
@@ -153,6 +179,13 @@
         //点击骰子后触发
 
         clock(time);
+        // for( iii=0;iii<endjudge1.length;iii++){
+        //     endjudge1[iii].style.display = "block";
+        // }
+        // document.getElementById('b2').addEventListener('click', function (e) {
+        //     location.href = "../HTML/single-invitesuccess.html";
+        // })
+
         //$('#tz').trigger('click');
         tz.addEventListener('click', function () {
             num = getnum(); //num从后端获取？
