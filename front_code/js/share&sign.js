@@ -13,7 +13,7 @@ $(function(){
             url:"",
             type:"get",
             dataType:"json",
-            data:JSON.stringify(email),
+            data:JSON.stringify(d),
             success:function(){
                 tan1.style.display = "block";
                 // var money = getCookie('money');  
