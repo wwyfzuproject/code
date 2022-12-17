@@ -29,6 +29,14 @@ goal[12]=1;
 goal[17]=1;
 goal[26]=1;
 goal[32]=1;//这几个点是打卡点
-var res;
 
-alert(res);
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r!=null)
+         return (r[2]);
+         return null;
+}
+var res= GetQueryString('res');//给res赋值
+
+// alert(res);
