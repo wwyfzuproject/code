@@ -30,6 +30,8 @@ goal[17]=1;
 goal[26]=1;
 goal[32]=1;//这几个点是打卡点
 
+
+//取出url中“？”后的res值
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
     var r = window.location.search.substr(1).match(reg);
