@@ -14,6 +14,47 @@ function animate1(obj, time, num, num1,f,callback) {
             {
                 callback(obj,time,num1,0,0,animate1);
             }
+            else if(f==2){
+                var suiji = document.getElementsByClassName("suijichoice");
+                for(iii=0;iii<suiji.length;iii++){
+                    suiji[iii].style.display = "block";
+                    }
+                document.getElementById('ziji').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        choice_flag=0;//为0自己前进
+                        if(play_flag==1){
+                            var r = Math.round(Math.random()*6+1);
+                            aposi+=r;
+                            alert(r+"Aziji");
+                            Aplayer(r);
+                        }
+
+                    }
+                })
+                document.getElementById('duifang').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        choice_flag=1;//为1对方前进
+                        if(play_flag==1) {
+                            var r = Math.round(Math.random() * 6 + 1);
+                            bposi += r;
+                            alert(r+"Aduifang");
+                            Bplayer(r);
+                        }
+                    }
+                })
+            }
+            else if(f==3){
+                for( iii=0;iii<dakajudge.length;iii++){
+                    dakajudge[iii].style.display = "block";
+                }
+                document.getElementById('pic1').addEventListener('click', function (e) {
+                    for( iii=0;iii<dakajudge.length;iii++){
+                        dakajudge[iii].style.display = "none";
+                    }
+                })
+            }
             clock(time);
         }
         else {
@@ -139,6 +180,48 @@ function animate2(obj, time, num, num2,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num2,0,0,animate2);
+            }
+            else if(f==2){
+                var suiji = document.getElementsByClassName("suijichoice");
+                for(iii=0;iii<suiji.length;iii++){
+                    suiji[iii].style.display = "block";
+                }
+                document.getElementById('ziji').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        //choice_flag=0;//为0自己前进
+                        if(play_flag==2){
+                            var r = Math.round(Math.random()*6+1);
+                            bposi+=r;
+                            alert(r+"Bziji");
+                            Bplayer(r);
+                        }
+
+                    }
+                })
+                document.getElementById('duifang').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        //choice_flag=1;//为1对方前进
+                        if(play_flag==2){
+                            var r = Math.round(Math.random()*6+1);
+                            aposi+=r;
+                            alert(r+"Bduifang");
+                            Aplayer(r);
+                        }
+
+                    }
+                })
+            }
+            else if(f==3){
+                for( iii=0;iii<dakajudge.length;iii++){
+                    dakajudge[iii].style.display = "block";
+                }
+                document.getElementById('pic1').addEventListener('click', function (e) {
+                    for( iii=0;iii<dakajudge.length;iii++){
+                        dakajudge[iii].style.display = "none";
+                    }
+                })
             }
             clock(time);
         }
