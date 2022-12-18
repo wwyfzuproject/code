@@ -13,14 +13,14 @@ body {
   background-color: white;
 }
 .back {
-  width: 983px;
-  height: 699px;
+  width: 789px;
+  height: 561px;
   background-color: #d2f09f;
   margin: 10px auto;
   position: relative;
   display: flex;
 }
-.ranking {
+/* .ranking {
   height: 699px;
   width: 306px;
   background-color: aliceblue;
@@ -28,7 +28,7 @@ body {
 }
 .ranking-list__wrapper {
   /* calc: css一个可以计算的方法，百度能找到说明。100%就是父盒子的高度，100px是你上面那两个切换的高度，相减就得到最终的 */
-  height: calc(100% - 100px);
+  /* height: calc(100% - 100px);
   overflow: hidden;
   position: relative;
 }
@@ -55,8 +55,8 @@ body {
 .ranking-item .ranking-item__value {
   position: relative;
   padding-left: 30px;
-}
-.ranking-item .bg {
+} */
+/* .ranking-item .bg {
   position: absolute;
   left: 20px;
   right: 0;
@@ -68,15 +68,15 @@ body {
   margin-top: 7px;
   margin-left: 100px;
   z-index: 11;
-}
-.up {
+}  */
+/* .up {
   float: left;
   width: 304px;
   height: 100px;
-  background-color: aliceblue;
+  background-color: aliceblue; */
   /* border-bottom: black;
     border-width: 1px;
-    border-style:solid; */
+    border-style:solid; 
 }
 .up li {
   float: left;
@@ -84,13 +84,17 @@ body {
 }
 ol {
   padding-top: 100px;
-  /* height: ; */
+   height: ; 
 }
 ol li {
   list-style-image: url(imagines/rankings.png);
+} */
+
+.right-face{
+  position: absolute;
+  top: 10px;
+  left: 80px;
 }
-
-
 h3 {
   margin-left: 10px;
   font-size: 20px;
@@ -131,42 +135,60 @@ h3 {
   padding-right: 10px;
 }
 .playerinfo {
-  margin-top: 170px;
-  margin-left: 96px;
+  margin-top: 80px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: row;
+}
+.playerinfo1 {
+  margin-top: 80px;
+  margin-left: 70px;
   display: flex;
   flex-direction: row;
 }
 .player01 {
   position: relative;
-  margin-left: 17px;
-}
+  margin-left: 10px;
 
-.invite img{
-  margin-left: 100px;
 }
-.startgame {
+.player011{
+  position: relative;
+  margin-left: 100px;
+  margin-top: 0px;
+}
+.invite img{
+  margin-left: 70px;
+}
+/* .startgame {
   margin-left: 200px;
   margin-top: 60px;
   z-index: 1;
+} */
+.startgame1{
+  position: relative;
+  margin-top: 30px;
+  margin-left: 180px;
 }
 /* 签到和分享 */
 .ss{
-  margin-top: 60px;
-  display: flex;
+  position: relative;
+  margin-top: 0px;
+  display:flex;
+  flex-direction: row;
+  padding-bottom: 20px;
 }
 
 /* 签到按钮 */
 .signin {
-  flex-direction: row;
-  padding-right: 50px;
-  margin-left: 500px;
+  position: relative;
   margin-top: 0px;
+  margin-left: 500px;
 }
 /* 分享按钮 */
 .share {
-  position: absolute;
-  top: 615px;
-  margin-left: 550px;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 50px;
 }
 .tan1 {
   width: 300px;
@@ -174,8 +196,10 @@ h3 {
   background-color: rgba(215, 236, 184, 1);
   position: absolute;
   border: #999 solid 2px;
-  margin-top: 200px;
-  margin-left: 350px;
+  top: 200px;
+  left: 170px;
+  z-index: 11;
+  display: none;
 }
 .qiandao-title {
   width: 300;
@@ -226,10 +250,12 @@ h3 {
   background-color: rgba(215, 236, 184, 1);
   position: absolute;
   border: #999 solid 2px;
-  margin-top: 200px;
-  margin-left: 350px;
+  top: 200px;
+  left: 170px;
+  z-index: 11;
   display: flex;
   flex-direction: row;
+  display: none;
 }
 .share-title {
   width: 300;
@@ -265,6 +291,19 @@ h3 {
   width: 120px;
   height: 70px;
   padding-top: 0px;
+}
+.copysuccess{
+  width:270px;
+  height: 80px;
+  border-radius: 30px;
+  font-size: 45px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  top: 300px;
+  left: 320px;
+  z-index: 111;
+  display: none;
 }
 
 .zaixianlist {
@@ -399,31 +438,37 @@ h3 {
 {
   position: absolute;
   top: 200px;
-  left: 391px;
+  left: 140px;
   z-index: 11;
 }
 .accept-deduct-gold{
   position: absolute;
-  left: 600px;
+  left: 190px;
   top: 350px;
   z-index: 111;
 }
 .refuse-deduct-gold{
   position: absolute;
-  left: 430px;
+  left: 370px;
   top: 350px;
   z-index: 111;
 }
 /* 选择模式 */
+.choice{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
 .limited-time{
-  position: absolute;
-  left: 450px;
-  top: 500px;
+  position: relative;
+  margin-left: 130px;
+  top: 0px;
 }
 .endless{
-  position: absolute;
-  left: 650px;
-  top: 500px;
+  position: relative;
+  margin-left: 60px;
+  margin-top: 0px;
 }
 
 .signin-single-success{

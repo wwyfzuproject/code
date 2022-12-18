@@ -10,14 +10,15 @@
 </head>
 <script src="https://unpkg.com/better-scroll@latest/dist/better-scroll.min.js"></script>
 <script type="text/javascript" src="../js/JQuery-3.6.1.min.js"></script>
-<script type="text/javascript" src="../js/single-game.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/gameBtn1.js"></script>
 <script type="text/javascript" src="../js/share&sign.js"></script>
-<script type="text/javascript" src="../js/coin&name&img.js"></script>
+<script type="text/javascript" src="../js/coin&name.js"></script>
 
 
 <body>
     <div class="back">
-        <!-- 排行榜 -->
+        <!-- 排行榜
         <div class="ranking">
             <div class="clearfix">
                 <ul id="tab-wrapper" class="up">
@@ -41,72 +42,68 @@
                 </form>
             </div>
 
-            <!-- 排名列表 -->
-            <div id="ranking-list__wrapper" class="ranking-list__wrapper">
+            排名列表 -->
+            <!-- <div id="ranking-list__wrapper" class="ranking-list__wrapper">
                 <ul class="ranking-list">
 
                 </ul>
-            </div>
+            </div> -->
 
             <!-- 在线列表 -->
-            <div id="zaixianlist" class="zaixianlist">
+            <!-- <div id="zaixianlist" class="zaixianlist">
                 <ul class="zaixian-list">
 
                 </ul>
-            </div>
-        </div>
+            </div> -->
+        
 
         <!-- 右上角玩家信息 -->
         <div class="right-face">
             <div class="playerset">
                 <img src="../imagines/gold.png" width="40px" height="40px">
-                <p class="coinNum">&nbspX&nbsp</p>
-                <p class="coinNum">22.5w</p>
-                <div class="name">法外狂徒张三</div>
+                <p class="coinNum" >&nbspX&nbsp</p>
+                <p id="coinNum" class="coinNum">22.5w</p>
+                <!-- <p class="coinNum">22.5w</p> -->
+                <div id ="name" class="name">法外狂徒张三</div>
+                <!-- <div class="name">法外狂徒张三</div> -->
 
             </div>
-
+            
             <!-- logo -->
-            <div class="playerinfo">
+            <div class="playerinfo1">
 
-                <div class="player01">
-                    <img src="../imagines/role1.png" alt="" width="200px" height="144px">
+                <div class="player011">
+                    <img src="../imagines/role1.png" alt="" width="250px" height="174px">
                 </div>
 
                 <!-- 邀请按钮-->
-                <div class="invite">
+                <!-- <div class="invite">
                     <img src="../imagines/invite.png" alt="" width="150px" height="144px"
                         onclick="invite1()">
-                </div>
+                </div> -->
 
             </div>
             <!-- 开始游戏按钮 -->
             <div id="single-game">
-                <img src="../imagines/startgame.png" onclick="startgame()" width="200px" height="80px" alt=""
-                    class="startgame">
+                <img src="../imagines/startgame.png" width="200px" height="80px" alt=""
+                    class="startgame1">
             </div>
 
-            <!-- 开始游戏前的金币扣除 -->
+            <!-- 游戏开始前的金币扣除 -->
             <div class="deduct-gold">
                 <img class="tips" src="../imagines/deduct-gold.png" width="350px" height="250px" alt="">
                 <img class="refuse-deduct-gold"  src="../imagines/refuse.png" width="100px" height="60px" alt="">
                 <img class="accept-deduct-gold"  src="../imagines/accept.png" height="60px" width="100px" alt="">
             </div>
             <div id="black">
-            </div>
 
-            <!-- 已发送邀请，等待对方接收弹窗 -->
-            <div class="wait-accept">
-                已发送邀请，等待对方接收
-            </div>
-
-            <!-- 签到和分享按钮 -->
+            <!-- 签到和分享 -->
             <div class="ss">
                 <div class="signin" id="sign">
-                    <img src="../imagines/qiandao.png" alt="" width="30px" height="30px">
+                    <img src="../imagines/qiandao.png" alt="" width="40px" height="40px">
                 </div>
                 <div class="share" id="share">
-                    <img src="../imagines/share.png" alt="" width="30px" height="30px">
+                    <img src="../imagines/share.png" alt="" width="40px" height="40px">
                 </div>
             </div>
 
@@ -114,7 +111,7 @@
 
         <!-- //签到和分享 -->
 
-        <div id="tan1" class="tan1">
+        <div id="tan1" class="tan1"  >
             <div class="qiandao-title">
                 <strong>签到</strong>
                 <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close">
@@ -125,9 +122,10 @@
                     <img src="../imagines/gold.png" alt="">
                     <h3>x 100</h3>
                 </div>
-
-
             </div>
+        </div>
+        <div class="copysuccess">
+            复制成功
         </div>
 
         <div class="tan2">
@@ -135,165 +133,210 @@
                 <h2>分享领金币</h2>
                 <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close2">
             </div>
+            <textarea id="copytext" style="display:none;"></textarea>
             <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
-            <img src="../imagines/cope.JPG" alt="" width="100px" height="60px" class="copy">
-        </div>
+            <img class="copy" src="../imagines/cope.JPG" alt="" width="100px" height="60px" id="copy">
+        </div> 
         <!-- <img src="../imagines/骰子2.png" alt=""> -->
+    </div>
+</div>
         <script>
 
 
             // 签到和分享页面的弹窗
-            var tan1 = document.getElementById('tan1');
-            var qiandao = document.querySelector(".signin");
-            var close1 = document.querySelector(".close");
-            var close2 = document.querySelector(".close2")
-            var tan2 = document.querySelector(".tan2");
-            var share = document.querySelector(".share");
+            // var tan1 = document.getElementById('tan1');
+            // var qiandao = document.querySelector(".signin");
+            // var close1 = document.querySelector(".close");
+            // var close2 = document.querySelector(".close2")
+            // var tan2 = document.querySelector(".tan2");
+            // var share = document.querySelector(".share");
 
-            tan1.style.display = "none";
-            tan2.style.display = "none";
-            qiandao.onclick = function () {
-                tan1.style.display = "block";
-            }
-            share.onclick = function () {
-                tan2.style.display = "block";
-            }
-            window.onclick = function (event) {
+            // tan1.style.display = "none";
+            // tan2.style.display = "none";
+            // qiandao.onclick = function () {
+            //     tan1.style.display = "block";
+            // }
+            // share.onclick = function () {
+            //     tan2.style.display = "block";
+            // }
+            // window.onclick = function (event) {
 
-                if (event.target == tan1) {
-                    tan1.style.display = "none";
-                }
-                if (event.target == tan2) {
-                    tan2.style.display = "none";
-                }
+            //     if (event.target == tan1) {
+            //         tan1.style.display = "none";
+            //     }
+            //     if (event.target == tan2) {
+            //         tan2.style.display = "none";
+            //     }
 
-            }
-            close1.onclick = function () {
-                tan1.style.display = "none";
+            // }
+            // close1.onclick = function () {
+            //     tan1.style.display = "none";
 
-            }
-            close2.onclick = function () {
-                tan2.style.display = "none";
+            // }
+            // close2.onclick = function () {
+            //     tan2.style.display = "none";
 
-            }
+            // }
+            // var copy = document.querySelector(".copy");
+            // var copysuccess = document.querySelector(".copysuccess");
+            // copysuccess.style.display = "none";
+            // copy.onclick=function(){
+            //     copysuccess.style.display = "block";
+            //     setTimeout(function(){
+            //     copysuccess.style.display="none";
+            // },2000)
+            // }
+            
+            var startgame1=document.querySelector(".startgame1")
             var deduct = document.querySelector(".deduct-gold");
             // 金币扣除提示
             deduct.style.display = "none";
-            function startgame() {
+            startgame1.onclick=function(){
                 deduct.style.display = "block";
             }
-            var refusededuct=document.querySelector(".refuse-deduct-gold");
-            var acceptdeduct=document.querySelector(".accept-deduct-gold");
+            
+            var refuse=document.querySelector(".refuse-deduct-gold");
+            // var accept=document.querySelector(".accept-deduct-gold");
 
-            refusededuct.onclick=function(){
+            refuse.onclick=function(){
                 deduct.style.display = "none";
            }
-           $(".accept-deduct-gold").click(function(){
-            deduct.style.display = "none";
-            location.href='../HTML/single-invitesuccess.html';
-           })
-           
-           
+        //    accept.onclick=function(){
+        //         location.href = "single-invitesuccess.html";
+        //    }
 
-        </script>
+
+        function startgame(){
+            location.href='../HTML/single-invitesuccess.html';
+        }
+    </script>
 </body>
+<!-- link -->
 <script>
 
-    // 排名的加载
-    const wrapper = document.getElementById("ranking-list__wrapper");
-    const bs = BetterScroll.createBScroll(wrapper, { pullUpLoad: true, mouseWheel: true })
+function copyText(value) {
+  if (value == null || value === '') return false
+  var textarea = document.createElement('textarea')
+  textarea.value = value
+  document.body.appendChild(textarea)
+  textarea.focus()
+  textarea.setSelectionRange ? textarea.setSelectionRange(0, textarea.value.length) : textarea.select()
+  var result = document.execCommand('copy')
+  document.body.removeChild(textarea)
+  return result
+}
+
+document.getElementById('copy').addEventListener('click',function(){
+    copyText('demo');
+    alert("复制成功");
+})
+
+// // 通过按钮实现复制指定元素的文本
+// document.getElementById('button').addEventListener('click', function() {
+//   var text = document.getElementById("text").value
+//   var success = copyText(text)
+//   console.log(success ? '复制成功' : '复制失败')
+// })
 
 
-    const onlineWrapper = document.getElementById("zaixianlist");
-    const onlineBs = BetterScroll.createBScroll(onlineWrapper, { pullUpLoad: true, mouseWheel: true })
-    const nameDataList = ['测试数据']; // 
-    const onlineNameDataList = ['张三', '李四', '王五']; // 
-    const rankingOptions = {
-        allTotal: 100, // 达到100条数据，不再加载
-        size: 10,
-        page: 1
-    }
-    const onlineOptions = {
-        allTotal: 100, // 达到100条数据，不再加载
-        size: 10,
-        page: 1
-    }
-    let activeTab = 0;// 当前点击的tab，0：排行榜 1：在线，默认：0
-    // 获取排行榜数据
-    function loadRankingData() {
-        const { page, size } = rankingOptions;
-        const dataList = Array(size).fill(0).map((_, index) => `<li class="ranking-item">
-                        <img src="../imagines/rankings.png" alt="" width="252px" height="52px" class="bg">
-                        <h2>${(page - 1) * size + index + 1}</h2>
-                        <div class="ranking-item__value">
-                            <div>${nameDataList[index % nameDataList.length]}${(page - 1) * size + index + 1}</div>
-                            <div class="coin">${((page - 1) * size + index + 1) * 100}00</div>
-                        </div>
-                    </li>`).join('')
+</script>
+<script>
 
-        const dom = document.getElementsByClassName('ranking-list')[0];
-        dom.innerHTML = dom.innerHTML + dataList;
+    // // 排名的加载
+    // const wrapper = document.getElementById("ranking-list__wrapper");
+    // const bs = BetterScroll.createBScroll(wrapper, { pullUpLoad: true, mouseWheel: true })
 
-    }
-    // 获取在线数据
-    function loadOnlineData() {
-        const { page, size } = onlineOptions;
-        const dataList = Array(size).fill(0).map((_, index) => `<li class="people">
-                        <img src="../imagines/online-list.png" alt="" width="252px" height="52px" class="state">
-                        <img src="../imagines/invite-button.png" alt="" width="60px" height="40px" class="invite">
-                        <p>${onlineNameDataList[index % onlineNameDataList.length]}${(page - 1) * size + index + 1}</p>
-                    </li>`).join('')
 
-        const dom = document.getElementsByClassName('zaixian-list')[0];
-        dom.innerHTML = dom.innerHTML + dataList;
-    }
-    // 排行榜上拉回调
-    bs.on('pullingUp', () => {
-        if (rankingOptions.page * rankingOptions.size >= rankingOptions.allTotal) return
-        rankingOptions.page += 1;
-        loadRankingData();
-        bs.finishPullUp()
-        bs.refresh();
-    })
-    // 在线上拉回调
-    onlineBs.on('pullingUp', () => {
-        if (onlineOptions.page * onlineOptions.size >= onlineOptions.allTotal) return
-        onlineOptions.page += 1;
-        loadOnlineData();
-        onlineBs.finishPullUp()
-        onlineBs.refresh();
-    })
+    // const onlineWrapper = document.getElementById("zaixianlist");
+    // const onlineBs = BetterScroll.createBScroll(onlineWrapper, { pullUpLoad: true, mouseWheel: true })
+    // const nameDataList = ['测试数据']; // 
+    // const onlineNameDataList = ['张三', '李四', '王五']; // 
+    // const rankingOptions = {
+    //     allTotal: 100, // 达到100条数据，不再加载
+    //     size: 10,
+    //     page: 1
+    // }
+    // const onlineOptions = {
+    //     allTotal: 100, // 达到100条数据，不再加载
+    //     size: 10,
+    //     page: 1
+    // }
+    // let activeTab = 0;// 当前点击的tab，0：排行榜 1：在线，默认：0
+    // // 获取排行榜数据
+    // function loadRankingData() {
+    //     const { page, size } = rankingOptions;
+    //     const dataList = Array(size).fill(0).map((_, index) => `<li class="ranking-item">
+    //                     <img src="../imagines/rankings.png" alt="" width="252px" height="52px" class="bg">
+    //                     <h2>${(page - 1) * size + index + 1}</h2>
+    //                     <div class="ranking-item__value">
+    //                         <div>${nameDataList[index % nameDataList.length]}${(page - 1) * size + index + 1}</div>
+    //                         <div class="coin">${((page - 1) * size + index + 1) * 100}00</div>
+    //                     </div>
+    //                 </li>`).join('')
 
-    // 初始化排行榜和在线第一页列表数据
-    loadRankingData();
-    loadOnlineData();
+    //     const dom = document.getElementsByClassName('ranking-list')[0];
+    //     dom.innerHTML = dom.innerHTML + dataList;
 
-    // 未点击Tab的图片列表
-    const defaultTabUrls = ['../imagines/ranking2.png', '../imagines/online-num1.png'];
-    // 点击Tab的图片列表
-    const activeTabUrls = ['../imagines/ranking.png', '../imagines/online-num2.png'];
+    // }
+    // // 获取在线数据
+    // function loadOnlineData() {
+    //     const { page, size } = onlineOptions;
+    //     const dataList = Array(size).fill(0).map((_, index) => `<li class="people">
+    //                     <img src="../imagines/online-list.png" alt="" width="252px" height="52px" class="state">
+    //                     <img src="../imagines/invite-button.png" alt="" width="60px" height="40px" class="invite">
+    //                     <p>${onlineNameDataList[index % onlineNameDataList.length]}${(page - 1) * size + index + 1}</p>
+    //                 </li>`).join('')
+
+    //     const dom = document.getElementsByClassName('zaixian-list')[0];
+    //     dom.innerHTML = dom.innerHTML + dataList;
+    // }
+    // // 排行榜上拉回调
+    // bs.on('pullingUp', () => {
+    //     if (rankingOptions.page * rankingOptions.size >= rankingOptions.allTotal) return
+    //     rankingOptions.page += 1;
+    //     loadRankingData();
+    //     bs.finishPullUp()
+    //     bs.refresh();
+    // })
+    // // 在线上拉回调
+    // onlineBs.on('pullingUp', () => {
+    //     if (onlineOptions.page * onlineOptions.size >= onlineOptions.allTotal) return
+    //     onlineOptions.page += 1;
+    //     loadOnlineData();
+    //     onlineBs.finishPullUp()
+    //     onlineBs.refresh();
+    // })
+
+    // // 初始化排行榜和在线第一页列表数据
+    // loadRankingData();
+    // loadOnlineData();
+
+    // // 未点击Tab的图片列表
+    // const defaultTabUrls = ['../imagines/ranking2.png', '../imagines/online-num1.png'];
+    // // 点击Tab的图片列表
+    // const activeTabUrls = ['../imagines/ranking.png', '../imagines/online-num2.png'];
     
-    const showListIds = ['#ranking-list__wrapper', '#zaixianlist']
-    // 先把两个列表都隐藏，再显示排行榜列表
-    showListIds.forEach(id => $(id).hide());
-    $(showListIds[activeTab]).show();
-    // Tab切换事件 type：0或者1
-    function handleTabChange(type) {
-        activeTab = type;
-        // 1.先把两个Tab的图片都改成未点击状态的图片
-        $('#tab-wrapper').find('img').each((index, item) => {
-            $(item).attr('src', defaultTabUrls[index]);
-        })
-        // 2.把当前点击的tab设置为已点击的图片
-        $(event.target).attr('src', activeTabUrls[type]);
-        // 3.把两个列表都隐藏
-        showListIds.forEach(id => $(id).hide());
-        // 4.显示当前点击的列表
-        $(showListIds[type]).show();
-        // 5.只有在线的Tab才有搜索功能
-        if (type === 1) { $('#search-wrapper').show() }
-        else { $('#search-wrapper').hide() }
-    }
+    // const showListIds = ['#ranking-list__wrapper', '#zaixianlist']
+    // // 先把两个列表都隐藏，再显示排行榜列表
+    // showListIds.forEach(id => $(id).hide());
+    // $(showListIds[activeTab]).show();
+    // // Tab切换事件 type：0或者1
+    // function handleTabChange(type) {
+    //     activeTab = type;
+    //     // 1.先把两个Tab的图片都改成未点击状态的图片
+    //     $('#tab-wrapper').find('img').each((index, item) => {
+    //         $(item).attr('src', defaultTabUrls[index]);
+    //     })
+    //     // 2.把当前点击的tab设置为已点击的图片
+    //     $(event.target).attr('src', activeTabUrls[type]);
+    //     // 3.把两个列表都隐藏
+    //     showListIds.forEach(id => $(id).hide());
+    //     // 4.显示当前点击的列表
+    //     $(showListIds[type]).show();
+    //     // 5.只有在线的Tab才有搜索功能
+    //     if (type === 1) { $('#search-wrapper').show() }
+    //     else { $('#search-wrapper').hide() }
+    // }
 
     // 角色邀请按钮
     function invite1(){
@@ -303,19 +346,19 @@
     }
 
     // 列表邀请按钮，点击邀请
-    var invite=document.querySelector(".invite");
-        var wait=document.querySelector(".wait-accept");
-        wait.style.display="none";
-        invite.onclick= function () {
+    // var invite=document.querySelector(".invite");
+    //     var wait=document.querySelector(".wait-accept");
+    //     wait.style.display="none";
+    //     invite.onclick= function () {
             
-            wait.style.display="block";
-            setTimeout(function(){
-                wait.style.display="none";
-            },2000)
+    //         wait.style.display="block";
+    //         setTimeout(function(){
+    //             wait.style.display="none";
+    //         },2000)
 
-            //判断对方是否同意同意即跳转邀请成功页面，与后端接口
-            location.href='../HTML/invitesuccess.html';
-        }
+    //         //判断对方是否同意同意即跳转邀请成功页面，与后端接口
+    //         location.href='../HTML/invitesuccess.html';
+    //     }
 
     
 

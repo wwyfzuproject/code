@@ -1,4 +1,4 @@
-function animate1(obj, time, num, callback) {
+function animate1(obj, time, num, num1,f,callback) {
     clearInterval(obj.timer);
     var target, flag;
     // target = obj.offsetLeft + num * (-26);
@@ -10,6 +10,42 @@ function animate1(obj, time, num, callback) {
             // console.log(target);
             console.log(obj.offsetLeft);
             console.log(obj.offsetTop);
+            if(f==1)
+            {
+                callback(obj,time,num1,0,0,animate1);
+            }
+            else if(f==2){
+                var suiji = document.getElementsByClassName("suijichoice1");
+                for(iii=0;iii<suiji.length;iii++){
+                    suiji[iii].style.display = "block";
+                }
+                document.getElementById('ziji1').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        choice_flag=0;//为0自己前进
+                        if(play_flag==1){
+                            var r=Math.floor(Math.random() * 6) + 1;
+                            aposi+=r;
+                            alert(r+"Aziji");
+                            Aplayer(r);
+                        }
+
+                    }
+                })
+                document.getElementById('duifang1').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        choice_flag=1;//为1对方前进
+                        if(play_flag==1) {
+                            var r=Math.floor(Math.random() * 6) + 1;
+                            bposi += r;
+                            alert(r+"Aduifang");
+                            Bplayer(r);
+                        }
+                    }
+                })
+            }
+            else remove(f);
             clock(time);
         }
         else {
@@ -120,7 +156,7 @@ function animate1(obj, time, num, callback) {
     }, 100)
 
 }
-function animate2(obj, time, num, callback) {
+function animate2(obj, time, num, num2,f,callback) {
     clearInterval(obj.timer);
     var target, flag;
     flag = 0;
@@ -132,6 +168,43 @@ function animate2(obj, time, num, callback) {
             console.log(target);
             console.log(obj.offsetLeft);
             console.log(obj.offsetTop);
+            if(f==1)
+            {
+                callback(obj,time,num2,0,0,animate2);
+            }
+            else if(f==2){
+                var suiji = document.getElementsByClassName("suijichoice2");
+                for(iii=0;iii<suiji.length;iii++){
+                    suiji[iii].style.display = "block";
+                }
+                document.getElementById('ziji2').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        //choice_flag=0;//为0自己前进
+                        if(play_flag==2){
+                            var r = Math.round(Math.random()*6+1);
+                            bposi+=r;
+                            alert(r+"Bziji");
+                            Bplayer(r);
+                        }
+
+                    }
+                })
+                document.getElementById('duifang2').addEventListener('click', function (e) {
+                    for(iii=0;iii<suiji.length;iii++){
+                        suiji[iii].style.display = "none";
+                        //choice_flag=1;//为1对方前进
+                        if(play_flag==2){
+                            var r = Math.round(Math.random()*6+1);
+                            aposi+=r;
+                            alert(r+"Bduifang");
+                            Aplayer(r);
+                        }
+
+                    }
+                })
+            }
+            else remove(f);
             clock(time);
         }
         else {
@@ -256,4 +329,10 @@ function clock(obj) {
 
 function getnum() {
     return Math.floor(Math.random() * 6) + 1;
+}
+function Jump(posi){
+    if(posi==7) return 12;
+    else if (posi==22) return 26;
+    else if (posi==39) return 45;
+
 }
