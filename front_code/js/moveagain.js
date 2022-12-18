@@ -8,7 +8,7 @@ function onclick1(){
         if(play_flag==1){
             var r=Math.floor(Math.random() * 6) + 1;
             aposi+=r;
-            alert(r+"Aziji");
+            //alert(r+"Aziji");
             Aplayer(r);
         }
     }
@@ -21,7 +21,7 @@ function onclick2(){
         if(play_flag==1) {
             var r=Math.floor(Math.random() * 6) + 1;
             bposi += r;
-            alert(r+"Aduifang");
+           // alert(r+"Aduifang");
             Bplayer(r);
         }
     }
@@ -34,7 +34,7 @@ function onclick3(){
         if(play_flag==2){
             var r = Math.round(Math.random()*6+1);
             bposi+=r;
-            alert(r+"Bziji");
+           // alert(r+"Bziji");
             Bplayer(r);
         }
     }
@@ -47,7 +47,7 @@ function onclick4(){
         if(play_flag==2){
             var r = Math.round(Math.random()*6+1);
             aposi+=r;
-            alert(r+"Bduifang");
+        //    alert(r+"Bduifang");
             Aplayer(r);
         }
 
