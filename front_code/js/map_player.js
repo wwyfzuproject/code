@@ -115,7 +115,7 @@ function win_lose_jugde(){
             document.getElementById('b2').addEventListener('click', function (e) {
                 location.href = "../HTML/gamestart1.html";
             });
-            Ajax(result);    
+            Ajax2(result);    
         }
         else if(acir>=2){//a win
             result = 1;
@@ -125,7 +125,7 @@ function win_lose_jugde(){
             document.getElementById('b1').addEventListener('click', function (e) {
                 location.href = "../HTML/gamestart1.html";
             });
-            Ajax(result);   
+            Ajax1(result);   
         }
     }//若限时模式且领先玩家的圈数大于二则结束游戏
 
@@ -137,7 +137,7 @@ function win_lose_jugde(){
         document.getElementById('b1').addEventListener('click', function (e) {
             location.href = "../HTML/gamestart1.html";
         });
-        Ajax(result);
+        Ajax1(result);
     }
     if(bsum==5){
         result = 0;
@@ -147,7 +147,7 @@ function win_lose_jugde(){
         document.getElementById('b2').addEventListener('click', function (e) {
             location.href = "../HTML/gamestart1.html";
         });
-        Ajax(result);
+        Ajax2(result);
     };
 
 }
@@ -166,11 +166,20 @@ function getCookie(c_name) {
     return "";
     }
 
-function Ajax(result){  //result是输0赢1  str是email
-    var email = getCookie('email');
-    var str = email.substring(1,email.length-1);
+function Ajax1(result){  //result是输0赢1  str是email  赢
+    var email1 = getCookie('email');
+    var str1 = email1.substring(1,email.length-1);
     $.ajax({
-    url:"",
+    url:"https://.........?'email='+str+'&result='+result",
+    type:"get"
+    });
+};
+
+function Ajax2(result){  //result是输0赢1  str是email 输
+    var email2 = getCookie('email');
+    var str2 = email2.substring(1,email.length-1);
+    $.ajax({
+    url:"https://.........?'email='+str+'&result='+result",
     type:"get"
     });
 };
