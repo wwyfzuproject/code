@@ -125,7 +125,6 @@ function win_lose_jugde(){
                     endjudge2[iii].style.display = "block";
                 }
                 document.getElementById('b2').addEventListener('click', function (e) {
-                    alert("h1");
                     Ajax2(result);
                     location.href = "../HTML/gamestart1.html";
 
@@ -138,7 +137,6 @@ function win_lose_jugde(){
                     endjudge1[iii].style.display = "block";
                 }
                 document.getElementById('b1').addEventListener('click', function (e) {
-                    alert("h2");
                     Ajax1(result);
                     location.href = "../HTML/gamestart1.html";
 
@@ -155,7 +153,6 @@ function win_lose_jugde(){
             endjudge1[iii].style.display = "block";
         }
         document.getElementById('b1').addEventListener('click', function (e) {
-            alert("h3");
             Ajax1(result);
             location.href = "../HTML/gamestart1.html";
         });
@@ -167,12 +164,25 @@ function win_lose_jugde(){
             endjudge2[iii].style.display = "block";
         }
         document.getElementById('b2').addEventListener('click', function (e) {
-            alert("h4");
             Ajax2(result);
             location.href = "../HTML/gamestart1.html";
         });
        
     };
+
+}
+
+function Game_end(){
+    var result;
+        result = 0;
+        for( iii=0;iii<endjudge2.length;iii++){
+            endjudge2[iii].style.display = "block";
+        }
+        document.getElementById('b2').addEventListener('click', function (e) {
+            Ajax2(result);
+            location.href = "../HTML/gamestart1.html";
+        });
+
 
 }
 
