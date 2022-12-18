@@ -1,3 +1,59 @@
+var suiji2 = document.getElementsByClassName("suijichoice2");
+var suiji1 = document.getElementsByClassName("suijichoice1");
+function onclick1(){
+
+    for(iii=0;iii<suiji1.length;iii++){
+        suiji1[iii].style.display = "none";
+        choice_flag=0;//为0自己前进
+        if(play_flag==1){
+            var r=Math.floor(Math.random() * 6) + 1;
+            aposi+=r;
+            alert(r+"Aziji");
+            Aplayer(r);
+        }
+    }
+    document.getElementById('ziji1').removeEventListener("click", onclick1);
+}
+function onclick2(){
+    for(iii=0;iii<suiji1.length;iii++){
+        suiji1[iii].style.display = "none";
+        choice_flag=1;//为1对方前进
+        if(play_flag==1) {
+            var r=Math.floor(Math.random() * 6) + 1;
+            bposi += r;
+            alert(r+"Aduifang");
+            Bplayer(r);
+        }
+    }
+    document.getElementById('duifang1').removeEventListener("click", onclick2);
+}
+function onclick3(){
+    for(iii=0;iii<suiji2.length;iii++){
+        suiji2[iii].style.display = "none";
+        //choice_flag=0;//为0自己前进
+        if(play_flag==2){
+            var r = Math.round(Math.random()*6+1);
+            bposi+=r;
+            alert(r+"Bziji");
+            Bplayer(r);
+        }
+    }
+    document.getElementById('ziji2').removeEventListener("click", onclick3);
+}
+function onclick4(){
+    for(iii=0;iii<suiji2.length;iii++){
+        suiji2[iii].style.display = "none";
+        //choice_flag=1;//为1对方前进
+        if(play_flag==2){
+            var r = Math.round(Math.random()*6+1);
+            aposi+=r;
+            alert(r+"Bduifang");
+            Aplayer(r);
+        }
+
+    }
+    document.getElementById('duifang2').removeEventListener("click", onclick4);
+}
 function remove(f){//4 12 17 26 32
     if(f==3){
         for( iii=0;iii<dakajudge1.length;iii++){
