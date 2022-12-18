@@ -15,11 +15,11 @@ function animate1(obj, time, num, num1,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num1,0,0,animate1);
-                if(aflag[aposi]==0&&aposi!=0){
-                    //alert(aposi);
-                    aflag[aposi]=1;
-                    asum++;
-                }
+                // if(aflag[aposi]==0&&aposi!=0){
+                //     //alert(aposi);
+                //     aflag[aposi]=1;
+                //     asum++;
+                // }
                 if(asum==5) {
                     win_lose_jugde();
                 }
@@ -202,11 +202,11 @@ function animate2(obj, time, num, num2,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num2,0,0,animate2);
-                if(bflag[aposi]==0&&bposi!=0){
-                    //alert(aposi);
-                    bflag[bposi]=1;
-                    bsum++;
-                }
+                // if(bflag[aposi]==0&&bposi!=0){
+                //     //alert(aposi);
+                //     bflag[bposi]=1;
+                //     bsum++;
+                // }
                 if(bsum==5) {
                     win_lose_jugde();
                 }
