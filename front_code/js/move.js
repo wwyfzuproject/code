@@ -28,7 +28,7 @@ function animate1(obj, time, num, num1,f,callback) {
                         if(play_flag==1){
                             var r=Math.floor(Math.random() * 6) + 1;
                             aposi+=r;
-                            alert(r+"Aziji");
+                            //alert(r+"Aziji");
                             Aplayer(r);
                         }
 
@@ -41,7 +41,7 @@ function animate1(obj, time, num, num1,f,callback) {
                         if(play_flag==1) {
                             var r=Math.floor(Math.random() * 6) + 1;
                             bposi += r;
-                            alert(r+"Aduifang");
+                            //alert(r+"Aduifang");
                             Bplayer(r);
                         }
                     }
@@ -216,7 +216,7 @@ function animate2(obj, time, num, num2,f,callback) {
                         if(play_flag==2){
                             var r = Math.round(Math.random()*6+1);
                             bposi+=r;
-                            alert(r+"Bziji");
+                            //alert(r+"Bziji");
                             Bplayer(r);
                         }
 
@@ -229,7 +229,7 @@ function animate2(obj, time, num, num2,f,callback) {
                         if(play_flag==2){
                             var r = Math.round(Math.random()*6+1);
                             aposi+=r;
-                            alert(r+"Bduifang");
+                            //alert(r+"Bduifang");
                             Aplayer(r);
                         }
 
