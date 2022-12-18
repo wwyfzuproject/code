@@ -192,20 +192,21 @@ function getCookie(c_name) {
 
 function Ajax1(result){  //result是输0赢1  str是email  赢
     var email1 = getCookie('email');
-    var str1 = email1.substring(1,email.length-1);
+    var str1 = email1.substring(1,email1.length-1);
     $.ajax({
-    url:"https://.........?'email='+str+'&result='+result",
-    type:"get"
+        url:"http://localhost:8080/gameLogin/WinServlet?email="+str1,
+        type:"get"
     });
 };
 
 function Ajax2(result){  //result是输0赢1  str是email 输
     var email2 = getCookie('email');
-    var str2 = email2.substring(1,email.length-1);
+    var str2 = email2.substring(1,email2.length-1);
     $.ajax({
-    url:"https://.........?'email='+str+'&result='+result",
-    type:"get"
+        url:"http://localhost:8080/gameLogin/LoseServlet?email="+str2,
+        type:"get"
     });
 };
+
 
 
