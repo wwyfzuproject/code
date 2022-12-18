@@ -155,6 +155,8 @@ function animate1(obj, time, num, num1,f,callback) {
                     obj.style.left = 691 + 'px';
                     obj.style.top = 37 + 'px';
                     flag1 = 0;
+
+                    animate1(obj, time, num, num1,f,callback)
                 }
             }
 
@@ -319,6 +321,8 @@ function animate2(obj, time, num, num2,f,callback) {
                     obj.style.left = 722 + 'px';
                     obj.style.top = -32 + 'px';
                     flag2 = 0;
+
+                    animate2(obj, time, num, num2,f,callback)
                 }
             }
         }
