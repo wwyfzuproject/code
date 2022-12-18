@@ -32,15 +32,6 @@ a{
     /* margin: 0 auto; */
 }
 
-#endgame{
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    /* background-color: greenyellow; */
-    position: relative;
-    left: 960px;
-    top: -530px;
-}
 /* 玩家1的头像设置 */
 .bgbox .role1 .img1{
     display: inline-block;
@@ -288,7 +279,15 @@ a{
     top: 290px;
     z-index: 11;
 }
-
+.bgbox .touzi input{
+    width: 80px;
+    height: 30px;
+    float: left;
+    position: relative;
+    left: 150px;
+    top: 340px;
+    z-index: 11;
+}
 /* 打卡弹窗灰色背景样式设置 */
 .win2-daka1 {
     position: fixed;
