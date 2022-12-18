@@ -28,7 +28,7 @@ function animate1(obj, time, num, num1,f,callback) {
             else {
                 remove(f);
                 if(aflag[aposi]==0&&f!=-1){
-                    alert(aposi);
+                    //alert(aposi);
                     aflag[aposi]=1;
                     asum++;
                 }
@@ -162,7 +162,7 @@ function animate1(obj, time, num, num1,f,callback) {
 
                 if(obj.offsetLeft==689)
                 {
-                    num--;
+                   // num--;
                     obj.style.left = 691 + 'px';
                     obj.style.top = 37 + 'px';
                     flag1 = 0;
