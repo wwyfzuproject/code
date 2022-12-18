@@ -108,10 +108,10 @@ function animate1(obj, time, num, callback) {
                 }
             }
 
-            // else if((obj.offsetLeft>=353)&&obj.offsetTop)
-            // {
-
-            // }
+            else if((obj.offsetLeft>=353)&&obj.offsetTop>=104)
+            {
+                
+            }
 
             // num--;
 
