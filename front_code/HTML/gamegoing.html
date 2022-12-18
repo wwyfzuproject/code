@@ -81,8 +81,10 @@
         <!-- 骰子 -->
         <div class="touzi">
             <img src="../imagines/dice1.png" alt="骰子" id="tz">
+            <input id="endgame" type="button" value="结束游戏" onclick="Game_end()">
             <!-- <img src="../imagines/dice2.png" alt="骰子"> -->
         </div>
+
     </div>
     <!-- 打卡点的弹窗 -->
     <!--    <弹窗1>-->
@@ -192,7 +194,6 @@
             <button class="b1" id="b2">返回</button>
         </div>
     </div>
-    <input id="endgame" type="button" value="结束游戏" onclick="Game_end()">
     <script>
         var flag = 1; //flag为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
