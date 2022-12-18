@@ -21,31 +21,8 @@ function animate1(obj, time, num, num1,f,callback) {
                 for(iii=0;iii<suiji.length;iii++){
                     suiji[iii].style.display = "block";
                 }
-                document.getElementById('ziji1').addEventListener('click', function (e) {
-                    for(iii=0;iii<suiji.length;iii++){
-                        suiji[iii].style.display = "none";
-                        choice_flag=0;//为0自己前进
-                        if(play_flag==1){
-                            var r=Math.floor(Math.random() * 6) + 1;
-                            aposi+=r;
-                            //alert(r+"Aziji");
-                            Aplayer(r);
-                        }
-
-                    }
-                })
-                document.getElementById('duifang1').addEventListener('click', function (e) {
-                    for(iii=0;iii<suiji.length;iii++){
-                        suiji[iii].style.display = "none";
-                        choice_flag=1;//为1对方前进
-                        if(play_flag==1) {
-                            var r=Math.floor(Math.random() * 6) + 1;
-                            bposi += r;
-                            //alert(r+"Aduifang");
-                            Bplayer(r);
-                        }
-                    }
-                })
+                document.getElementById('ziji1').addEventListener('click', onclick1)
+                document.getElementById('duifang1').addEventListener('click', onclick2)
             }
             else remove(f);
             clock(time);
@@ -209,32 +186,8 @@ function animate2(obj, time, num, num2,f,callback) {
                 for(iii=0;iii<suiji.length;iii++){
                     suiji[iii].style.display = "block";
                 }
-                document.getElementById('ziji2').addEventListener('click', function (e) {
-                    for(iii=0;iii<suiji.length;iii++){
-                        suiji[iii].style.display = "none";
-                        //choice_flag=0;//为0自己前进
-                        if(play_flag==2){
-                            var r = Math.round(Math.random()*6+1);
-                            bposi+=r;
-                            //alert(r+"Bziji");
-                            Bplayer(r);
-                        }
-
-                    }
-                })
-                document.getElementById('duifang2').addEventListener('click', function (e) {
-                    for(iii=0;iii<suiji.length;iii++){
-                        suiji[iii].style.display = "none";
-                        //choice_flag=1;//为1对方前进
-                        if(play_flag==2){
-                            var r = Math.round(Math.random()*6+1);
-                            aposi+=r;
-                            //alert(r+"Bduifang");
-                            Aplayer(r);
-                        }
-
-                    }
-                })
+                document.getElementById('ziji2').addEventListener('click', onclick3)
+                document.getElementById('duifang2').addEventListener('click', onclick4)
             }
             else remove(f);
             clock(time);
