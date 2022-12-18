@@ -7,7 +7,7 @@ function animate1(obj, time, num, num1,f,callback) {
     var flag = 0;
     obj.timer = setInterval(function () {
         // if (obj.offsetLeft <= target) {
-        if (num == 0) {
+        if (num <= 0) {
             clearInterval(obj.timer);
             // console.log(target);
             console.log(obj.offsetLeft);
@@ -149,14 +149,15 @@ function animate1(obj, time, num, num1,f,callback) {
                     console.log(num);
                 }
 
-                if(obj.offsetLeft==689)
+                if(obj.offsetLeft==693)
                 {
                     num--;
                     obj.style.left = 691 + 'px';
                     obj.style.top = 37 + 'px';
                     flag1 = 0;
 
-                    animate1(obj, time, num, num1,f,callback)
+                    console.log('num = '+num);
+                    if(num>0) animate1(obj, time, num, num1,f,callback);
                 }
             }
 
@@ -164,7 +165,7 @@ function animate1(obj, time, num, num1,f,callback) {
 
         }
         
-    }, 100)
+    }, 10)
 
 }
 function animate2(obj, time, num, num2,f,callback) {
@@ -326,7 +327,7 @@ function animate2(obj, time, num, num2,f,callback) {
                 }
             }
         }
-    }, 100)
+    }, 10)
 
 }
 
