@@ -123,9 +123,11 @@ function win_lose_jugde(){
                 endjudge2[iii].style.display = "block";
             }
             document.getElementById('b2').addEventListener('click', function (e) {
+                Ajax2(result);  
                 location.href = "../HTML/gamestart1.html";
+                  
             });
-            Ajax2(result);    
+            
         }
         else if(acir>=2){//a win
             result = 1;
@@ -133,9 +135,11 @@ function win_lose_jugde(){
                 endjudge1[iii].style.display = "block";
             }
             document.getElementById('b1').addEventListener('click', function (e) {
+                Ajax1(result);   
                 location.href = "../HTML/gamestart1.html";
+                
             });
-            Ajax1(result);   
+            
         }
     }//若限时模式且领先玩家的圈数大于二则结束游戏
 
@@ -145,9 +149,10 @@ function win_lose_jugde(){
             endjudge1[iii].style.display = "block";
         }
         document.getElementById('b1').addEventListener('click', function (e) {
+            Ajax1(result);
             location.href = "../HTML/gamestart1.html";
         });
-        Ajax1(result);
+        
     }
     if(bsum==5){
         result = 0;
@@ -155,9 +160,10 @@ function win_lose_jugde(){
             endjudge2[iii].style.display = "block";
         }
         document.getElementById('b2').addEventListener('click', function (e) {
+            Ajax2(result);
             location.href = "../HTML/gamestart1.html";
         });
-        Ajax2(result);
+       
     };
 
 }
