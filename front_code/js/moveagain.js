@@ -8,7 +8,7 @@ function onclick1(){
         if(play_flag==1){
             var r=Math.floor(Math.random() * 6) + 1;
             aposi+=r;
-           // alert(r+"Aziji");
+            //alert(r+"Aziji");
             Aplayer(r);
         }
     }
