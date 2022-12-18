@@ -23,19 +23,24 @@ function Aplayer(num){
             win_lose_jugde();
         }
     }
-    else {
+    else {//4,12,17,26,32
         if(map[aposi]==0){//普通棋子+打卡点
             if(goal[aposi]==1){//打卡点
-                animate1(player1, time,num,num1,3,animate1);
+                if(aposi==4) animate1(player1, time,num,num1,3,animate1);
+                else if(aposi==12) animate1(player1, time,num,num1,4,animate1);
+                else if(aposi==17) animate1(player1, time,num,num1,5,animate1);
+                else if(aposi==26) animate1(player1, time,num,num1,6,animate1);
+                else if(aposi==32) animate1(player1, time,num,num1,7,animate1);
+
                 if(aflag[aposi]==0){
                     aflag[aposi]=1;
                     asum++;
                 }
                 if(asum==5) {
-                   win_lose_jugde();
+                    win_lose_jugde();
                 }
             }
-            else animate1(player1, time,num,num1,0,animate1);
+            else animate1(player1, time,num,num1,-1,animate1);
         }
         else {//选择点
             play_flag=1;
@@ -82,7 +87,12 @@ function Bplayer(num){
         if(map[bposi]==0)
         {
             if(goal[bposi]==1){
-                animate2(player2, time,num,num2,3,animate2);
+                if(bposi==4) animate2(player2, time,num,num2,3,animate2);
+                else if(bposi==12) animate2(player2, time,num,num2,4,animate2);
+                else if(bposi==17) animate2(player2, time,num,num2,5,animate2);
+                else if(bposi==26) animate2(player2, time,num,num2,6,animate2);
+                else if(bposi==32) animate2(player2, time,num,num2,7,animate2);
+
                 if(bflag[bposi]==0){
                     bflag[bposi]=1;
                     bsum++;
@@ -91,7 +101,7 @@ function Bplayer(num){
                     win_lose_jugde();
                 }
             }
-            else animate2(player2, time,num,num2,0,animate2);
+            else animate2(player2, time,num,num2,-1,animate2);
         }
         else{//选择
             play_flag=2;
@@ -164,7 +174,7 @@ function getCookie(c_name) {
         }
     }
     return "";
-    }
+}
 
 function Ajax1(result){  //result是输0赢1  str是email  赢
     var email1 = getCookie('email');

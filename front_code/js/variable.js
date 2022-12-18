@@ -61,4 +61,13 @@ function GetQueryString(name) {
 }
 var res= GetQueryString('res');//给res赋值
 
+var endjudge1 = document.getElementsByClassName("win1-over");
+var endjudge2 = document.getElementsByClassName("win11-over");
+
+var dakajudge1 = document.getElementsByClassName("win2-daka1");
+var dakajudge2 = document.getElementsByClassName("win2-daka2");
+var dakajudge3 = document.getElementsByClassName("win2-daka3");
+var dakajudge4 = document.getElementsByClassName("win2-daka4");
+var dakajudge5 = document.getElementsByClassName("win2-daka5");
+var iii=0;
 // alert(res);

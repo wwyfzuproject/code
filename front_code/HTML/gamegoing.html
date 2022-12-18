@@ -13,6 +13,7 @@
     <script src="../js/coin&name.js"></script>
     <script src="../js/variable.js"></script>
     <script src="../js/map_player.js"></script>
+    <script src="../js/moveagain.js"></script>
 </head>
 
 <body>
@@ -84,23 +85,54 @@
         </div>
     </div>
     <!-- 打卡点的弹窗 -->
-    <div class="win2-daka">
-        <div class="win2-content">
-            <img src="../imagines/jinjianglou.PNG" alt="晋江楼" style="width: 450px;height: 400px;" id="pic1">
-            <!-- <img src="../imagines/tushuguan.jpg" alt="图书馆" style="width: 450px;height: 400px;"> -->
-            <!-- <img src="../imagines/sutuo.jpg" alt="素拓" style="width: 450px;height: 400px;"> -->
-            <!-- <img src="../imagines/honghui.jpg" alt="宏晖" style="width: 450px;height: 400px;"> -->
-            <!-- <img src="../imagines/fuyouge.jpg" alt="福友阁" style="width: 450px;height: 400px;"> -->
+    <!--    <弹窗1>-->
+    <div class="win2-daka1">
+        <div class="win2-content1">
+             <img src="../imagines/jinjianglou.PNG" alt="晋江楼" style="width: 450px;height: 400px;" id="pic1">
         </div>
     </div>
+    <!--    <弹窗2>-->
+    <div class="win2-daka2">
+        <div class="win2-content2">
+            <img src="../imagines/tushuguan.jpg" alt="图书馆" style="width: 450px;height: 400px;" id="pic2">
+        </div>
+    </div>
+    <!--    <弹窗3>-->
+    <div class="win2-daka3">
+        <div class="win2-content3">
+            <img src="../imagines/sutuo.jpg" alt="素拓" style="width: 450px;height: 400px;" id="pic3">
+        </div>
+    </div>
+    <!--    <弹窗4>-->
+    <div class="win2-daka4">
+        <div class="win2-content4">
+            <img src="../imagines/honghui.jpg" alt="宏晖" style="width: 450px;height: 400px;" id="pic4">
+        </div>
+    </div>
+    <!--    <弹窗5>-->
+    <div class="win2-daka5">
+        <div class="win2-content5">
+            <img src="../imagines/fuyouge.jpg" alt="福友阁" style="width: 450px;height: 400px;" id="pic5">
+        </div>
+    </div>
+
     <!-- 随机事件的弹窗 -->
-    <div class="suijichoice">
-        <div class="suiji-content">
+    <div class="suijichoice1">
+        <div class="suiji-content1">
             <div class="suijititle">随机事件选择</div>
             <!-- 选择让自己前进 -->
-            <div class="ziji" id="ziji">让自己前进</div>
+            <div class="ziji" id="ziji1">让自己前进</div>
             <!-- 选择让对方前进 -->
-            <div class="duifang" id="duifang">让对方前进</div>
+            <div class="duifang" id="duifang1">让对方前进</div>
+        </div>
+    </div>
+    <div class="suijichoice2">
+        <div class="suiji-content2">
+            <div class="suijititle">随机事件选择</div>
+            <!-- 选择让自己前进 -->
+            <div class="ziji" id="ziji2">让自己前进</div>
+            <!-- 选择让对方前进 -->
+            <div class="duifang" id="duifang2">让对方前进</div>
         </div>
     </div>
     <!-- 游戏结束弹窗 -->
@@ -169,22 +201,14 @@
         var tz = document.querySelector('#tz');
         var time = document.querySelector('.time');
         var num; //骰子数
-
-        var endjudge1 = document.getElementsByClassName("win11-over");
-        var endjudge2 = document.getElementsByClassName("win11-over");
-        var dakajudge = document.getElementsByClassName("win2-daka");
-        var iii=0;
-
         var target;
         //点击骰子后触发
 
         clock(time);
-        // for( iii=0;iii<endjudge1.length;iii++){
-        //     endjudge1[iii].style.display = "block";
+        // for( iii=0;iii<dakajudge.length;iii++){
+        //     dakajudge[iii].style.display = "block";
         // }
-        // document.getElementById('b2').addEventListener('click', function (e) {
-        //     location.href = "../HTML/single-invitesuccess.html";
-        // })
+
 
         //$('#tz').trigger('click');
         tz.addEventListener('click', function () {
