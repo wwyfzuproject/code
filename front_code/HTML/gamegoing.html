@@ -192,7 +192,7 @@
             <button class="b1" id="b2">返回</button>
         </div>
     </div>
-
+    <input id="endgame" type="button" value="结束游戏" onclick="Game_end()">
     <script>
         var flag = 1; //flag为奇数时p1行动，否则p2行动
         var player1 = document.querySelector('.p1');
@@ -213,7 +213,7 @@
         //$('#tz').trigger('click');
         tz.addEventListener('click', function () {
             num = getnum(); //num从后端获取？
-            // num = 45;
+            // num = 1;
             time.innerHTML = '倒计时';
             clearInterval(time.timer);
             switch (num) {
@@ -238,13 +238,12 @@
             }
             //玩家移动期间禁用骰子，移动完之后再恢复
             if (flag % 2) {
-                // var popUp = document.getElementById("win1-over");
-                // popUp.style.display = "";
             // console.log(target);
             aposi+=num;//随机摇骰子，玩家位置发生改变
             console.log(player1.offsetLeft);
             console.log(player1.offsetTop);
             flag++;
+            // animate1(player1, time,47,0,-1,animate1);
             Aplayer(num);
         }
         else {
@@ -254,6 +253,7 @@
             console.log(player2.offsetLeft);
             console.log(player2.offsetTop);
             flag++;
+                 //animate2(player2, time,44,0,-1,animate2);
             Bplayer(num);
         }
 
