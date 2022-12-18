@@ -15,6 +15,7 @@ function animate1(obj, time, num, num1,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num1,0,0,animate1);
+                if(bcir>=2||acir>=2) win_lose_jugde();
             }
             else if(f==2){
                 var suiji = document.getElementsByClassName("suijichoice1");
@@ -24,7 +25,17 @@ function animate1(obj, time, num, num1,f,callback) {
                 document.getElementById('ziji1').addEventListener('click', onclick1)
                 document.getElementById('duifang1').addEventListener('click', onclick2)
             }
-            else remove(f);
+            else {
+                remove(f);
+                if(aflag[aposi]==0&&f!=-1){
+                    alert(aposi);
+                    aflag[aposi]=1;
+                    asum++;
+                }
+                if(asum==5) {
+                    win_lose_jugde();
+                }
+            }
             clock(time);
         }
         else {
@@ -163,7 +174,7 @@ function animate1(obj, time, num, num1,f,callback) {
             // num--;
 
         }
-        
+
     }, 100)
 
 }
@@ -182,6 +193,7 @@ function animate2(obj, time, num, num2,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num2,0,0,animate2);
+                if(bcir>=2||acir>=2) win_lose_jugde();
             }
             else if(f==2){
                 var suiji = document.getElementsByClassName("suijichoice2");
@@ -191,7 +203,16 @@ function animate2(obj, time, num, num2,f,callback) {
                 document.getElementById('ziji2').addEventListener('click', onclick3)
                 document.getElementById('duifang2').addEventListener('click', onclick4)
             }
-            else remove(f);
+            else {
+                remove(f);
+                if(bflag[bposi]==0&&f!=-1){
+                    bflag[bposi]=1;
+                    bsum++;
+                }
+                if(bsum==5){//b满5个打卡点
+                    win_lose_jugde();
+                }
+            }
             clock(time);
         }
         else {
