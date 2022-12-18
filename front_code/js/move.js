@@ -7,7 +7,7 @@ function animate1(obj, time, num, num1,f,callback) {
     var flag = 0;
     obj.timer = setInterval(function () {
         // if (obj.offsetLeft <= target) {
-        if (num <= 0) {
+        if (num == 0) {
             clearInterval(obj.timer);
             // console.log(target);
             console.log(obj.offsetLeft);
@@ -162,7 +162,7 @@ function animate1(obj, time, num, num1,f,callback) {
 
                 if(obj.offsetLeft==693)
                 {
-                   // num--;
+                   num--;
                     obj.style.left = 691 + 'px';
                     obj.style.top = 37 + 'px';
                     flag1 = 0;
