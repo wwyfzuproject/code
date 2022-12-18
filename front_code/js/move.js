@@ -360,9 +360,9 @@ function animate2(obj, time, num, num2,f,callback) {
                     target = obj.offsetLeft + num * (28);
                     console.log(num);
                 }
-                if(obj.offsetLeft==722)
+                if(obj.offsetLeft==710)
                 {
-                    num--;
+                    // num--;
                     obj.style.left = 722 + 'px';
                     obj.style.top = -32 + 'px';
                     flag2 = 0;
