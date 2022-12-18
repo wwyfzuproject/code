@@ -31,6 +31,16 @@ a{
     background-size: contain;
     /* margin: 0 auto; */
 }
+
+#endgame{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    /* background-color: greenyellow; */
+    position: relative;
+    left: 960px;
+    top: -530px;
+}
 /* 玩家1的头像设置 */
 .bgbox .role1 .img1{
     display: inline-block;
