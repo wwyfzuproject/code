@@ -130,11 +130,12 @@
 
         <div class="tan2">
             <div class="share-title">
-                <h2>分享领金币</h2>
+                <h2>分享</h2>
                 <img src="../imagines/close.png" alt="" width="30px" height="30px" class="close2">
             </div>
             <textarea id="copytext" style="display:none;"></textarea>
-            <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link">
+            <h3 class="textcopy"><strong>复制链接分享给好友即可</strong></h3>
+            <!-- <img src="../imagines/copylink.JPG" alt="" width="200px" height="80px" class="link"> -->
             <img class="copy" src="../imagines/cope.JPG" alt="" width="100px" height="60px" id="copy">
         </div> 
         <!-- <img src="../imagines/骰子2.png" alt=""> -->
@@ -227,7 +228,7 @@ function copyText(value) {
 }
 
 document.getElementById('copy').addEventListener('click',function(){
-    copyText('demo');
+    copyText('http://119.3.248.246:8080/gameLogin-1.0-SNAPSHOT/HTML/index.html');
     alert("复制成功");
 })
 

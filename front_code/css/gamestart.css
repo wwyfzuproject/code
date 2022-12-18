@@ -226,7 +226,7 @@ h3 {
   font-size: 20px;
   text-align: centerS;
   margin-top: 30px;
-  margin-left: 100px;
+  margin-left: 50px;
   font-family: serif;
 }
 .qiandao-gold {
@@ -285,12 +285,22 @@ h3 {
   margin-left: 50px;
   margin-bottom: 0px;
 }
+.textcopy{
+  font-size: 25px;
+  width: 500px;
+  margin-top: 38px;
+  margin-left: 15px;
+  color: rgb(182, 159, 44);
+  
+   
+}
 .copy {
-  margin-left: 100px;
-  margin-top: 0px;
+  margin-left: 80px;
+  margin-top: 22px;
   width: 120px;
   height: 70px;
   padding-top: 0px;
+  
 }
 .copysuccess{
   width:270px;
