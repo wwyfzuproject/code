@@ -15,6 +15,14 @@ function animate1(obj, time, num, num1,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num1,0,0,animate1);
+                if(aflag[aposi]==0&&aposi!=0){
+                    //alert(aposi);
+                    aflag[aposi]=1;
+                    asum++;
+                }
+                if(asum==5) {
+                    win_lose_jugde();
+                }
                 if(bcir>=2||acir>=2) win_lose_jugde();
             }
             else if(f==2){
@@ -162,7 +170,7 @@ function animate1(obj, time, num, num1,f,callback) {
 
                 if(obj.offsetLeft==693)
                 {
-                   num--;
+                    num--;
                     obj.style.left = 691 + 'px';
                     obj.style.top = 37 + 'px';
                     flag1 = 0;
@@ -194,6 +202,14 @@ function animate2(obj, time, num, num2,f,callback) {
             if(f==1)
             {
                 callback(obj,time,num2,0,0,animate2);
+                if(bflag[aposi]==0&&bposi!=0){
+                    //alert(aposi);
+                    bflag[bposi]=1;
+                    bsum++;
+                }
+                if(bsum==5) {
+                    win_lose_jugde();
+                }
                 if(bcir>=2||acir>=2) win_lose_jugde();
             }
             else if(f==2){
