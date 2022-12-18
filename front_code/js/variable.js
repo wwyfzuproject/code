@@ -69,5 +69,6 @@ var dakajudge2 = document.getElementsByClassName("win2-daka2");
 var dakajudge3 = document.getElementsByClassName("win2-daka3");
 var dakajudge4 = document.getElementsByClassName("win2-daka4");
 var dakajudge5 = document.getElementsByClassName("win2-daka5");
+
 var iii=0;
 // alert(res);
