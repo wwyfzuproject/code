@@ -212,8 +212,8 @@
 
         //$('#tz').trigger('click');
         tz.addEventListener('click', function () {
-            // num = getnum(); //num从后端获取？
-            num = 1;
+            num = getnum(); //num从后端获取？
+            // num = 1;
             time.innerHTML = '倒计时';
             clearInterval(time.timer);
             switch (num) {
